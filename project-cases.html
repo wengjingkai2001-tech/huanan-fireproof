@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>完工项目案例 - 广东华南防火科技有限公司</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-hero {
+            padding: 140px 0 60px;
+            background: linear-gradient(135deg, #1a1a2e, #0f3460);
+            text-align: center;
+            color: #fff;
+        }
+        .page-hero h1 { font-size: 2.6rem; margin-bottom: 12px; }
+        .page-hero p { color: rgba(255,255,255,0.6); font-size: 1.1rem; }
+        .page-hero .divider { margin: 16px auto; }
+        .back-link {
+            display: inline-block;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        .case-section { margin-bottom: 60px; }
+        .case-section h2 {
+            font-size: 1.6rem;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .case-section h2 .tag {
+            font-size: 0.8rem;
+            background: #e74c3c;
+            color: #fff;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-weight: 400;
+        }
+        .case-section > p {
+            color: #888;
+            margin-bottom: 24px;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .case-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid #eee;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .case-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            border-color: #e74c3c;
+        }
+        .case-img {
+            height: 240px;
+            background-size: cover;
+            background-position: center;
+            background-color: #f0f0f0;
+        }
+        .case-body {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .case-body h3 {
+            font-size: 1.15rem;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+        .case-body .case-location {
+            font-size: 0.85rem;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        .case-body .case-desc {
+            font-size: 0.92rem;
+            color: #666;
+            line-height: 1.7;
+            flex: 1;
+        }
+        .case-body .case-meta {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #eee;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.85rem;
+            color: #999;
+        }
+        .case-body .case-meta span strong {
+            color: #555;
+        }
+
+        .case-full {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        .case-full .case-img {
+            height: 100%;
+            min-height: 280px;
+        }
+
+        .factory-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .factory-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+        .factory-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .factory-item p {
+            padding: 12px 16px;
+            font-size: 0.9rem;
+            color: #555;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .case-grid { grid-template-columns: 1fr; }
+            .case-full { grid-template-columns: 1fr; }
+            .factory-grid { grid-template-columns: 1fr; }
+            .page-hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== Header ========== -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="华南防火科技" style="height:40px;">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#about" class="nav-link">关于我们</a></li>
+                    <li><a href="index.html#products" class="nav-link">产品中心</a></li>
+                    <li><a href="index.html#certificates" class="nav-link">资质证书</a></li>
+                    <li><a href="project-cases.html" class="nav-link active">项目案例</a></li>
+                    <li><a href="index.html#contact" class="nav-link">联系我们</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========== Page Hero ========== -->
+    <section class="page-hero">
+        <div class="container">
+            <a href="index.html" class="back-link">&larr; 返回首页</a>
+            <h1>完工项目案例</h1>
+            <div class="divider"></div>
+            <p>匠心工程 · 实力见证 · 品质保障</p>
+        </div>
+    </section>
+
+    <!-- ========== Project Cases ========== -->
+    <section class="section">
+        <div class="container">
+
+            <!-- 幕墙门窗工程 -->
+            <div class="case-section">
+                <h2>幕墙门窗工程 <span class="tag">已完工</span></h2>
+                <p>涵盖商业综合体、办公楼、住宅等项目，提供玻璃幕墙、铝单板、门窗等系统解决方案</p>
+                <div class="case-grid">
+                    <div class="case-card">
+                        <div class="case-img" style="background-image:url('images/projects/case11_1.jpeg')"></div>
+                        <div class="case-body">
+                            <h3>港龙城项目</h3>
+                            <p class="case-location">📍 商业综合体</p>
+                            <p class="case-desc">大型商业综合体幕墙门窗工程，采用玻璃幕墙与铝单板系统，打造现代商业空间。</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-img" style="background-image:url('images/projects/case11_2.jpeg')"></div>
+                        <div class="case-body">
+                            <h3>电商城项目</h3>
+                            <p class="case-location">📍 电商产业园</p>
+                            <p class="case-desc">电商产业园区幕墙及门窗工程，高标准玻璃幕墙系统，营造现代化办公环境。</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-img" style="background-image:url('images/projects/case12_1.jpeg')"></div>
+                        <div class="case-body">
+                            <h3>海纳项目</h3>
+                            <p class="case-location">📍 深汕特别合作区</p>
+                            <p class="case-desc">办公楼玻璃幕墙、铝单板、玻璃雨棚工程，幕墙约2504㎡，铝单板约5401㎡。</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-img" style="background-image:url('images/projects/case12_2.jpeg')"></div>
+                        <div class="case-body">
+                            <h3>海丰文化中心项目</h3>
+                            <p class="case-location">📍 汕尾市海丰县</p>
+                            <p class="case-desc">文化中心外装饰工程，融合玻璃幕墙与铝板系统，打造地标性文化建筑。</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-img" style="background-image:url('images/projects/case13_1.jpeg')"></div>
+                        <div class="case-body">
+                            <h3>御海湾项目</h3>
+                            <p class="case-location">📍 海丰城区</p>
+                            <p class="case-desc">高端住宅区外幕墙工程，全玻璃幕墙约1789㎡，石材幕墙约2802㎡，展现品质人居。</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-img" style="background-image:url('images/projects/case13_2.jpeg')"></div>
+                        <div class="case-body">
+                            <h3>山湖海窗扇制作安装工程</h3>
+                            <p class="case-location">📍 住宅项目</p>
+                            <p class="case-desc">住宅小区窗扇制作与安装工程，大批量标准化生产，保障交付品质与进度。</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-img" style="background-image:url('images/projects/case14_1.jpeg')"></div>
+                        <div class="case-body">
+                            <h3>御海湾一期</h3>
+                            <p class="case-location">📍 海丰城区</p>
+                            <p class="case-desc">一期住宅外幕墙及门窗系统，中空玻璃与铝板幕墙结合，打造宜居生活空间。</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-img" style="background-image:url('images/projects/case14_2.jpeg')"></div>
+                        <div class="case-body">
+                            <h3>汕尾技术学院</h3>
+                            <p class="case-location">📍 汕尾市</p>
+                            <p class="case-desc">院校幕墙及门窗工程，高标准安全玻璃系统，为教育建筑提供可靠保障。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 重点工程 -->
+            <div class="case-section">
+                <h2>重点工程项目 <span class="tag">精选</span></h2>
+                <p>近年来承接的各类重点建筑项目，涵盖扶贫、市政、商业等多个领域</p>
+                <div class="case-grid">
+                    <div class="case-card">
+                        <div class="case-body">
+                            <h3>陆河扶贫厂房</h3>
+                            <p class="case-location">📍 汕尾市陆河县</p>
+                            <p class="case-desc">铝合金门窗工程，50系列平开窗约1452㎡，50系列百叶窗，5mm浅灰钢化玻璃，2019年已完工。</p>
+                            <div class="case-meta">
+                                <span><strong>玻璃类型：</strong>5mm浅灰钢化玻璃</span>
+                                <span><strong>时间：</strong>2019年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-body">
+                            <h3>河源·中骏世界城外墙装饰工程</h3>
+                            <p class="case-location">📍 河源市江东新区</p>
+                            <p class="case-desc">建设部外墙装饰工程，建筑面积约1600㎡，玻璃幕墙约840㎡，铝单板约2030㎡。</p>
+                            <div class="case-meta">
+                                <span><strong>玻璃类型：</strong>6mm高透光单银LOW-E+12mmA+6mm中空钢化</span>
+                                <span><strong>时间：</strong>2020年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-body">
+                            <h3>中骏集团佛山雍景台项目</h3>
+                            <p class="case-location">📍 佛山市</p>
+                            <p class="case-desc">高层住宅及临街商铺，总建筑面积约156853㎡，提供幕墙门窗系统方案。</p>
+                            <div class="case-meta">
+                                <span><strong>业态：</strong>高层住宅+商铺</span>
+                                <span><strong>时间：</strong>2020年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-body">
+                            <h3>海丰县旅游公寓扶贫项目</h3>
+                            <p class="case-location">📍 汕尾市海丰县</p>
+                            <p class="case-desc">空调格栅约1054㎡，玻璃栏杆约1293㎡，采用6mm白玻+0.76pvb+6mm白玻夹胶钢化。</p>
+                            <div class="case-meta">
+                                <span><strong>玻璃类型：</strong>夹胶钢化（干夹）</span>
+                                <span><strong>时间：</strong>2019-2020年</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-body">
+                            <h3>海丰县红城文旅小镇项目</h3>
+                            <p class="case-location">📍 海丰县海城镇</p>
+                            <p class="case-desc">外装饰工程，门窗约238㎡，玻璃幕墙约1216㎡，铝单板约1081㎡，6mm LOW-E中空钢化玻璃。</p>
+                            <div class="case-meta">
+                                <span><strong>玻璃类型：</strong>6mm LOW-E+12mmA+6mm中空钢化</span>
+                                <span><strong>时间：</strong>2020-2021年</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 生产实力 -->
+            <div class="case-section">
+                <h2>生产实力 <span class="tag" style="background:#1a1a2e">车间一览</span></h2>
+                <p>国内外先进的玻璃深加工设备，严格的质量管理体系</p>
+                <div class="factory-grid">
+                    <div class="factory-item">
+                        <img src="images/projects/case15_1.jpeg" alt="原片切割" onerror="this.parentElement.style.display='none'">
+                        <p>原片切割（全自动电脑开机台）</p>
+                    </div>
+                    <div class="factory-item">
+                        <img src="images/projects/case16_1.jpeg" alt="磨边" onerror="this.parentElement.style.display='none'">
+                        <p>磨边（全自动高速四边精磨）</p>
+                    </div>
+                    <div class="factory-item">
+                        <img src="images/projects/case16_2.jpeg" alt="中空" onerror="this.parentElement.style.display='none'">
+                        <p>中空（全自动打胶中空线）</p>
+                    </div>
+                    <div class="factory-item">
+                        <img src="images/projects/case17_1.jpeg" alt="钢化" onerror="this.parentElement.style.display='none'">
+                        <p>钢化（强制对流双式钢化炉）</p>
+                    </div>
+                    <div class="factory-item">
+                        <img src="images/projects/case17_2.jpeg" alt="夹胶" onerror="this.parentElement.style.display='none'">
+                        <p>夹胶（夹胶合片无尘车间）</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== Footer ========== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 广东华南防火科技有限公司 | 项目案例展示</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
