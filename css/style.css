@@ -872,10 +872,14 @@ img { max-width: 100%; display: block; }
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;          /* uniform box width for all three logos */
-    height: 48px;         /* uniform box height */
+    width: 80px;          /* partner logos: bigger box */
+    height: 80px;
     flex-shrink: 0;
     line-height: 0;
+}
+.header-logo--main {
+    width: 60px;          /* main logo: smaller */
+    height: 48px;
 }
 .header-logo img {
     max-width: 100%;      /* scale down to fit box, preserve aspect ratio */
