@@ -873,21 +873,14 @@ img { max-width: 100%; display: block; }
     width: auto;
     display: block;
     transition: transform 0.25s ease, opacity 0.25s ease;
+    filter: brightness(0) invert(1);  /* all logos appear white on the dark header */
+    opacity: 0.9;
 }
 .header-logo:hover img {
     transform: translateY(-1px);
-    opacity: 0.85;
-}
-/* Partner logos (non-main) appear in white on the dark header */
-.header-logo:not(.header-logo--main) img {
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
-}
-.header-logo--main img {
-    height: 40px;  /* main logo slightly larger */
+    opacity: 1;
 }
 @media (max-width: 720px) {
     .header-logos { gap: 6px; }
     .header-logo img { height: 28px; }
-    .header-logo--main img { height: 32px; }
 }
