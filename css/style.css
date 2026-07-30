@@ -38,6 +38,7 @@ img { max-width: 100%; display: block; }
     transition: background 0.3s;
 }
 
+
 .header.scrolled {
     background: rgba(26, 26, 46, 0.98);
     box-shadow: 0 2px 20px rgba(0,0,0,0.3);
@@ -834,4 +835,30 @@ img { max-width: 100%; display: block; }
     .stat-number {
         font-size: 2rem;
     }
+}
+
+
+/* ===== Partner logos (header) ===== */
+.partner-logos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+.partner-logo {
+    height: 32px;
+    width: auto;
+    display: block;
+    opacity: 0.85;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    filter: brightness(0) invert(1);  /* forces pure white look on dark header */
+}
+.partner-logo:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+@media (max-width: 720px) {
+    .partner-logos { gap: 8px; margin-right: 4px; }
+    .partner-logo { height: 26px; }
 }
