@@ -873,8 +873,8 @@ img { max-width: 100%; display: block; }
     line-height: 0;
 }
 .header-logo--main {
-    width: 60px;          /* main logo: smaller */
-    height: 48px;
+    width: 60px;          /* main logo: square box, 60x40 */
+    height: 40px;
 }
 .header-logo img {
     max-width: 100%;      /* scale down to fit box, preserve aspect ratio */
