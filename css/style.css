@@ -838,14 +838,6 @@ img { max-width: 100%; display: block; }
 }
 
 
-/* ===== Partner logos (header) ===== */
-.partner-logos {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-right: 8px;
-    flex-shrink: 0;
-}
 .partner-logo {
     height: 32px;
     width: auto;
@@ -861,4 +853,41 @@ img { max-width: 100%; display: block; }
 @media (max-width: 720px) {
     .partner-logos { gap: 8px; margin-right: 4px; }
     .partner-logo { height: 26px; }
+}
+
+
+/* ===== Header logo group ===== */
+.header-logos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.header-logo {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+}
+.header-logo img {
+    height: 36px;
+    width: auto;
+    display: block;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.header-logo:hover img {
+    transform: translateY(-1px);
+    opacity: 0.85;
+}
+/* Partner logos (non-main) appear in white on the dark header */
+.header-logo:not(.header-logo--main) img {
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+.header-logo--main img {
+    height: 40px;  /* main logo slightly larger */
+}
+@media (max-width: 720px) {
+    .header-logos { gap: 6px; }
+    .header-logo img { height: 28px; }
+    .header-logo--main img { height: 32px; }
 }
