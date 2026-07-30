@@ -866,14 +866,9 @@ img { max-width: 100%; display: block; }
 .header-logo {
     display: flex;
     align-items: center;
-    line-height: 0;
-}
-.header-logo {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    width: 80px;          /* partner logos: bigger box */
-    height: 80px;
+    width: 70px;          /* partner logos: bigger box */
+    height: 75px;
     flex-shrink: 0;
     line-height: 0;
 }
