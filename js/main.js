@@ -88,22 +88,47 @@ revealElements.forEach(el => {
     revealObserver.observe(el);
 });
 
-// ===== Contact Form =====
+// ===== Contact Form (AJAX via Formspree) =====
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const btn = contactForm.querySelector('button');
+        const btn = contactForm.querySelector('button[type="submit"]');
+        const status = document.getElementById('formStatus');
         const originalText = btn.textContent;
-        btn.textContent = '已提交，我们会尽快联系您！';
-        btn.style.background = '#27ae60';
-        btn.style.borderColor = '#27ae60';
-        contactForm.reset();
-        setTimeout(() => {
+
+        btn.textContent = '提交中...';
+        btn.disabled = true;
+        if (status) { status.className = 'form-status'; status.textContent = ''; }
+
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                if (status) {
+                    status.className = 'form-status form-success';
+                    status.textContent = '✓ 提交成功，我们会尽快联系您！';
+                }
+                contactForm.reset();
+            } else {
+                let errMsg = '提交失败';
+                try { const data = await response.json(); errMsg = data.error || errMsg; } catch (_) {}
+                throw new Error(errMsg);
+            }
+        } catch (err) {
+            if (status) {
+                status.className = 'form-status form-error';
+                status.textContent = '✗ ' + (err.message || '网络错误，请稍后重试');
+            }
+        } finally {
             btn.textContent = originalText;
-            btn.style.background = '';
-            btn.style.borderColor = '';
-        }, 3000);
+            btn.disabled = false;
+        }
     });
 }
 
