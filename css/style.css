@@ -1020,3 +1020,186 @@ img { max-width: 100%; display: block; }
     .whatsapp-float::after { animation: none; }
     .whatsapp-float { transition: none; }
 }
+
+
+/* ===== WeChat floating button (国内客户备用) ===== */
+.wechat-float {
+    position: fixed;
+    right: 24px;
+    /* sit above WhatsApp: 24 (wa bottom) + 60 (wa height) + 12 (gap) = 96 */
+    bottom: 96px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #07C160;
+    box-shadow: 0 6px 18px rgba(7, 193, 96, 0.40), 0 2px 6px rgba(0, 0, 0, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9998;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: inherit;
+}
+.wechat-float:hover,
+.wechat-float:focus {
+    transform: scale(1.08);
+    box-shadow: 0 8px 22px rgba(7, 193, 96, 0.55), 0 3px 8px rgba(0, 0, 0, 0.22);
+    outline: none;
+}
+.wechat-float:active {
+    transform: scale(0.96);
+}
+.wechat-float .wc-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    fill: #ffffff;
+}
+/* Tooltip on hover */
+.wechat-float::before {
+    content: attr(data-label);
+    position: absolute;
+    right: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1a1a2e;
+    color: #fff;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.wechat-float:hover::before,
+.wechat-float:focus::before {
+    opacity: 1;
+    transform: translateY(-50%) translateX(-2px);
+}
+@media (max-width: 720px) {
+    .wechat-float { right: 16px; bottom: 80px; width: 48px; height: 48px; }
+    .wechat-float .wc-icon { width: 26px; height: 26px; }
+    .wechat-float::before { font-size: 0.78rem; padding: 6px 10px; }
+}
+
+
+/* ===== WeChat QR modal (扫码弹窗) ===== */
+.qr-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 20, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    padding: 20px;
+}
+.qr-modal.is-open {
+    display: flex;
+    opacity: 1;
+}
+.qr-modal__card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 26px 26px 22px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    text-align: center;
+    position: relative;
+    transform: translateY(8px) scale(0.98);
+    transition: transform 0.2s ease;
+}
+.qr-modal.is-open .qr-modal__card {
+    transform: translateY(0) scale(1);
+}
+.qr-modal__close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+}
+.qr-modal__close:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+.qr-modal__title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 4px;
+}
+.qr-modal__subtitle {
+    font-size: 0.82rem;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+.qr-modal__img {
+    display: block;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #fff;
+}
+.qr-modal__id-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 4px;
+}
+.qr-modal__id {
+    flex: 1;
+    text-align: left;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 0.92rem;
+    color: #111827;
+    word-break: break-all;
+}
+.qr-modal__copy {
+    background: #07C160;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+    white-space: nowrap;
+    font-family: inherit;
+}
+.qr-modal__copy:hover {
+    background: #06ad56;
+}
+.qr-modal__copy.is-copied {
+    background: #1a1a2e;
+}
+.qr-modal__tip {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-top: 10px;
+}
