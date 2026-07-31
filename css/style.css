@@ -1203,3 +1203,26 @@ img { max-width: 100%; display: block; }
     color: #9ca3af;
     margin-top: 10px;
 }
+
+
+/* ===== Contact form status (Formspree AJAX) ===== */
+.form-status {
+    margin-top: 12px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    line-height: 1.4;
+    display: none;
+}
+.form-status.form-success {
+    display: block;
+    background: #eafaf1;
+    color: #27ae60;
+    border: 1px solid #a3e4bc;
+}
+.form-status.form-error {
+    display: block;
+    background: #fdedec;
+    color: #e74c3c;
+    border: 1px solid #f5b7b1;
+}
