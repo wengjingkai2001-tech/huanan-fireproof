@@ -3,9 +3,7 @@
   "lang.zh": "中文",
   "lang.en": "English",
   "lang.th": "ไทย",
-
   "site.title": "广东华南防火科技有限公司",
-
   "nav.about": "关于我们",
   "nav.products": "产品中心",
   "nav.capability": "生产实力",
@@ -13,13 +11,11 @@
   "nav.cases": "项目案例",
   "nav.projects": "完工项目",
   "nav.contact": "联系我们",
-
   "hero.title": "广东华南防火科技有限公司",
   "hero.subtitle": "生产稳定 技术扎实 勇于创新 诚信经营",
   "hero.desc": "Guangdong Huanan Fire Prevention Technology Co., Ltd.",
   "hero.btn_products": "了解产品",
   "hero.btn_about": "关于我们",
-
   "about.title": "关于我们",
   "about.subtitle": "Guangdong Huanan Fire Prevention Technology Co., Ltd.",
   "about.p1": "广东华南防火科技有限公司位于东莞市道滘镇，主要经营铝合金防火窗、钢制防火窗、防火幕墙、防火隔断、高硼硅防火玻璃、复合隔热甲级防火玻璃、纳米水晶硅防火玻璃等产品。公司拥有防火门窗框架生产与深加工系统以及防火玻璃生产与深加工系统，具备稳定且完善的生产体系、严格的品质把控、贴心的售后服务。",
@@ -30,7 +26,6 @@
   "about.stat2": "专利证书",
   "about.stat3": "行业经验(年)",
   "about.stat4": "服务客户",
-
   "products.title": "产品中心",
   "products.subtitle": "纳米水晶硅防火玻璃门窗深加工 · 代加工合作 · 市场推广",
   "products.card1.title": "铝合金防火窗",
@@ -45,7 +40,6 @@
   "products.card5.desc": "复合隔热型、纳米水晶硅非隔热型、单片铯钾防火玻璃、高硼硅隔热防火玻璃等多种品类。",
   "products.card6.title": "断桥铝门窗",
   "products.card6.desc": "采用断桥隔热铝型材，保温隔热隔音，搭配防火玻璃，美观与安全兼备。",
-
   "capability.title": "生产实力",
   "capability.subtitle": "国内外先进设备 · 完善的生产体系 · 严格的品质把控",
   "capability.item1": "1. 厂房外观",
@@ -60,7 +54,6 @@
   "capability.item10": "10. 加工设备",
   "capability.item11": "11. 夹胶玻璃",
   "capability.item12": "12. 物料仓库",
-
   "certificates.title": "资质证书",
   "certificates.subtitle": "权威认证 · 品质保证",
   "certificates.card1.title": "消防产品认证证书",
@@ -75,7 +68,6 @@
   "certificates.card5.desc": "离线LOW-E玻璃合作商",
   "certificates.card6.title": "高新技术企业",
   "certificates.card6.desc": "科技创新 驱动发展",
-
   "projects.title": "完工项目",
   "projects.subtitle": "匠心工程 · 实力见证",
   "projects.card1.title": "大型商业综合体",
@@ -90,7 +82,6 @@
   "projects.card5.desc": "断桥铝门窗系统",
   "projects.viewall.title": "查看全部案例",
   "projects.viewall.desc": "港龙城 · 电商城 · 海纳 · 御海湾 等",
-
   "contact.title": "联系我们",
   "contact.subtitle": "期待与您的合作",
   "contact.label_name": "公司名称",
@@ -108,9 +99,7 @@
   "contact.form_email": "电子邮箱",
   "contact.form_message": "留言内容",
   "contact.form_submit": "提交留言",
-
   "footer.copyright": "© 2026 广东华南防火科技有限公司 | Guangdong Huanan Fire Prevention Technology Co., Ltd.",
-
   "cases.page_title": "完工项目案例 - 广东华南防火科技有限公司",
   "cases.back": "← 返回首页",
   "cases.h1": "完工项目案例",
@@ -124,7 +113,6 @@
   "cases.section3.title": "生产实力",
   "cases.section3.tag": "车间一览",
   "cases.section3.desc": "国内外先进的玻璃深加工设备，严格的质量管理体系",
-
   "cases.case1.title": "港龙城项目",
   "cases.case1.loc": "📍 商业综合体",
   "cases.case1.desc": "大型商业综合体幕墙门窗工程，采用玻璃幕墙与铝单板系统，打造现代商业空间。",
@@ -149,7 +137,6 @@
   "cases.case8.title": "汕尾技术学院",
   "cases.case8.loc": "📍 汕尾市",
   "cases.case8.desc": "院校幕墙及门窗工程，高标准安全玻璃系统，为教育建筑提供可靠保障。",
-
   "cases.case9.title": "陆河扶贫厂房",
   "cases.case9.loc": "📍 汕尾市陆河县",
   "cases.case9.desc": "铝合金门窗工程，50系列平开窗约1452㎡，50系列百叶窗，5mm浅灰钢化玻璃，2019年已完工。",
@@ -178,18 +165,18 @@
   "cases.case13.desc": "外装饰工程，门窗约238㎡，玻璃幕墙约1216㎡，铝单板约1081㎡，6mm LOW-E中空钢化玻璃。",
   "cases.case13.meta1v": "6mm LOW-E+12mmA+6mm中空钢化",
   "cases.case13.meta2v": "2020-2021年",
-
   "cases.factory.cut": "原片切割（全自动电脑开机台）",
   "cases.factory.edge": "磨边（全自动高速四边精磨）",
   "cases.factory.hollow": "中空（全自动打胶中空线）",
   "cases.factory.tempered": "钢化（强制对流双式钢化炉）",
   "cases.factory.laminated": "夹胶（夹胶合片无尘车间）",
-
   "footer.cases.copyright": "© 2026 广东华南防火科技有限公司 | 项目案例展示",
-
   "alt.partner.huanan": "华南集团",
   "alt.partner.arc": "合作方",
   "alt.partner.main": "华南防火科技",
   "alt.hero": "广东华南防火科技",
-  "alt.menu": "菜单"
+  "alt.menu": "菜单",
+  "whatsapp.url": "https://wa.me/8613316330906?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E5%92%A8%E8%AF%A2%E8%B4%B5%E5%8F%B8%E7%9A%84%E9%98%B2%E7%81%AB%E9%97%A8%E7%AA%97/%E7%8E%BB%E7%92%83%E5%B9%95%E5%A2%99%E4%BA%A7%E5%93%81%E3%80%82",
+  "whatsapp.label": "微信/WhatsApp 联系我们",
+  "whatsapp.text": "你好，我想咨询贵司的防火门窗/玻璃幕墙产品。"
 }
