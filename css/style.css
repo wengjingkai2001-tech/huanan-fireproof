@@ -895,3 +895,44 @@ img { max-width: 100%; display: block; }
     .header-logos { gap: 6px; }
     .header-logo { width: 48px; height: 38px; }
 }
+
+
+/* ===== Language switcher (header) ===== */
+.lang-switch {
+    margin-left: 16px;
+    flex-shrink: 0;
+    position: relative;
+}
+.lang-switch select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: rgba(255, 255, 255, 0.10);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 5px 26px 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-family: inherit;
+    cursor: pointer;
+    line-height: 1.4;
+    transition: background 0.2s, border-color 0.2s;
+    /* Custom caret */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%23ffffff' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 9px center;
+}
+.lang-switch select:hover,
+.lang-switch select:focus {
+    background-color: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.45);
+    outline: none;
+}
+.lang-switch select option {
+    color: #1a1a2e;
+    background: #ffffff;
+}
+@media (max-width: 720px) {
+    .lang-switch { margin-left: 8px; }
+    .lang-switch select { font-size: 0.78rem; padding: 4px 22px 4px 8px; }
+}
