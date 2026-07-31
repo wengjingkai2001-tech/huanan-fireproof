@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>广东华南防火科技有限公司</title>
+    <title data-i18n="site.title">广东华南防火科技有限公司</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- 百度统计占位：把 _hmt.push(['_setAccount', 'YOUR_BAIDU_TJ_ID']); 里的 YOUR_BAIDU_TJ_ID 替换成你的百度统计 ID -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?YOUR_BAIDU_TJ_ID";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <script src="js/i18n.js"></script>
 </head>
 <body>
 
@@ -12,22 +23,29 @@
     <header class="header">
         <div class="container header-inner">
             <div class="header-logos">
-                <a href="#partner-huanan" class="header-logo"><img src="images/partner-huanan.png" alt="华南集团"></a>
-                <a href="#partner-arc" class="header-logo"><img src="images/partner-arc.png" alt="合作方"></a>
-                <a href="#hero" class="header-logo header-logo--main"><img src="images/logo.png" alt="华南防火科技"></a>
+                <a href="#partner-huanan" class="header-logo"><img src="images/partner-huanan.png" data-i18n-attr="alt:alt.partner.huanan" alt="华南集团"></a>
+                <a href="#partner-arc" class="header-logo"><img src="images/partner-arc.png" data-i18n-attr="alt:alt.partner.arc" alt="合作方"></a>
+                <a href="#hero" class="header-logo header-logo--main"><img src="images/logo.png" data-i18n-attr="alt:alt.partner.main" alt="华南防火科技"></a>
             </div>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="#about" class="nav-link">关于我们</a></li>
-                    <li><a href="#products" class="nav-link">产品中心</a></li>
-                    <li><a href="#capability" class="nav-link">生产实力</a></li>
-                    <li><a href="#certificates" class="nav-link">资质证书</a></li>
-                    <li><a href="project-cases.html" class="nav-link">项目案例</a></li>
-                    <li><a href="#projects" class="nav-link">完工项目</a></li>
-                    <li><a href="#contact" class="nav-link">联系我们</a></li>
+                    <li><a href="#about" class="nav-link" data-i18n="nav.about">关于我们</a></li>
+                    <li><a href="#products" class="nav-link" data-i18n="nav.products">产品中心</a></li>
+                    <li><a href="#capability" class="nav-link" data-i18n="nav.capability">生产实力</a></li>
+                    <li><a href="#certificates" class="nav-link" data-i18n="nav.certificates">资质证书</a></li>
+                    <li><a href="project-cases.html" class="nav-link" data-i18n="nav.cases">项目案例</a></li>
+                    <li><a href="#projects" class="nav-link" data-i18n="nav.projects">完工项目</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav.contact">联系我们</a></li>
                 </ul>
             </nav>
-            <button class="hamburger" id="hamburger" aria-label="菜单">
+            <div class="lang-switch">
+                <select id="lang-switcher" aria-label="Language">
+                    <option value="zh" data-i18n="lang.zh">中文</option>
+                    <option value="en" data-i18n="lang.en">English</option>
+                    <option value="th" data-i18n="lang.th">ไทย</option>
+                </select>
+            </div>
+            <button class="hamburger" id="hamburger" data-i18n-attr="aria-label:alt.menu" aria-label="菜单">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -37,12 +55,12 @@
     <section class="hero" id="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1>广东华南防火科技有限公司</h1>
-            <p class="hero-subtitle">生产稳定 技术扎实 勇于创新 诚信经营</p>
-            <p class="hero-desc">Guangdong Huanan Fire Prevention Technology Co., Ltd.</p>
+            <h1 data-i18n="hero.title">广东华南防火科技有限公司</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">生产稳定 技术扎实 勇于创新 诚信经营</p>
+            <p class="hero-desc" data-i18n="hero.desc">Guangdong Huanan Fire Prevention Technology Co., Ltd.</p>
             <div class="hero-btns">
-                <a href="#products" class="btn btn-primary">了解产品</a>
-                <a href="#about" class="btn btn-outline">关于我们</a>
+                <a href="#products" class="btn btn-primary" data-i18n="hero.btn_products">了解产品</a>
+                <a href="#about" class="btn btn-outline" data-i18n="hero.btn_about">关于我们</a>
             </div>
         </div>
     </section>
@@ -51,33 +69,33 @@
     <section class="section" id="about">
         <div class="container">
             <div class="section-header">
-                <h2>关于我们</h2>
+                <h2 data-i18n="about.title">关于我们</h2>
                 <div class="divider"></div>
-                <p>Guangdong Huanan Fire Prevention Technology Co., Ltd.</p>
+                <p data-i18n="about.subtitle">Guangdong Huanan Fire Prevention Technology Co., Ltd.</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>广东华南防火科技有限公司位于东莞市道滘镇，主要经营铝合金防火窗、钢制防火窗、防火幕墙、防火隔断、高硼硅防火玻璃、复合隔热甲级防火玻璃、纳米水晶硅防火玻璃等产品。公司拥有防火门窗框架生产与深加工系统以及防火玻璃生产与深加工系统，具备稳定且完善的生产体系、严格的品质把控、贴心的售后服务。</p>
-                    <p>公司上游，广东华南新型材科技有限公司是南玻、信义离线LOW-E玻璃加盟商，耀皮在线LOW-E玻璃广东总代理。多家公司携手并进，采用一对一针对性服务，技术与知识储备优良，致力为客户提供全方面的服务，保证生产与供货的稳定性以及专业的产品与高质量。</p>
-                    <p>华南防火始终以客户为中心，坚守"心存敬畏，工致匠心"的核心价值观，重视人才的引进和培养，注重设备设施的现代化建设和科学化管理，拥有一批专业的技术人才，不断为客户提供一流的产品及服务。公司立足于粤港澳大湾区并逐步走向全国，承接展览中心、学校、医院、娱乐体育中心、办公楼、商住区等项目。</p>
-                    <p>华南防火秉承"汇聚科技之光，品质守护人居，服务助力小康，创新驱动世界"的伟大使命，用真诚服务社会，承载每一个华南人的梦想，不懈前行。</p>
+                    <p data-i18n="about.p1">广东华南防火科技有限公司位于东莞市道滘镇，主要经营铝合金防火窗、钢制防火窗、防火幕墙、防火隔断、高硼硅防火玻璃、复合隔热甲级防火玻璃、纳米水晶硅防火玻璃等产品。公司拥有防火门窗框架生产与深加工系统以及防火玻璃生产与深加工系统，具备稳定且完善的生产体系、严格的品质把控、贴心的售后服务。</p>
+                    <p data-i18n="about.p2">公司上游，广东华南新型材科技有限公司是南玻、信义离线LOW-E玻璃加盟商，耀皮在线LOW-E玻璃广东总代理。多家公司携手并进，采用一对一针对性服务，技术与知识储备优良，致力为客户提供全方面的服务，保证生产与供货的稳定性以及专业的产品与高质量。</p>
+                    <p data-i18n="about.p3">华南防火始终以客户为中心，坚守"心存敬畏，工致匠心"的核心价值观，重视人才的引进和培养，注重设备设施的现代化建设和科学化管理，拥有一批专业的技术人才，不断为客户提供一流的产品及服务。公司立足于粤港澳大湾区并逐步走向全国，承接展览中心、学校、医院、娱乐体育中心、办公楼、商住区等项目。</p>
+                    <p data-i18n="about.p4">华南防火秉承"汇聚科技之光，品质守护人居，服务助力小康，创新驱动世界"的伟大使命，用真诚服务社会，承载每一个华南人的梦想，不懈前行。</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
                         <span class="stat-number" data-target="300">0</span>
-                        <span class="stat-label">合作项目</span>
+                        <span class="stat-label" data-i18n="about.stat1">合作项目</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number" data-target="20">0</span>
-                        <span class="stat-label">专利证书</span>
+                        <span class="stat-label" data-i18n="about.stat2">专利证书</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number" data-target="10">0</span>
-                        <span class="stat-label">行业经验(年)</span>
+                        <span class="stat-label" data-i18n="about.stat3">行业经验(年)</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number" data-target="150">0</span>
-                        <span class="stat-label">服务客户</span>
+                        <span class="stat-label" data-i18n="about.stat4">服务客户</span>
                     </div>
                 </div>
             </div>
@@ -88,52 +106,52 @@
     <section class="section section-dark" id="products">
         <div class="container">
             <div class="section-header">
-                <h2>产品中心</h2>
+                <h2 data-i18n="products.title">产品中心</h2>
                 <div class="divider"></div>
-                <p>纳米水晶硅防火玻璃门窗深加工 · 代加工合作 · 市场推广</p>
+                <p data-i18n="products.subtitle">纳米水晶硅防火玻璃门窗深加工 · 代加工合作 · 市场推广</p>
             </div>
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-img-wrap">
                         <img src="images/products/铝合金防火窗.jpg" alt="铝合金防火窗">
                     </div>
-                    <h3>铝合金防火窗</h3>
-                    <p>110/120/125系列铝合金防火窗，兼具耐火完整性与美观性，适用于各类建筑外墙开口部位。</p>
+                    <h3 data-i18n="products.card1.title">铝合金防火窗</h3>
+                    <p data-i18n="products.card1.desc">110/120/125系列铝合金防火窗，兼具耐火完整性与美观性，适用于各类建筑外墙开口部位。</p>
                 </div>
                 <div class="product-card">
                     <div class="product-img-wrap">
                         <img src="images/products/钢制防火窗.jpg" alt="钢制防火窗">
                     </div>
-                    <h3>钢制防火门窗</h3>
-                    <p>甲级/乙级/丙级钢制防火窗，可开启与不可开启两种类型，满足不同防火分区需求。</p>
+                    <h3 data-i18n="products.card2.title">钢制防火门窗</h3>
+                    <p data-i18n="products.card2.desc">甲级/乙级/丙级钢制防火窗，可开启与不可开启两种类型，满足不同防火分区需求。</p>
                 </div>
                 <div class="product-card">
                     <div class="product-img-wrap">
                         <img src="images/products/幕墙系统.jpg" alt="幕墙系统">
                     </div>
-                    <h3>幕墙系统</h3>
-                    <p>框架式幕墙系统，配套中空玻璃与防火玻璃，在保证防火性能的同时实现建筑通透感。</p>
+                    <h3 data-i18n="products.card3.title">幕墙系统</h3>
+                    <p data-i18n="products.card3.desc">框架式幕墙系统，配套中空玻璃与防火玻璃，在保证防火性能的同时实现建筑通透感。</p>
                 </div>
                 <div class="product-card">
                     <div class="product-img-wrap">
                         <img src="images/products/防火玻璃隔断.jpg" alt="防火玻璃隔断">
                     </div>
-                    <h3>防火玻璃隔断</h3>
-                    <p>纳米水晶硅防火玻璃隔断系统，隔热型(A类)与非隔热型(C类)，耐火极限0.5h~3.0h。</p>
+                    <h3 data-i18n="products.card4.title">防火玻璃隔断</h3>
+                    <p data-i18n="products.card4.desc">纳米水晶硅防火玻璃隔断系统，隔热型(A类)与非隔热型(C类)，耐火极限0.5h~3.0h。</p>
                 </div>
                 <div class="product-card">
                     <div class="product-img-wrap">
                         <img src="images/products/防火玻璃.jpg" alt="防火玻璃">
                     </div>
-                    <h3>防火玻璃</h3>
-                    <p>复合隔热型、纳米水晶硅非隔热型、单片铯钾防火玻璃、高硼硅隔热防火玻璃等多种品类。</p>
+                    <h3 data-i18n="products.card5.title">防火玻璃</h3>
+                    <p data-i18n="products.card5.desc">复合隔热型、纳米水晶硅非隔热型、单片铯钾防火玻璃、高硼硅隔热防火玻璃等多种品类。</p>
                 </div>
                 <div class="product-card">
                     <div class="product-img-wrap">
                         <img src="images/products/断桥铝门窗.jpg" alt="断桥铝门窗">
                     </div>
-                    <h3>断桥铝门窗</h3>
-                    <p>采用断桥隔热铝型材，保温隔热隔音，搭配防火玻璃，美观与安全兼备。</p>
+                    <h3 data-i18n="products.card6.title">断桥铝门窗</h3>
+                    <p data-i18n="products.card6.desc">采用断桥隔热铝型材，保温隔热隔音，搭配防火玻璃，美观与安全兼备。</p>
                 </div>
             </div>
         </div>
@@ -143,82 +161,58 @@
     <section class="section" id="capability">
         <div class="container">
             <div class="section-header">
-                <h2>生产实力</h2>
+                <h2 data-i18n="capability.title">生产实力</h2>
                 <div class="divider"></div>
-                <p>国内外先进设备 · 完善的生产体系 · 严格的品质把控</p>
+                <p data-i18n="capability.subtitle">国内外先进设备 · 完善的生产体系 · 严格的品质把控</p>
             </div>
             <div class="capability-grid">
                 <div class="cap-item" onclick="openLightbox(this)">
                     <img src="images/factory/img_4227.jpg" alt="厂房外观" loading="lazy">
-                    <div class="cap-overlay">
-                        <span>1. 厂房外观</span>
-                    </div>
+                    <div class="cap-overlay"><span data-i18n="capability.item1">1. 厂房外观</span></div>
                 </div>
                 <div class="cap-item" onclick="openLightbox(this)">
                     <img src="images/gate/img_4224.jpg" alt="公司大门" loading="lazy">
-                    <div class="cap-overlay">
-                        <span>2. 公司大门</span>
-                    </div>
+                    <div class="cap-overlay"><span data-i18n="capability.item2">2. 公司大门</span></div>
                 </div>
                 <div class="cap-item" onclick="openLightbox(this)">
                     <img src="images/capability/3.jpg" alt="切割" loading="lazy">
-                    <div class="cap-overlay">
-                        <span>3. 切割</span>
-                    </div>
+                    <div class="cap-overlay"><span data-i18n="capability.item3">3. 切割</span></div>
                 </div>
                 <div class="cap-item" onclick="openLightbox(this)">
                     <img src="images/capability/9.jpg" alt="磨边" loading="lazy">
-                    <div class="cap-overlay">
-                        <span>4. 磨边</span>
-                    </div>
+                    <div class="cap-overlay"><span data-i18n="capability.item4">4. 磨边</span></div>
                 </div>
                 <div class="cap-item" onclick="openLightbox(this)">
                     <img src="images/capability/5.jpg" alt="钢化生产线" loading="lazy">
-                    <div class="cap-overlay">
-                        <span>5. 钢化生产线</span>
-                    </div>
+                    <div class="cap-overlay"><span data-i18n="capability.item5">5. 钢化生产线</span></div>
                 </div>
                 <div class="cap-item" onclick="openLightbox(this)">
                     <img src="images/capability/7.jpg" alt="夹角玻璃生产线" loading="lazy">
-                    <div class="cap-overlay">
-                        <span>6. 夹角玻璃生产线</span>
-                    </div>
+                    <div class="cap-overlay"><span data-i18n="capability.item6">6. 夹角玻璃生产线</span></div>
                 </div>
                 <div class="cap-item" onclick="openLightbox(this)">
                     <img src="images/capability/6.jpg" alt="加热炉" loading="lazy">
-                    <div class="cap-overlay">
-                        <span>7. 加热炉</span>
-                    </div>
+                    <div class="cap-overlay"><span data-i18n="capability.item7">7. 加热炉</span></div>
                 </div>
                 <div class="cap-item" onclick="openLightbox(this)">
                     <img src="images/capability/8.jpg" alt="中空玻璃生产线" loading="lazy">
-                    <div class="cap-overlay">
-                        <span>8. 中空玻璃生产线</span>
-                    </div>
+                    <div class="cap-overlay"><span data-i18n="capability.item8">8. 中空玻璃生产线</span></div>
                 </div>
                 <div class="cap-item" onclick="openLightbox(this)">
                     <img src="images/capability/10.jpg" alt="中空玻璃" loading="lazy">
-                    <div class="cap-overlay">
-                        <span>9. 中空玻璃</span>
-                    </div>
+                    <div class="cap-overlay"><span data-i18n="capability.item9">9. 中空玻璃</span></div>
                 </div>
                 <div class="cap-item" onclick="openLightbox(this)">
                     <img src="images/workshop/img_4220.jpg" alt="加工设备" loading="lazy">
-                    <div class="cap-overlay">
-                        <span>10. 加工设备</span>
-                    </div>
+                    <div class="cap-overlay"><span data-i18n="capability.item10">10. 加工设备</span></div>
                 </div>
                 <div class="cap-item" onclick="openLightbox(this)">
                     <img src="images/capability/11.jpg" alt="夹胶玻璃" loading="lazy">
-                    <div class="cap-overlay">
-                        <span>11. 夹胶玻璃</span>
-                    </div>
+                    <div class="cap-overlay"><span data-i18n="capability.item11">11. 夹胶玻璃</span></div>
                 </div>
                 <div class="cap-item" onclick="openLightbox(this)">
                     <img src="images/warehouse/img_4179.jpg" alt="物料仓库" loading="lazy">
-                    <div class="cap-overlay">
-                        <span>12. 物料仓库</span>
-                    </div>
+                    <div class="cap-overlay"><span data-i18n="capability.item12">12. 物料仓库</span></div>
                 </div>
             </div>
         </div>
@@ -237,40 +231,40 @@
     <section class="section section-dark" id="certificates">
         <div class="container">
             <div class="section-header">
-                <h2>资质证书</h2>
+                <h2 data-i18n="certificates.title">资质证书</h2>
                 <div class="divider"></div>
-                <p>权威认证 · 品质保证</p>
+                <p data-i18n="certificates.subtitle">权威认证 · 品质保证</p>
             </div>
             <div class="certs-grid">
                 <div class="cert-card">
                     <div class="cert-icon">&#10003;</div>
-                    <h4>消防产品认证证书</h4>
-                    <p>国家消防产品质量监督检验中心</p>
+                    <h4 data-i18n="certificates.card1.title">消防产品认证证书</h4>
+                    <p data-i18n="certificates.card1.desc">国家消防产品质量监督检验中心</p>
                 </div>
                 <div class="cert-card">
                     <div class="cert-icon">&#10003;</div>
-                    <h4>纳米水晶硅防火玻璃</h4>
-                    <p>复合隔热型 A类 防火玻璃</p>
+                    <h4 data-i18n="certificates.card2.title">纳米水晶硅防火玻璃</h4>
+                    <p data-i18n="certificates.card2.desc">复合隔热型 A类 防火玻璃</p>
                 </div>
                 <div class="cert-card">
                     <div class="cert-icon">&#10003;</div>
-                    <h4>高硼硅防火玻璃</h4>
-                    <p>全钢化非隔热型 耐火3小时</p>
+                    <h4 data-i18n="certificates.card3.title">高硼硅防火玻璃</h4>
+                    <p data-i18n="certificates.card3.desc">全钢化非隔热型 耐火3小时</p>
                 </div>
                 <div class="cert-card">
                     <div class="cert-icon">&#10003;</div>
-                    <h4>单片铯钾防火玻璃</h4>
-                    <p>高强度 高耐候性 耐紫外线</p>
+                    <h4 data-i18n="certificates.card4.title">单片铯钾防火玻璃</h4>
+                    <p data-i18n="certificates.card4.desc">高强度 高耐候性 耐紫外线</p>
                 </div>
                 <div class="cert-card">
                     <div class="cert-icon">&#10003;</div>
-                    <h4>南玻·信义加盟商</h4>
-                    <p>离线LOW-E玻璃合作商</p>
+                    <h4 data-i18n="certificates.card5.title">南玻·信义加盟商</h4>
+                    <p data-i18n="certificates.card5.desc">离线LOW-E玻璃合作商</p>
                 </div>
                 <div class="cert-card">
                     <div class="cert-icon">&#10003;</div>
-                    <h4>高新技术企业</h4>
-                    <p>科技创新 驱动发展</p>
+                    <h4 data-i18n="certificates.card6.title">高新技术企业</h4>
+                    <p data-i18n="certificates.card6.desc">科技创新 驱动发展</p>
                 </div>
             </div>
         </div>
@@ -280,51 +274,51 @@
     <section class="section section-dark" id="projects">
         <div class="container">
             <div class="section-header">
-                <h2>完工项目</h2>
+                <h2 data-i18n="projects.title">完工项目</h2>
                 <div class="divider"></div>
-                <p>匠心工程 · 实力见证</p>
+                <p data-i18n="projects.subtitle">匠心工程 · 实力见证</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-img" style="background-image:url('images/projects/project1.jpg')"></div>
                     <div class="project-info">
-                        <h4>大型商业综合体</h4>
-                        <p>防火门窗 + 玻璃幕墙系统</p>
+                        <h4 data-i18n="projects.card1.title">大型商业综合体</h4>
+                        <p data-i18n="projects.card1.desc">防火门窗 + 玻璃幕墙系统</p>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-img" style="background-image:url('images/projects/project2.png')"></div>
                     <div class="project-info">
-                        <h4>办公大楼项目</h4>
-                        <p>断桥铝门窗 + 防火玻璃隔断</p>
+                        <h4 data-i18n="projects.card2.title">办公大楼项目</h4>
+                        <p data-i18n="projects.card2.desc">断桥铝门窗 + 防火玻璃隔断</p>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-img" style="background-image:url('images/projects/project3.jpg')"></div>
                     <div class="project-info">
-                        <h4>医院医疗项目</h4>
-                        <p>甲级防火门 + 防火窗系统</p>
+                        <h4 data-i18n="projects.card3.title">医院医疗项目</h4>
+                        <p data-i18n="projects.card3.desc">甲级防火门 + 防火窗系统</p>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-img" style="background-image:url('images/projects/project4.jpg')"></div>
                     <div class="project-info">
-                        <h4>学校工程</h4>
-                        <p>铝合金门窗 + 防火玻璃隔断</p>
+                        <h4 data-i18n="projects.card4.title">学校工程</h4>
+                        <p data-i18n="projects.card4.desc">铝合金门窗 + 防火玻璃隔断</p>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-img" style="background-image:url('images/projects/project5.jpg')"></div>
                     <div class="project-info">
-                        <h4>住宅小区项目</h4>
-                        <p>断桥铝门窗系统</p>
+                        <h4 data-i18n="projects.card5.title">住宅小区项目</h4>
+                        <p data-i18n="projects.card5.desc">断桥铝门窗系统</p>
                     </div>
                 </div>
                 <a href="project-cases.html" class="project-card" style="text-decoration:none;display:block">
                     <div class="project-img" style="background:linear-gradient(135deg,#1a1a2e,#0f3460);display:flex;align-items:center;justify-content:center;font-size:2rem;color:#e74c3c">+</div>
                     <div class="project-info">
-                        <h4>查看全部案例</h4>
-                        <p>港龙城 · 电商城 · 海纳 · 御海湾 等</p>
+                        <h4 data-i18n="projects.viewall.title">查看全部案例</h4>
+                        <p data-i18n="projects.viewall.desc">港龙城 · 电商城 · 海纳 · 御海湾 等</p>
                     </div>
                 </a>
             </div>
@@ -335,40 +329,40 @@
     <section class="section" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2>联系我们</h2>
+                <h2 data-i18n="contact.title">联系我们</h2>
                 <div class="divider"></div>
-                <p>期待与您的合作</p>
+                <p data-i18n="contact.subtitle">期待与您的合作</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <span class="contact-label">公司名称</span>
-                        <span>广东华南防火科技有限公司</span>
+                        <span class="contact-label" data-i18n="contact.label_name">公司名称</span>
+                        <span data-i18n="contact.value_name">广东华南防火科技有限公司</span>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-label">联系人</span>
-                        <span>翁生</span>
+                        <span class="contact-label" data-i18n="contact.label_contact">联系人</span>
+                        <span data-i18n="contact.value_contact">翁生</span>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-label">地址</span>
-                        <span>广东省东莞市道滘镇南丫亨龙工业区华南防火科技有限公司</span>
+                        <span class="contact-label" data-i18n="contact.label_address">地址</span>
+                        <span data-i18n="contact.value_address">广东省东莞市道滘镇南丫亨龙工业区华南防火科技有限公司</span>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-label">电话</span>
-                        <span>13316330906</span>
+                        <span class="contact-label" data-i18n="contact.label_phone">电话</span>
+                        <span data-i18n="contact.value_phone">13316330906</span>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-label">合作上游</span>
-                        <span>广东华南新型材科技有限公司</span>
+                        <span class="contact-label" data-i18n="contact.label_partner">合作上游</span>
+                        <span data-i18n="contact.value_partner">广东华南新型材科技有限公司</span>
                     </div>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm">
-                        <input type="text" placeholder="您的姓名" required>
-                        <input type="tel" placeholder="联系电话" required>
-                        <input type="email" placeholder="电子邮箱">
-                        <textarea rows="4" placeholder="留言内容" required></textarea>
-                        <button type="submit" class="btn btn-primary">提交留言</button>
+                        <input type="text" data-i18n-attr="placeholder:contact.form_name" placeholder="您的姓名" required>
+                        <input type="tel" data-i18n-attr="placeholder:contact.form_phone" placeholder="联系电话" required>
+                        <input type="email" data-i18n-attr="placeholder:contact.form_email" placeholder="电子邮箱">
+                        <textarea rows="4" data-i18n-attr="placeholder:contact.form_message" placeholder="留言内容" required></textarea>
+                        <button type="submit" class="btn btn-primary" data-i18n="contact.form_submit">提交留言</button>
                     </form>
                 </div>
             </div>
@@ -378,7 +372,7 @@
     <!-- ========== Footer ========== -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 广东华南防火科技有限公司 | Guangdong Huanan Fire Prevention Technology Co., Ltd.</p>
+            <p data-i18n="footer.copyright">© 2026 广东华南防火科技有限公司 | Guangdong Huanan Fire Prevention Technology Co., Ltd.</p>
         </div>
     </footer>
 
