@@ -3,9 +3,7 @@
   "lang.zh": "中文",
   "lang.en": "English",
   "lang.th": "ไทย",
-
   "site.title": "Guangdong Huanan Fire Prevention Technology Co., Ltd.",
-
   "nav.about": "About Us",
   "nav.products": "Products",
   "nav.capability": "Capability",
@@ -13,25 +11,21 @@
   "nav.cases": "Case Studies",
   "nav.projects": "Projects",
   "nav.contact": "Contact",
-
   "hero.title": "Guangdong Huanan Fire Prevention Technology Co., Ltd.",
   "hero.subtitle": "Stable Production · Solid Technology · Bold Innovation · Integrity in Business",
   "hero.desc": "Professional manufacturer of fire-rated doors, windows, curtain walls and glass",
   "hero.btn_products": "View Products",
   "hero.btn_about": "About Us",
-
   "about.title": "About Us",
   "about.subtitle": "Guangdong Huanan Fire Prevention Technology Co., Ltd.",
   "about.p1": "Guangdong Huanan Fire Prevention Technology Co., Ltd. is located in Daojiao Town, Dongguan City. We mainly produce aluminum fire-rated windows, steel fire-rated windows, fire-rated curtain walls, fire-rated partitions, high borosilicate fire-rated glass, composite insulated Class A fire-rated glass, and nano-crystal-silica fire-rated glass. With complete production lines for fire-rated door/window frames and deep-processing fire-rated glass, we deliver a stable production system, strict quality control and attentive after-sales service.",
   "about.p2": "Our upstream partner, Guangdong Huanan New Material Technology Co., Ltd., is an authorized dealer of CSG and Xinyi offline LOW-E glass and the exclusive Guangdong agent for Yaopi online LOW-E glass. Working together with one-on-one service, strong technical expertise and solid knowledge, we provide all-round support for our customers, ensuring stable production and supply with professional products of the highest quality.",
   "about.p3": "Huanan Fire Prevention always puts customers first, holding the core values of \"Awe in the heart, craftsmanship in the work\". We invest in talent, modern facilities and scientific management, backed by a professional technical team, to deliver first-class products and services to our customers. Based in the Guangdong-Hong Kong-Macao Greater Bay Area and expanding nationwide, we undertake projects including exhibition centers, schools, hospitals, sports and entertainment centers, office buildings, and mixed-use residential complexes.",
   "about.p4": "Embracing the great mission of \"Bringing the light of technology, protecting quality of life, helping build a moderately prosperous society, and driving the world with innovation\", Huanan Fire Prevention serves society with sincerity, carrying the dreams of every Huanan person forward without pause.",
-
   "about.stat1": "Projects Delivered",
   "about.stat2": "Patents & Certs",
   "about.stat3": "Years of Experience",
   "about.stat4": "Clients Served",
-
   "products.title": "Products",
   "products.subtitle": "Nano-crystal-silica fire-rated glass & door/window deep processing · OEM partnership · Market expansion",
   "products.card1.title": "Aluminum Fire-Rated Windows",
@@ -46,7 +40,6 @@
   "products.card5.desc": "Comprehensive range: composite insulated, nano-crystal-silica non-insulated, single cesium-potassium, and high-borosilicate fire-rated glass.",
   "products.card6.title": "Thermal-Break Aluminum Doors & Windows",
   "products.card6.desc": "Thermal-break aluminum profiles with excellent insulation and soundproofing, paired with fire-rated glass for both beauty and safety.",
-
   "capability.title": "Manufacturing Capability",
   "capability.subtitle": "Advanced domestic and international equipment · Complete production system · Strict quality control",
   "capability.item1": "1. Factory Exterior",
@@ -61,7 +54,6 @@
   "capability.item10": "10. Processing Equipment",
   "capability.item11": "11. Laminated Glass",
   "capability.item12": "12. Material Warehouse",
-
   "certificates.title": "Certificates & Qualifications",
   "certificates.subtitle": "Authoritative Certification · Quality Assurance",
   "certificates.card1.title": "Fire Product Certification",
@@ -76,7 +68,6 @@
   "certificates.card5.desc": "Offline LOW-E Glass Distributor",
   "certificates.card6.title": "High-Tech Enterprise",
   "certificates.card6.desc": "Technology Innovation Drives Development",
-
   "projects.title": "Completed Projects",
   "projects.subtitle": "Craftsmanship · Strength in Action",
   "projects.card1.title": "Large Commercial Complex",
@@ -91,7 +82,6 @@
   "projects.card5.desc": "Thermal-break aluminum door & window system",
   "projects.viewall.title": "View All Cases",
   "projects.viewall.desc": "Ganglong City · E-commerce City · Haina · Yuhai Bay and more",
-
   "contact.title": "Contact Us",
   "contact.subtitle": "Looking forward to working with you",
   "contact.label_name": "Company",
@@ -109,9 +99,7 @@
   "contact.form_email": "Email",
   "contact.form_message": "Your Message",
   "contact.form_submit": "Submit Inquiry",
-
   "footer.copyright": "© 2026 Guangdong Huanan Fire Prevention Technology Co., Ltd. | All rights reserved.",
-
   "cases.page_title": "Project Cases - Guangdong Huanan Fire Prevention Technology Co., Ltd.",
   "cases.back": "← Back to Home",
   "cases.h1": "Completed Project Cases",
@@ -125,7 +113,6 @@
   "cases.section3.title": "Manufacturing Capability",
   "cases.section3.tag": "Workshop Tour",
   "cases.section3.desc": "Advanced domestic and international glass deep-processing equipment with strict quality management.",
-
   "cases.case1.title": "Ganglong City Project",
   "cases.case1.loc": "📍 Commercial Complex",
   "cases.case1.desc": "Large commercial complex curtain wall and door/window project, using glass curtain wall and aluminum panel systems to create a modern commercial space.",
@@ -150,7 +137,6 @@
   "cases.case8.title": "Shanwei Polytechnic",
   "cases.case8.loc": "📍 Shanwei City",
   "cases.case8.desc": "Campus curtain wall and door/window project with high-standard safety glass systems, providing reliable protection for educational buildings.",
-
   "cases.case9.title": "Luhe Poverty-Alleviation Plant",
   "cases.case9.loc": "📍 Luhe County, Shanwei",
   "cases.case9.desc": "Aluminum door/window project, 50-series casement windows approximately 1,452 m², 50-series louver windows, 5mm light-gray tempered glass, completed in 2019.",
@@ -179,18 +165,18 @@
   "cases.case13.desc": "Exterior decoration project, with door/window approximately 238 m², glass curtain wall 1,216 m², aluminum panel 1,081 m², 6mm LOW-E insulating tempered glass.",
   "cases.case13.meta1v": "6mm LOW-E + 12mmA + 6mm insulating tempered",
   "cases.case13.meta2v": "2020-2021",
-
   "cases.factory.cut": "Original Sheet Cutting (Fully Automatic Computer Cutting Line)",
   "cases.factory.edge": "Edge Grinding (Fully Automatic High-Speed 4-Side Precision Grinder)",
   "cases.factory.hollow": "Insulating Glass (Fully Automatic Glazing Line)",
   "cases.factory.tempered": "Tempering (Forced Convection Double-Chamber Tempering Furnace)",
   "cases.factory.laminated": "Lamination (Dust-Free Lamination Workshop)",
-
   "footer.cases.copyright": "© 2026 Guangdong Huanan Fire Prevention Technology Co., Ltd. | Project Case Studies",
-
   "alt.partner.huanan": "Huanan Group",
   "alt.partner.arc": "Partner",
   "alt.partner.main": "Huanan Fire Prevention",
   "alt.hero": "Guangdong Huanan Fire Prevention",
-  "alt.menu": "Menu"
+  "alt.menu": "Menu",
+  "whatsapp.url": "https://wa.me/8613316330906?text=Hello%2C%20I%27m%20interested%20in%20your%20fire-resistant%20windows%2C%20doors%2C%20and%20glass%20curtain%20wall%20systems.",
+  "whatsapp.label": "Chat on WhatsApp",
+  "whatsapp.text": "Hello, I'm interested in your fire-resistant windows, doors, and glass curtain wall systems."
 }
