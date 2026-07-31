@@ -178,5 +178,11 @@
   "alt.menu": "菜单",
   "whatsapp.url": "https://wa.me/8613316330906?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E5%92%A8%E8%AF%A2%E8%B4%B5%E5%8F%B8%E7%9A%84%E9%98%B2%E7%81%AB%E9%97%A8%E7%AA%97/%E7%8E%BB%E7%92%83%E5%B9%95%E5%A2%99%E4%BA%A7%E5%93%81%E3%80%82",
   "whatsapp.label": "微信/WhatsApp 联系我们",
-  "whatsapp.text": "你好，我想咨询贵司的防火门窗/玻璃幕墙产品。"
+  "whatsapp.text": "你好，我想咨询贵司的防火门窗/玻璃幕墙产品。",
+  "wechat.label": "微信联系我们",
+  "wechat.modal_title": "扫码添加微信",
+  "wechat.modal_subtitle": "用微信扫一扫，加好友咨询",
+  "wechat.copy": "复制",
+  "wechat.copied": "已复制",
+  "wechat.tip": "国内客户专用 · 微信沟通最方便"
 }
