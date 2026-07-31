@@ -10,10 +10,18 @@ html {
 }
 
 body {
-    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+    font-family:
+        system-ui, -apple-system, "Segoe UI",
+        "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", "微软雅黑",
+        "Noto Sans CJK SC", "Source Han Sans SC",
+        "Helvetica Neue", Arial, sans-serif;
     color: #333;
     line-height: 1.6;
     background: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 a { text-decoration: none; color: inherit; }
