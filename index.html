@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="site.title">广东华南防火科技有限公司</title>
+    <meta name="description" content="广东华南防火科技有限公司 — 专业防火门窗、防火玻璃、幕墙系统制造商。生产铝合金防火窗、钢制防火门窗、纳米水晶硅防火玻璃、防火玻璃隔断，承接各类建筑防火工程。">
+    <meta name="keywords" content="防火窗,防火门,防火玻璃,幕墙系统,铝合金防火窗,钢制防火窗,防火玻璃隔断,华南防火,广东防火门窗">
+    <meta property="og:title" content="广东华南防火科技有限公司">
+    <meta property="og:description" content="专业防火门窗、防火玻璃、幕墙系统制造商">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wengjingkai2001-tech.github.io/huanan-fireproof/">
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
     <link rel="stylesheet" href="css/style.css">
     <!-- 百度统计占位：把 _hmt.push(['_setAccount', '156dc9d0243376267567c404c79a4f28']); 里的 156dc9d0243376267567c404c79a4f28 替换成你的百度统计 ID -->
     <script>
@@ -357,12 +364,13 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" data-i18n-attr="placeholder:contact.form_name" placeholder="您的姓名" required>
-                        <input type="tel" data-i18n-attr="placeholder:contact.form_phone" placeholder="联系电话" required>
-                        <input type="email" data-i18n-attr="placeholder:contact.form_email" placeholder="电子邮箱">
-                        <textarea rows="4" data-i18n-attr="placeholder:contact.form_message" placeholder="留言内容" required></textarea>
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <input type="text" name="name" data-i18n-attr="placeholder:contact.form_name" placeholder="您的姓名" required>
+                        <input type="tel" name="phone" data-i18n-attr="placeholder:contact.form_phone" placeholder="联系电话" required>
+                        <input type="email" name="email" data-i18n-attr="placeholder:contact.form_email" placeholder="电子邮箱">
+                        <textarea name="message" rows="4" data-i18n-attr="placeholder:contact.form_message" placeholder="留言内容" required></textarea>
                         <button type="submit" class="btn btn-primary" data-i18n="contact.form_submit">提交留言</button>
+                        <div class="form-status" id="formStatus"></div>
                     </form>
                 </div>
             </div>
