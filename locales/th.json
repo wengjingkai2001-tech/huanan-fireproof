@@ -184,5 +184,18 @@
   "wechat.modal_subtitle": "เปิด WeChat แล้วสแกน QR นี้",
   "wechat.copy": "คัดลอก",
   "wechat.copied": "คัดลอกแล้ว",
-  "wechat.tip": "สำหรับลูกค้าในจีนแผ่นดินใหญ่"
+  "wechat.tip": "สำหรับลูกค้าในจีนแผ่นดินใหญ่",
+  "cases.section4.title": "วิดีโอหน้างานจริง",
+  "cases.section4.tag": "วิดีโอ",
+  "cases.section4.desc": "วิดีโอหน้างานจริง — การติดตั้งผนังกระจกและราวกันตก",
+  "videos.v1.title": "โครงการ Poly Yuejiangtai",
+  "videos.v1.sub": "การติดตั้งราวกันตกกระจกระเบียง",
+  "videos.v2.title": "Shenzhen Nanshan Yunkai",
+  "videos.v2.sub": "ยกผนังกระจกขนาดใหญ่",
+  "videos.v3.title": "Jinshan Valley Villa",
+  "videos.v3.sub": "ยกราวกันตกกระจกหน้างาน",
+  "videos.v4.title": "โครงการ Hongmei Shoukai",
+  "videos.v4.sub": "ติดตั้งกรอบหน้าต่าง",
+  "video.title": "วิดีโอโครงการ",
+  "video.hint": "คลิกนอกวิดีโอหรือกด Esc เพื่อปิด"
 }
