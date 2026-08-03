@@ -184,5 +184,18 @@
   "wechat.modal_subtitle": "Open WeChat and scan the QR code",
   "wechat.copy": "Copy",
   "wechat.copied": "Copied",
-  "wechat.tip": "For Mainland China customers"
+  "wechat.tip": "For Mainland China customers",
+  "cases.section4.title": "Construction Footage",
+  "cases.section4.tag": "Video",
+  "cases.section4.desc": "Real project site videos — glass curtain wall and railing installation",
+  "videos.v1.title": "Poly Yuejiangtai Project",
+  "videos.v1.sub": "Balcony glass railing installation",
+  "videos.v2.title": "Shenzhen Nanshan Yunkai Mansion",
+  "videos.v2.sub": "Large glass curtain wall hoisting",
+  "videos.v3.title": "Jinshan Valley Villa",
+  "videos.v3.sub": "Glass railing on-site hoisting",
+  "videos.v4.title": "Hongmei Shoukai Project",
+  "videos.v4.sub": "Window frame installation",
+  "video.title": "Project video",
+  "video.hint": "Click outside the video or press Esc to close"
 }
