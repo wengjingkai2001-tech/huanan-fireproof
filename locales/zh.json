@@ -184,5 +184,18 @@
   "wechat.modal_subtitle": "用微信扫一扫，加好友咨询",
   "wechat.copy": "复制",
   "wechat.copied": "已复制",
-  "wechat.tip": "国内客户专用 · 微信沟通最方便"
+  "wechat.tip": "国内客户专用 · 微信沟通最方便",
+  "cases.section4.title": "工地实拍",
+  "cases.section4.tag": "视频",
+  "cases.section4.desc": "真实项目现场视频 · 玻璃幕墙与护栏安装实拍",
+  "videos.v1.title": "保利阅江台项目",
+  "videos.v1.sub": "阳台玻璃护栏安装",
+  "videos.v2.title": "深圳南山云开府",
+  "videos.v2.sub": "大型玻璃幕墙吊装",
+  "videos.v3.title": "金山谷别墅",
+  "videos.v3.sub": "玻璃护栏现场吊装",
+  "videos.v4.title": "洪梅首开项目",
+  "videos.v4.sub": "窗框安装实拍",
+  "video.title": "项目视频",
+  "video.hint": "点击视频外区域或按 Esc 关闭"
 }
