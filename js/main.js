@@ -196,3 +196,44 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') nextImage();
     if (e.key === 'ArrowLeft') prevImage();
 });
+
+// ===== Construction Video Lightbox (project-cases) =====
+(function() {
+    const lightbox = document.getElementById('video-lightbox');
+    const video    = document.getElementById('video-lightbox-video');
+    const nameEl   = document.getElementById('video-lightbox-name');
+    const btnClose = document.getElementById('video-lightbox-close');
+    if (!lightbox || !video) return;
+
+    function open(src, title) {
+        video.src = src;
+        if (nameEl && title) nameEl.textContent = title;
+        lightbox.hidden = false;
+        requestAnimationFrame(() => lightbox.classList.add('is-open'));
+        // best-effort play (autoplay may be blocked until user gesture, but click counts)
+        try { video.play(); } catch (_) {}
+    }
+    function close() {
+        lightbox.classList.remove('is-open');
+        try { video.pause(); } catch (_) {}
+        setTimeout(() => {
+            lightbox.hidden = true;
+            video.removeAttribute('src');
+            video.load();
+        }, 200);
+    }
+
+    document.querySelectorAll('.video-card').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const src   = btn.getAttribute('data-video-src');
+            const cap   = btn.querySelector('.video-card__caption strong');
+            const title = cap ? cap.textContent.trim() : '';
+            if (src) open(src, title);
+        });
+    });
+    if (btnClose) btnClose.addEventListener('click', close);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && !lightbox.hidden) close();
+    });
+})();
