@@ -237,3 +237,67 @@ document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !lightbox.hidden) close();
     });
 })();
+
+/* ===== Certificate image lightbox ===== */
+(function() {
+  function getCaption(link) {
+    var lang = (document.documentElement.lang || 'zh').toLowerCase();
+    var key = 'data-caption-' + lang;
+    // Fall back chain: lang -> zh -> empty
+    return link.getAttribute(key) || link.getAttribute('data-caption-zh') || '';
+  }
+  // Build the lightbox element once
+  var lb = document.createElement('div');
+  lb.className = 'img-lightbox';
+  lb.setAttribute('role', 'dialog');
+  lb.setAttribute('aria-modal', 'true');
+  lb.innerHTML = '<div class="img-lightbox__inner">' +
+                   '<button type="button" class="img-lightbox__close" aria-label="Close">&times;</button>' +
+                   '<img class="img-lightbox__img" alt="">' +
+                 '</div>';
+  document.body.appendChild(lb);
+  var lbImg = lb.querySelector('.img-lightbox__img');
+  var lbClose = lb.querySelector('.img-lightbox__close');
+
+  function openLb(src, caption) {
+    lbImg.src = src;
+    lbImg.alt = caption || '';
+    lb.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLb() {
+    lb.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  lbClose.addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e) {
+    if (e.target === lb) closeLb();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lb.classList.contains('is-open')) closeLb();
+  });
+
+  // Wire up all cert thumbnails
+  function bind() {
+    document.querySelectorAll('.js-cert').forEach(function(link) {
+      if (link._certBound) return;
+      link._certBound = true;
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var src = link.getAttribute('href');
+        openLb(src, getCaption(link));
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bind);
+  } else {
+    bind();
+  }
+  // Re-bind after i18n language change in case DOM is replaced
+  if (window.i18n && typeof window.i18n.onChange === 'function') {
+    window.i18n.onChange(bind);
+  } else {
+    document.addEventListener('i18n:change', bind);
+  }
+})();
