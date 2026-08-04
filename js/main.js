@@ -348,6 +348,38 @@ document.addEventListener('keydown', (e) => {
   modal.setAttribute('aria-modal', 'true');
   document.body.appendChild(modal);
 
+  // Build a self-contained video lightbox (so we don't depend on
+  // #video-lightbox being present in the current HTML page).
+  // If the page already has one (e.g. project-cases.html), reuse it.
+  var videoLb = document.getElementById('video-lightbox');
+  if (!videoLb) {
+    videoLb = document.createElement('div');
+    videoLb.id = 'video-lightbox';
+    videoLb.className = 'video-lightbox';
+    videoLb.hidden = true;
+    videoLb.innerHTML =
+      '<div class="video-lightbox__inner">' +
+        '<button type="button" class="video-lightbox__close" id="video-lightbox-close" aria-label="Close">&times;</button>' +
+        '<video class="video-lightbox__video" id="video-lightbox-video" controls playsinline></video>' +
+        '<div class="video-lightbox__title" id="video-lightbox-name"></div>' +
+      '</div>';
+    document.body.appendChild(videoLb);
+  }
+  var videoEl = document.getElementById('video-lightbox-video');
+  var nameEl = document.getElementById('video-lightbox-name');
+  var videoClose = document.getElementById('video-lightbox-close');
+  function closeVideoLb() {
+    videoLb.classList.remove('is-open');
+    try { videoEl.pause(); } catch (_) {}
+    setTimeout(function() {
+      videoLb.hidden = true;
+      videoEl.removeAttribute('src');
+      videoEl.load();
+    }, 200);
+  }
+  if (videoClose) videoClose.addEventListener('click', closeVideoLb);
+  videoLb.addEventListener('click', function(e) { if (e.target === videoLb) closeVideoLb(); });
+
   function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, function(c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
@@ -365,7 +397,7 @@ document.addEventListener('keydown', (e) => {
     var html = '<div class="proj-modal__header">' +
                  '<div><span class="proj-modal__title">' + escapeHtml(title) + '</span>' +
                    '<span class="proj-modal__count">' + items.length + '</span></div>' +
-                 '<button type="button" class="proj-modal__close" aria-label="Close">��</button>' +
+                 '<button type="button" class="proj-modal__close" aria-label="Close">&times;</button>' +
                '</div>' +
                '<div class="proj-modal__body">' +
                  '<div class="proj-modal__grid">' +
@@ -408,17 +440,12 @@ document.addEventListener('keydown', (e) => {
     var type = el.getAttribute('data-type');
     var src = el.getAttribute('data-src');
     if (type === 'video') {
-      // Reuse existing video lightbox
-      var videoLb = document.getElementById('video-lightbox');
-      var videoEl = document.getElementById('video-lightbox-video');
-      var nameEl = document.getElementById('video-lightbox-name');
-      if (videoLb && videoEl) {
-        videoEl.src = src;
-        if (nameEl) nameEl.textContent = '';
-        videoLb.hidden = false;
-        requestAnimationFrame(function() { videoLb.classList.add('is-open'); });
-        try { videoEl.play(); } catch (_) {}
-      }
+      // Use the video lightbox (either pre-existing or just-created above)
+      videoEl.src = src;
+      if (nameEl) nameEl.textContent = '';
+      videoLb.hidden = false;
+      requestAnimationFrame(function() { videoLb.classList.add('is-open'); });
+      try { videoEl.play(); } catch (_) {}
     } else {
       // Reuse existing img lightbox (img-lightbox from certificates)
       var imgLb = document.querySelector('.img-lightbox');
@@ -434,7 +461,11 @@ document.addEventListener('keydown', (e) => {
 
   // Esc closes proj-modal first, then lets lightbox handlers take over
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeModal();
+    } else if (e.key === 'Escape' && videoLb && !videoLb.hidden) {
+      closeVideoLb();
+    }
   });
 
   // Wire up project cards
