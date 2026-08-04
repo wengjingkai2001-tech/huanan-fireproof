@@ -301,3 +301,162 @@ document.addEventListener('keydown', (e) => {
     document.addEventListener('i18n:change', bind);
   }
 })();
+
+
+/* ===== Project media modal (�����˵�) ===== */
+(function() {
+  // Media data per project id
+  // 'i' = image, 'v' = video; auto-derives urls in the standard order
+  var PROJECTS = {
+    'dongguan-huayangnian': { kind: 'videos-first', items: [
+      { type: 'video', src: 'images/projects/dongguan-huayangnian/vid-01.mp4', thumb: 'images/projects/dongguan-huayangnian/thumb-01.jpg', name: 'vid-01' },
+      { type: 'video', src: 'images/projects/dongguan-huayangnian/vid-02.mp4', thumb: 'images/projects/dongguan-huayangnian/thumb-02.jpg', name: 'vid-02' },
+      { type: 'video', src: 'images/projects/dongguan-huayangnian/vid-03.mp4', thumb: 'images/projects/dongguan-huayangnian/thumb-03.jpg', name: 'vid-03' },
+      { type: 'video', src: 'images/projects/dongguan-huayangnian/vid-04.mp4', thumb: 'images/projects/dongguan-huayangnian/thumb-04.jpg', name: 'vid-04' },
+      { type: 'video', src: 'images/projects/dongguan-huayangnian/vid-05.mp4', thumb: 'images/projects/dongguan-huayangnian/thumb-05.jpg', name: 'vid-05' },
+      { type: 'video', src: 'images/projects/dongguan-huayangnian/vid-06.mp4', thumb: 'images/projects/dongguan-huayangnian/thumb-06.jpg', name: 'vid-06' },
+      { type: 'image', src: 'images/projects/dongguan-huayangnian/img-01.jpg', thumb: 'images/projects/dongguan-huayangnian/img-01.jpg', name: 'img-01' }
+    ]},
+    'foshan-mingdecheng': { kind: 'videos', items: [
+      { type: 'video', src: 'images/projects/foshan-mingdecheng/vid-01.mp4', thumb: 'images/projects/foshan-mingdecheng/thumb-01.jpg', name: 'vid-01' },
+      { type: 'video', src: 'images/projects/foshan-mingdecheng/vid-02.mp4', thumb: 'images/projects/foshan-mingdecheng/thumb-02.jpg', name: 'vid-02' },
+      { type: 'video', src: 'images/projects/foshan-mingdecheng/vid-03.mp4', thumb: 'images/projects/foshan-mingdecheng/thumb-03.jpg', name: 'vid-03' },
+      { type: 'video', src: 'images/projects/foshan-mingdecheng/vid-04.mp4', thumb: 'images/projects/foshan-mingdecheng/thumb-04.jpg', name: 'vid-04' },
+      { type: 'video', src: 'images/projects/foshan-mingdecheng/vid-05.mp4', thumb: 'images/projects/foshan-mingdecheng/thumb-05.jpg', name: 'vid-05' }
+    ]},
+    'huanyu-tianxia': { kind: 'images', count: 12, prefix: 'images/projects/huanyu-tianxia/img-', ext: 'jpg' },
+    'jinke-boyue':       { kind: 'images', count: 9,  prefix: 'images/projects/jinke-boyue/img-',       ext: 'jpg' },
+    'jinke-cheng':       { kind: 'images', count: 12, prefix: 'images/projects/jinke-cheng/img-',       ext: 'jpg' },
+    'nantian-mingyuan':  { kind: 'images', count: 8,  prefix: 'images/projects/nantian-mingyuan/img-',  ext: 'jpg' }
+  };
+
+  function expandItems(spec) {
+    if (spec.items) return spec.items;
+    var out = [];
+    for (var i = 1; i <= spec.count; i++) {
+      var name = (i < 10 ? '0' : '') + i;
+      var src = spec.prefix + name + '.' + spec.ext;
+      out.push({ type: 'image', src: src, thumb: src, name: 'img-' + name });
+    }
+    return out;
+  }
+
+  // Build modal element
+  var modal = document.createElement('div');
+  modal.className = 'proj-modal';
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  document.body.appendChild(modal);
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function(c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function openModal(projectId) {
+    var spec = PROJECTS[projectId];
+    if (!spec) return;
+    var items = expandItems(spec);
+    var title = (function() {
+      var card = document.querySelector('.js-project[data-project-id="' + projectId + '"]');
+      return card ? (card.querySelector('h4') ? card.querySelector('h4').textContent : projectId) : projectId;
+    })();
+    var html = '<div class="proj-modal__header">' +
+                 '<div><span class="proj-modal__title">' + escapeHtml(title) + '</span>' +
+                   '<span class="proj-modal__count">' + items.length + '</span></div>' +
+                 '<button type="button" class="proj-modal__close" aria-label="Close">��</button>' +
+               '</div>' +
+               '<div class="proj-modal__body">' +
+                 '<div class="proj-modal__grid">' +
+                   items.map(function(it) {
+                     if (it.type === 'video') {
+                       return '<div class="proj-media js-proj-media" data-type="video" data-src="' + escapeHtml(it.src) + '" data-thumb="' + escapeHtml(it.thumb) + '">' +
+                                '<img src="' + escapeHtml(it.thumb) + '" alt="' + escapeHtml(it.name) + '" loading="lazy">' +
+                                '<span class="proj-media__play">?</span>' +
+                              '</div>';
+                     }
+                     return '<div class="proj-media js-proj-media" data-type="image" data-src="' + escapeHtml(it.src) + '">' +
+                              '<img src="' + escapeHtml(it.thumb) + '" alt="' + escapeHtml(it.name) + '" loading="lazy">' +
+                            '</div>';
+                   }).join('') +
+                 '</div>' +
+               '</div>';
+    modal.innerHTML = html;
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    // Close on backdrop click
+    modal.addEventListener('click', backdropClose);
+    modal.querySelector('.proj-modal__close').addEventListener('click', closeModal);
+  }
+
+  function backdropClose(e) {
+    if (e.target === modal) closeModal();
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+    // Pause any playing videos
+    modal.querySelectorAll('video').forEach(function(v) { try { v.pause(); } catch (_) {} });
+  }
+
+  // Delegate click on .js-proj-media
+  modal.addEventListener('click', function(e) {
+    var el = e.target.closest('.js-proj-media');
+    if (!el) return;
+    var type = el.getAttribute('data-type');
+    var src = el.getAttribute('data-src');
+    if (type === 'video') {
+      // Reuse existing video lightbox
+      var videoLb = document.getElementById('video-lightbox');
+      var videoEl = document.getElementById('video-lightbox-video');
+      var nameEl = document.getElementById('video-lightbox-name');
+      if (videoLb && videoEl) {
+        videoEl.src = src;
+        if (nameEl) nameEl.textContent = '';
+        videoLb.hidden = false;
+        requestAnimationFrame(function() { videoLb.classList.add('is-open'); });
+        try { videoEl.play(); } catch (_) {}
+      }
+    } else {
+      // Reuse existing img lightbox (img-lightbox from certificates)
+      var imgLb = document.querySelector('.img-lightbox');
+      var imgEl = imgLb ? imgLb.querySelector('.img-lightbox__img') : null;
+      if (imgLb && imgEl) {
+        imgEl.src = src;
+        imgEl.alt = el.querySelector('img') ? el.querySelector('img').alt : '';
+        imgLb.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+  });
+
+  // Esc closes proj-modal first, then lets lightbox handlers take over
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+
+  // Wire up project cards
+  function bind() {
+    document.querySelectorAll('.js-project').forEach(function(card) {
+      if (card._projBound) return;
+      card._projBound = true;
+      card.addEventListener('click', function() {
+        openModal(card.getAttribute('data-project-id'));
+      });
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModal(card.getAttribute('data-project-id'));
+        }
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bind);
+  } else {
+    bind();
+  }
+  document.addEventListener('i18n:change', bind);
+})();
