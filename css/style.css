@@ -1520,7 +1520,7 @@ img { max-width: 100%; display: block; }
 }
 
 
-/* ===== Project media modal (¶þ¼¶²Ëµ¥) ===== */
+/* ===== Project media modal (ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½) ===== */
 .project-play {
     position: absolute;
     right: 10px;
@@ -1569,7 +1569,7 @@ img { max-width: 100%; display: block; }
 .proj-modal__close {
     width: 40px; height: 40px; border-radius: 50%;
     border: none; background: rgba(255,255,255,0.15);
-    color: #fff; font-size: 22px; line-height: 1;
+    color: #fff; font-size: 22px; line-height: 1; font-family: Arial, sans-serif;
     cursor: pointer; transition: background 0.15s ease;
 }
 .proj-modal__close:hover { background: rgba(255,255,255,0.3); }
@@ -1585,7 +1585,7 @@ img { max-width: 100%; display: block; }
 }
 .proj-media {
     position: relative;
-    aspect-ratio: 9 / 16;     /* vertical video shape ¡ª common for phone-shot site footage */
+    aspect-ratio: 9 / 16;     /* vertical video shape ï¿½ï¿½ common for phone-shot site footage */
     background: #000;
     border-radius: 8px;
     overflow: hidden;
