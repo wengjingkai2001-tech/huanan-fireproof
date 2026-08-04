@@ -404,12 +404,14 @@ document.addEventListener('keydown', (e) => {
                    items.map(function(it) {
                      if (it.type === 'video') {
                        return '<div class="proj-media js-proj-media" data-type="video" data-src="' + escapeHtml(it.src) + '" data-thumb="' + escapeHtml(it.thumb) + '">' +
-                                '<img src="' + escapeHtml(it.thumb) + '" alt="' + escapeHtml(it.name) + '" loading="lazy">' +
-                                '<span class="proj-media__play">?</span>' +
+                                '<img src="' + escapeHtml(it.thumb) + '" alt="' + escapeHtml(it.name) + '" loading="lazy" decoding="async">' +
+                                '<span class="proj-media__play" aria-hidden="true">' +
+                                  '<svg viewBox="0 0 24 24" width="42" height="42"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>' +
+                                '</span>' +
                               '</div>';
                      }
                      return '<div class="proj-media js-proj-media" data-type="image" data-src="' + escapeHtml(it.src) + '">' +
-                              '<img src="' + escapeHtml(it.thumb) + '" alt="' + escapeHtml(it.name) + '" loading="lazy">' +
+                              '<img src="' + escapeHtml(it.thumb) + '" alt="' + escapeHtml(it.name) + '" loading="lazy" decoding="async">' +
                             '</div>';
                    }).join('') +
                  '</div>' +
