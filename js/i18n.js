@@ -7,7 +7,7 @@
 (function() {
   'use strict';
   const STORAGE_KEY = 'huanan_lang';
-  const SUPPORTED = ['zh', 'en', 'th', 'ja'];
+  const SUPPORTED = ['zh', 'en', 'th', 'ja', 'ru', 'fr', 'de'];
   const DEFAULT_LANG = 'zh';
   let currentLang = DEFAULT_LANG;
   let translations = {};
