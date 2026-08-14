@@ -1,22 +1,30 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>完工项目案例 | 广东华南防火科技有限公司</title>
-    <meta name="description" content="广东华南防火科技有限公司完工项目案例：港龙城、电商城、海纳、御海湾、中骏世界城、海丰文旅小镇、汕尾技术学院等幕墙门窗与防火玻璃工程。">
-    <meta name="keywords" content="防火门窗工程案例,防火玻璃工程,幕墙工程案例,断桥铝门窗项目">
-    <meta name="robots" content="index, follow">
+    <title data-i18n="cases.page_title">完工项目案例 - 广东华南防火科技有限公司</title>
+    <meta name="description" content="广东华南防火科技有限公司完工项目案例展示 — 涵盖玻璃幕墙工程、防火门窗工程、商业综合体、学校医院、办公楼、住宅等。">
+    <meta name="keywords" content="防火门窗工程,玻璃幕墙,防火窗案例,防火门案例,华南防火项目">
+    <meta property="og:title" content="完工项目案例 - 广东华南防火科技有限公司">
+    <meta property="og:description" content="广东华南防火科技完工项目案例 — 幕墙门窗工程 + 重点工程项目。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wengjingkai2001-tech.github.io/huanan-fireproof/project-cases.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/style.css">
+    <!-- 百度统计 -->
     <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?156dc9d0243376267567c404c79a4f28";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?156dc9d0243376267567c404c79a4f28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
     </script>
+    <script src="js/i18n.js"></script>
     <style>
         .page-hero {
             padding: 140px 0 60px;
@@ -167,19 +175,28 @@
     <!-- ========== Header ========== -->
     <header class="header">
         <div class="container header-inner">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="华南防火" style="height:40px;">
-            </a>
+            <div class="header-logos">
+                <a href="index.html" class="header-logo"><img src="images/logo-1.png" data-i18n-attr="alt:alt.partner.huanan" alt="华南集团" decoding="async"></a>
+                <a href="index.html" class="header-logo"><img src="images/logo-2.png" data-i18n-attr="alt:alt.partner.arc" alt="合作方" decoding="async"></a>
+                <a href="index.html" class="header-logo header-logo--main"><img src="images/logo-3.png" data-i18n-attr="alt:alt.partner.main" alt="华南防火科技" decoding="async"></a>
+            </div>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="index.html#about" class="nav-link">关于我们</a></li>
-                    <li><a href="index.html#products" class="nav-link">产品中心</a></li>
-                    <li><a href="index.html#certificates" class="nav-link">资质证书</a></li>
-                    <li><a href="project-cases.html" class="nav-link active">项目案例</a></li>
-                    <li><a href="index.html#contact" class="nav-link">联系我们</a></li>
+                    <li><a href="index.html#about" class="nav-link" data-i18n="nav.about">关于我们</a></li>
+                    <li><a href="index.html#products" class="nav-link" data-i18n="nav.products">产品中心</a></li>
+                    <li><a href="index.html#certificates" class="nav-link" data-i18n="nav.certificates">资质证书</a></li>
+                    <li><a href="project-cases.html" class="nav-link active" data-i18n="nav.cases">项目案例</a></li>
+                    <li><a href="index.html#contact" class="nav-link" data-i18n="nav.contact">联系我们</a></li>
                 </ul>
             </nav>
-            <button class="hamburger" id="hamburger" aria-label="菜单">
+            <div class="lang-switch">
+                <select id="lang-switcher" aria-label="Language">
+                    <option value="zh" data-i18n="lang.zh">中文</option>
+                    <option value="en" data-i18n="lang.en">English</option>
+                    <option value="th" data-i18n="lang.th">ไทย</option>
+                </select>
+            </div>
+            <button class="hamburger" id="hamburger" data-i18n-attr="aria-label:alt.menu" aria-label="菜单">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -188,10 +205,10 @@
     <!-- ========== Page Hero ========== -->
     <section class="page-hero">
         <div class="container">
-            <a href="index.html" class="back-link">&larr; 返回首页</a>
-            <h1>完工项目案例</h1>
+            <a href="index.html" class="back-link" data-i18n="cases.back">← 返回首页</a>
+            <h1 data-i18n="cases.h1">完工项目案例</h1>
             <div class="divider"></div>
-            <p>匠心工程 · 实力见证 · 品质保障</p>
+            <p data-i18n="cases.h1_subtitle">匠心工程 · 实力见证 · 品质保障</p>
         </div>
     </section>
 
@@ -199,73 +216,75 @@
     <section class="section">
         <div class="container">
 
-            <!-- 幕墙门窗工程 -->
+            <!-- 重点完工项目（与首页 #projects 一致：6 个真实项目） -->
             <div class="case-section">
-                <h2>幕墙门窗工程 <span class="tag">已完工</span></h2>
-                <p>涵盖商业综合体、办公楼、住宅等项目，提供玻璃幕墙、铝单板、门窗等系统解决方案</p>
-                <div class="case-grid">
-                    <div class="case-card">
-                        <div class="case-img" style="background-image:url('images/projects/case11_1.jpeg')"></div>
-                        <div class="case-body">
-                            <h3>港龙城项目</h3>
-                            <p class="case-location">📍 商业综合体</p>
-                            <p class="case-desc">大型商业综合体幕墙门窗工程，采用玻璃幕墙与铝单板系统，打造现代商业空间。</p>
+                <h2 data-i18n="cases.section1.title">幕墙门窗工程 <span class="tag" data-i18n="cases.section1.tag">已完工</span></h2>
+                <p data-i18n="cases.section1.desc">涵盖商业综合体、办公楼、住宅等项目，提供玻璃幕墙、铝单板、门窗等系统解决方案</p>
+                <div class="projects-grid">
+                    <div class="project-card js-project" data-project-id="dongguan-huayangnian" role="button" tabindex="0">
+                        <div class="project-img" style="background-image:url('images/projects/dongguan-huayangnian/thumb-01.jpg')">
+                            <span class="project-play" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+                            </span>
+                        </div>
+                        <div class="project-info">
+                            <h4 data-i18n="projects.card1a.title">东莞花样年·家装</h4>
+                            <p data-i18n="projects.card1a.desc">工地施工实拍</p>
                         </div>
                     </div>
-                    <div class="case-card">
-                        <div class="case-img" style="background-image:url('images/projects/case11_2.jpeg')"></div>
-                        <div class="case-body">
-                            <h3>电商城项目</h3>
-                            <p class="case-location">📍 电商产业园</p>
-                            <p class="case-desc">电商产业园区幕墙及门窗工程，高标准玻璃幕墙系统，营造现代化办公环境。</p>
+                    <div class="project-card js-project" data-project-id="foshan-mingdecheng" role="button" tabindex="0">
+                        <div class="project-img" style="background-image:url('images/projects/foshan-mingdecheng/thumb-01.jpg')">
+                            <span class="project-play" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+                            </span>
+                        </div>
+                        <div class="project-info">
+                            <h4 data-i18n="projects.card1b.title">佛山明德城·家装</h4>
+                            <p data-i18n="projects.card1b.desc">工地施工实拍</p>
                         </div>
                     </div>
-                    <div class="case-card">
-                        <div class="case-img" style="background-image:url('images/projects/case12_1.jpeg')"></div>
-                        <div class="case-body">
-                            <h3>海纳项目</h3>
-                            <p class="case-location">📍 深汕特别合作区</p>
-                            <p class="case-desc">办公楼玻璃幕墙、铝单板、玻璃雨棚工程，幕墙约2504㎡，铝单板约5401㎡。</p>
+                    <div class="project-card js-project" data-project-id="huanyu-tianxia" role="button" tabindex="0">
+                        <div class="project-img" style="background-image:url('images/projects/huanyu-tianxia/img-01.jpg')">
+                            <span class="project-play project-play--img" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+                            </span>
+                        </div>
+                        <div class="project-info">
+                            <h4 data-i18n="projects.card1c.title">寰宇天下·工装</h4>
+                            <p data-i18n="projects.card1c.desc">商业地产项目</p>
                         </div>
                     </div>
-                    <div class="case-card">
-                        <div class="case-img" style="background-image:url('images/projects/case12_2.jpeg')"></div>
-                        <div class="case-body">
-                            <h3>海丰文化中心项目</h3>
-                            <p class="case-location">📍 汕尾市海丰县</p>
-                            <p class="case-desc">文化中心外装饰工程，融合玻璃幕墙与铝板系统，打造地标性文化建筑。</p>
+                    <div class="project-card js-project" data-project-id="jinke-boyue" role="button" tabindex="0">
+                        <div class="project-img" style="background-image:url('images/projects/jinke-boyue/img-01.jpg')">
+                            <span class="project-play project-play--img" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+                            </span>
+                        </div>
+                        <div class="project-info">
+                            <h4 data-i18n="projects.card1d.title">金科铂悦都会·工装</h4>
+                            <p data-i18n="projects.card1d.desc">商业地产项目</p>
                         </div>
                     </div>
-                    <div class="case-card">
-                        <div class="case-img" style="background-image:url('images/projects/case13_1.jpeg')"></div>
-                        <div class="case-body">
-                            <h3>御海湾项目</h3>
-                            <p class="case-location">📍 海丰城区</p>
-                            <p class="case-desc">高端住宅区外幕墙工程，全玻璃幕墙约1789㎡，石材幕墙约2802㎡，展现品质人居。</p>
+                    <div class="project-card js-project" data-project-id="jinke-cheng" role="button" tabindex="0">
+                        <div class="project-img" style="background-image:url('images/projects/jinke-cheng/img-01.jpg')">
+                            <span class="project-play project-play--img" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+                            </span>
+                        </div>
+                        <div class="project-info">
+                            <h4 data-i18n="projects.card1e.title">金科城·工装</h4>
+                            <p data-i18n="projects.card1e.desc">商业地产项目</p>
                         </div>
                     </div>
-                    <div class="case-card">
-                        <div class="case-img" style="background-image:url('images/projects/case13_2.jpeg')"></div>
-                        <div class="case-body">
-                            <h3>山湖海窗扇制作安装工程</h3>
-                            <p class="case-location">📍 住宅项目</p>
-                            <p class="case-desc">住宅小区窗扇制作与安装工程，大批量标准化生产，保障交付品质与进度。</p>
+                    <div class="project-card js-project" data-project-id="nantian-mingyuan" role="button" tabindex="0">
+                        <div class="project-img" style="background-image:url('images/projects/nantian-mingyuan/img-01.jpg')">
+                            <span class="project-play project-play--img" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+                            </span>
                         </div>
-                    </div>
-                    <div class="case-card">
-                        <div class="case-img" style="background-image:url('images/projects/case14_1.jpeg')"></div>
-                        <div class="case-body">
-                            <h3>御海湾一期</h3>
-                            <p class="case-location">📍 海丰城区</p>
-                            <p class="case-desc">一期住宅外幕墙及门窗系统，中空玻璃与铝板幕墙结合，打造宜居生活空间。</p>
-                        </div>
-                    </div>
-                    <div class="case-card">
-                        <div class="case-img" style="background-image:url('images/projects/case14_2.jpeg')"></div>
-                        <div class="case-body">
-                            <h3>汕尾技术学院</h3>
-                            <p class="case-location">📍 汕尾市</p>
-                            <p class="case-desc">院校幕墙及门窗工程，高标准安全玻璃系统，为教育建筑提供可靠保障。</p>
+                        <div class="project-info">
+                            <h4 data-i18n="projects.card1f.title">南天名苑·工装</h4>
+                            <p data-i18n="projects.card1f.desc">商业地产项目</p>
                         </div>
                     </div>
                 </div>
@@ -273,61 +292,61 @@
 
             <!-- 重点工程 -->
             <div class="case-section">
-                <h2>重点工程项目 <span class="tag">精选</span></h2>
-                <p>近年来承接的各类重点建筑项目，涵盖扶贫、市政、商业等多个领域</p>
+                <h2 data-i18n="cases.section2.title">重点工程项目 <span class="tag" data-i18n="cases.section2.tag">精选</span></h2>
+                <p data-i18n="cases.section2.desc">近年来承接的各类重点建筑项目，涵盖扶贫、市政、商业等多个领域</p>
                 <div class="case-grid">
                     <div class="case-card">
                         <div class="case-body">
-                            <h3>陆河扶贫厂房</h3>
-                            <p class="case-location">📍 汕尾市陆河县</p>
-                            <p class="case-desc">铝合金门窗工程，50系列平开窗约1452㎡，50系列百叶窗，5mm浅灰钢化玻璃，2019年已完工。</p>
+                            <h3 data-i18n="cases.case9.title">陆河扶贫厂房</h3>
+                            <p class="case-location" data-i18n="cases.case9.loc">📍 汕尾市陆河县</p>
+                            <p class="case-desc" data-i18n="cases.case9.desc">铝合金门窗工程，50系列平开窗约1452㎡，50系列百叶窗，5mm浅灰钢化玻璃，2019年已完工。</p>
                             <div class="case-meta">
-                                <span><strong>玻璃类型：</strong>5mm浅灰钢化玻璃</span>
-                                <span><strong>时间：</strong>2019年</span>
+                                <span><strong data-i18n="cases.case9.meta1">玻璃类型：</strong><span data-i18n="cases.case9.meta1v">5mm浅灰钢化玻璃</span></span>
+                                <span><strong data-i18n="cases.case9.meta2">时间：</strong><span data-i18n="cases.case9.meta2v">2019年</span></span>
                             </div>
                         </div>
                     </div>
                     <div class="case-card">
                         <div class="case-body">
-                            <h3>河源·中骏世界城外墙装饰工程</h3>
-                            <p class="case-location">📍 河源市江东新区</p>
-                            <p class="case-desc">建设部外墙装饰工程，建筑面积约1600㎡，玻璃幕墙约840㎡，铝单板约2030㎡。</p>
+                            <h3 data-i18n="cases.case10.title">河源·中骏世界城外墙装饰工程</h3>
+                            <p class="case-location" data-i18n="cases.case10.loc">📍 河源市江东新区</p>
+                            <p class="case-desc" data-i18n="cases.case10.desc">建设部外墙装饰工程，建筑面积约1600㎡，玻璃幕墙约840㎡，铝单板约2030㎡。</p>
                             <div class="case-meta">
-                                <span><strong>玻璃类型：</strong>6mm高透光单银LOW-E+12mmA+6mm中空钢化</span>
-                                <span><strong>时间：</strong>2020年</span>
+                                <span><strong data-i18n="cases.case9.meta1">玻璃类型：</strong><span data-i18n="cases.case10.meta1v">6mm高透光单银LOW-E+12mmA+6mm中空钢化</span></span>
+                                <span><strong data-i18n="cases.case9.meta2">时间：</strong><span data-i18n="cases.case10.meta2v">2020年</span></span>
                             </div>
                         </div>
                     </div>
                     <div class="case-card">
                         <div class="case-body">
-                            <h3>中骏集团佛山雍景台项目</h3>
-                            <p class="case-location">📍 佛山市</p>
-                            <p class="case-desc">高层住宅及临街商铺，总建筑面积约156853㎡，提供幕墙门窗系统方案。</p>
+                            <h3 data-i18n="cases.case11.title">中骏集团佛山雍景台项目</h3>
+                            <p class="case-location" data-i18n="cases.case11.loc">📍 佛山市</p>
+                            <p class="case-desc" data-i18n="cases.case11.desc">高层住宅及临街商铺，总建筑面积约156853㎡，提供幕墙门窗系统方案。</p>
                             <div class="case-meta">
-                                <span><strong>业态：</strong>高层住宅+商铺</span>
-                                <span><strong>时间：</strong>2020年</span>
+                                <span><strong data-i18n="cases.case11.meta1l">业态：</strong><span data-i18n="cases.case11.meta1v">高层住宅+商铺</span></span>
+                                <span><strong data-i18n="cases.case9.meta2">时间：</strong><span data-i18n="cases.case11.meta2v">2020年</span></span>
                             </div>
                         </div>
                     </div>
                     <div class="case-card">
                         <div class="case-body">
-                            <h3>海丰县旅游公寓扶贫项目</h3>
-                            <p class="case-location">📍 汕尾市海丰县</p>
-                            <p class="case-desc">空调格栅约1054㎡，玻璃栏杆约1293㎡，采用6mm白玻+0.76pvb+6mm白玻夹胶钢化。</p>
+                            <h3 data-i18n="cases.case12.title">海丰县旅游公寓扶贫项目</h3>
+                            <p class="case-location" data-i18n="cases.case12.loc">📍 汕尾市海丰县</p>
+                            <p class="case-desc" data-i18n="cases.case12.desc">空调格栅约1054㎡，玻璃栏杆约1293㎡，采用6mm白玻+0.76pvb+6mm白玻夹胶钢化。</p>
                             <div class="case-meta">
-                                <span><strong>玻璃类型：</strong>夹胶钢化（干夹）</span>
-                                <span><strong>时间：</strong>2019-2020年</span>
+                                <span><strong data-i18n="cases.case9.meta1">玻璃类型：</strong><span data-i18n="cases.case12.meta1v">夹胶钢化（干夹）</span></span>
+                                <span><strong data-i18n="cases.case9.meta2">时间：</strong><span data-i18n="cases.case12.meta2v">2019-2020年</span></span>
                             </div>
                         </div>
                     </div>
                     <div class="case-card">
                         <div class="case-body">
-                            <h3>海丰县红城文旅小镇项目</h3>
-                            <p class="case-location">📍 海丰县海城镇</p>
-                            <p class="case-desc">外装饰工程，门窗约238㎡，玻璃幕墙约1216㎡，铝单板约1081㎡，6mm LOW-E中空钢化玻璃。</p>
+                            <h3 data-i18n="cases.case13.title">海丰县红城文旅小镇项目</h3>
+                            <p class="case-location" data-i18n="cases.case13.loc">📍 海丰县海城镇</p>
+                            <p class="case-desc" data-i18n="cases.case13.desc">外装饰工程，门窗约238㎡，玻璃幕墙约1216㎡，铝单板约1081㎡，6mm LOW-E中空钢化玻璃。</p>
                             <div class="case-meta">
-                                <span><strong>玻璃类型：</strong>6mm LOW-E+12mmA+6mm中空钢化</span>
-                                <span><strong>时间：</strong>2020-2021年</span>
+                                <span><strong data-i18n="cases.case9.meta1">玻璃类型：</strong><span data-i18n="cases.case13.meta1v">6mm LOW-E+12mmA+6mm中空钢化</span></span>
+                                <span><strong data-i18n="cases.case9.meta2">时间：</strong><span data-i18n="cases.case13.meta2v">2020-2021年</span></span>
                             </div>
                         </div>
                     </div>
@@ -336,42 +355,199 @@
 
             <!-- 生产实力 -->
             <div class="case-section">
-                <h2>生产实力 <span class="tag" style="background:#1a1a2e">车间一览</span></h2>
-                <p>国内外先进的玻璃深加工设备，严格的质量管理体系</p>
+                <h2 data-i18n="cases.section3.title">生产实力 <span class="tag" style="background:#1a1a2e" data-i18n="cases.section3.tag">车间一览</span></h2>
+                <p data-i18n="cases.section3.desc">国内外先进的玻璃深加工设备，严格的质量管理体系</p>
                 <div class="factory-grid">
                     <div class="factory-item">
-                        <img src="images/projects/case15_1.jpeg" alt="原片切割" onerror="this.parentElement.style.display='none'">
-                        <p>原片切割（全自动电脑开机台）</p>
+                        <img src="images/capability/3.jpg" alt="原片切割" decoding="async">
+                        <p data-i18n="cases.factory.cut">原片切割（全自动电脑开机台）</p>
                     </div>
                     <div class="factory-item">
-                        <img src="images/projects/case16_1.jpeg" alt="磨边" onerror="this.parentElement.style.display='none'">
-                        <p>磨边（全自动高速四边精磨）</p>
+                        <img src="images/capability/9.jpg" alt="磨边" decoding="async">
+                        <p data-i18n="cases.factory.edge">磨边（全自动高速四边精磨）</p>
                     </div>
                     <div class="factory-item">
-                        <img src="images/projects/case16_2.jpeg" alt="中空" onerror="this.parentElement.style.display='none'">
-                        <p>中空（全自动打胶中空线）</p>
+                        <img src="images/capability/8.jpg" alt="中空" decoding="async">
+                        <p data-i18n="cases.factory.hollow">中空（全自动打胶中空线）</p>
                     </div>
                     <div class="factory-item">
-                        <img src="images/projects/case17_1.jpeg" alt="钢化" onerror="this.parentElement.style.display='none'">
-                        <p>钢化（强制对流双式钢化炉）</p>
+                        <img src="images/capability/5.jpg" alt="钢化" decoding="async">
+                        <p data-i18n="cases.factory.tempered">钢化（强制对流双式钢化炉）</p>
                     </div>
                     <div class="factory-item">
-                        <img src="images/projects/case17_2.jpeg" alt="夹胶" onerror="this.parentElement.style.display='none'">
-                        <p>夹胶（夹胶合片无尘车间）</p>
+                        <img src="images/capability/11.jpg" alt="夹胶" decoding="async">
+                        <p data-i18n="cases.factory.laminated">夹胶（夹胶合片无尘车间）</p>
                     </div>
+                </div>
+            </div>
+
+            <!-- 工地实拍（视频） -->
+            <div class="case-section">
+                <h2 data-i18n="cases.section4.title">工地实拍 <span class="tag" style="background:#e74c3c" data-i18n="cases.section4.tag">视频</span></h2>
+                <p data-i18n="cases.section4.desc">真实项目现场视频 · 玻璃幕墙与护栏安装实拍</p>
+                <div class="video-grid">
+                    <button type="button" class="video-card" data-video-src="videos/baoli-yuejiang.mp4" data-video-key="v1">
+                        <img class="video-card__thumb" src="images/projects/baoliyuejiang.jpg" alt="保利阅江台" loading="lazy" decoding="async">
+                        <span class="video-card__play" aria-hidden="true">
+                            <span class="video-card__play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+                        </span>
+                        <span class="video-card__caption">
+                            <strong data-i18n="videos.v1.title">保利阅江台项目</strong>
+                            <small data-i18n="videos.v1.sub">阳台玻璃护栏安装</small>
+                        </span>
+                    </button>
+
+                    <button type="button" class="video-card" data-video-src="videos/nanshan-yunkai.mp4" data-video-key="v2">
+                        <img class="video-card__thumb" src="images/projects/nanshanyunkai.jpg" alt="深圳南山云开府" loading="lazy" decoding="async">
+                        <span class="video-card__play" aria-hidden="true">
+                            <span class="video-card__play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+                        </span>
+                        <span class="video-card__caption">
+                            <strong data-i18n="videos.v2.title">深圳南山云开府</strong>
+                            <small data-i18n="videos.v2.sub">大型玻璃幕墙吊装</small>
+                        </span>
+                    </button>
+
+                    <button type="button" class="video-card" data-video-src="videos/jinshan-valley.mp4" data-video-key="v3">
+                        <img class="video-card__thumb" src="images/projects/jinshanvalley.jpg" alt="金山谷别墅" loading="lazy" decoding="async">
+                        <span class="video-card__play" aria-hidden="true">
+                            <span class="video-card__play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+                        </span>
+                        <span class="video-card__caption">
+                            <strong data-i18n="videos.v3.title">金山谷别墅</strong>
+                            <small data-i18n="videos.v3.sub">玻璃护栏现场吊装</small>
+                        </span>
+                    </button>
+
+                    <button type="button" class="video-card" data-video-src="videos/hongmei-shoukai.mp4" data-video-key="v4">
+                        <img class="video-card__thumb" src="images/projects/hongmeishoukai.jpg" alt="洪梅首开" loading="lazy" decoding="async">
+                        <span class="video-card__play" aria-hidden="true">
+                            <span class="video-card__play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+                        </span>
+                        <span class="video-card__caption">
+                            <strong data-i18n="videos.v4.title">洪梅首开项目</strong>
+                            <small data-i18n="videos.v4.sub">窗框安装实拍</small>
+                        </span>
+                    </button>
                 </div>
             </div>
 
         </div>
     </section>
 
+    <!-- Video lightbox (二级菜单) -->
+    <div class="video-lightbox" id="video-lightbox" role="dialog" aria-modal="true" aria-labelledby="video-lightbox-title" hidden>
+        <div class="video-lightbox__inner">
+            <button type="button" class="video-lightbox__close" id="video-lightbox-close" aria-label="Close">&times;</button>
+            <video class="video-lightbox__video" id="video-lightbox-video" controls preload="metadata" playsinline></video>
+            <div class="video-lightbox__title" id="video-lightbox-title">
+                <span data-i18n="video.title" id="video-lightbox-name">视频标题</span>
+                <small data-i18n="video.hint">点击视频外区域或按 Esc 关闭</small>
+            </div>
+        </div>
+    </div>
+
     <!-- ========== Footer ========== -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 广东华南防火科技有限公司 | 项目案例展示</p>
+            <p data-i18n="footer.cases.copyright">© 2026 广东华南防火科技有限公司 | 项目案例展示</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+
+    <!-- WeChat floating button (国内客户备用) -->
+    <button type="button" class="wechat-float" id="wechat-float"
+            data-i18n-attr="data-label:wechat.label;aria-label:wechat.label"
+            data-label="微信联系我们"
+            aria-label="微信联系我们">
+        <svg class="wc-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9.5 4C5.36 4 2 6.69 2 10c0 1.74.94 3.31 2.41 4.38l-.6 1.85 2.13-1.07c.84.22 1.74.34 2.69.34.27 0 .54-.01.8-.04-.18-.55-.27-1.13-.27-1.71 0-3.31 3.13-6 7-6 .23 0 .46.01.69.04C16.39 5.6 13.21 4 9.5 4zm-2.7 3.4a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8zm5.4 0a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8zM16.5 9c-3.59 0-6.5 2.46-6.5 5.5S12.91 20 16.5 20c.74 0 1.45-.1 2.12-.29l1.88.94-.5-1.62c1.34-.94 2.25-2.27 2.25-3.78C23.25 11.46 20.09 9 16.5 9zm-2 2.3a.7.7 0 1 1 0 1.4.7.7 0 0 1 0-1.4zm4 0a.7.7 0 1 1 0 1.4.7.7 0 0 1 0-1.4z"/>
+        </svg>
+    </button>
+
+    <!-- WhatsApp floating button (外贸询盘入口) -->
+    <a href="#" class="whatsapp-float"
+       id="whatsapp-float"
+       target="_blank" rel="noopener noreferrer"
+       data-i18n-attr="href:whatsapp.url;data-label:whatsapp.label;aria-label:whatsapp.label"
+       data-label="Chat on WhatsApp"
+       aria-label="Chat on WhatsApp">
+        <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- WeChat QR modal -->
+    <div class="qr-modal" id="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-modal-title" hidden>
+        <div class="qr-modal__card">
+            <button type="button" class="qr-modal__close" id="qr-modal-close" aria-label="Close">&times;</button>
+            <div class="qr-modal__title" id="qr-modal-title" data-i18n="wechat.modal_title">扫码添加微信</div>
+            <div class="qr-modal__subtitle" data-i18n="wechat.modal_subtitle">用微信扫一扫，加好友咨询</div>
+            <img class="qr-modal__img" src="images/wechat-qr.png" alt="WeChat QR code" width="220" height="220" decoding="async">
+            <div class="qr-modal__id-row">
+                <span class="qr-modal__id">13316330906</span>
+                <button type="button" class="qr-modal__copy" id="qr-modal-copy"
+                        data-i18n="wechat.copy"
+                        data-i18n-attr="data-copied:wechat.copied">复制</button>
+            </div>
+            <div class="qr-modal__tip" data-i18n="wechat.tip">国内客户专用 · 微信沟通最方便</div>
+        </div>
+    </div>
+
+    <script>
+    // WeChat modal: open / close / copy
+    (function(){
+      var btnOpen  = document.getElementById('wechat-float');
+      var modal    = document.getElementById('qr-modal');
+      var btnClose = document.getElementById('qr-modal-close');
+      var btnCopy  = document.getElementById('qr-modal-copy');
+      var wechatId = '13316330906';
+      if (!btnOpen || !modal) return;
+      function open() {
+        modal.hidden = false;
+        requestAnimationFrame(function(){ modal.classList.add('is-open'); });
+      }
+      function close() {
+        modal.classList.remove('is-open');
+        setTimeout(function(){ modal.hidden = true; }, 200);
+      }
+      btnOpen.addEventListener('click', open);
+      btnClose.addEventListener('click', close);
+      modal.addEventListener('click', function(e){ if (e.target === modal) close(); });
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !modal.hidden) close(); });
+      btnCopy.addEventListener('click', function(){
+        var copyText = btnCopy.textContent;
+        var copiedText = btnCopy.getAttribute('data-copied') || 'Copied';
+        var done = function(){
+          btnCopy.classList.add('is-copied');
+          btnCopy.textContent = copiedText;
+          setTimeout(function(){
+            btnCopy.classList.remove('is-copied');
+            btnCopy.textContent = copyText;
+          }, 1500);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(wechatId).then(done).catch(function(){
+            var ta = document.createElement('textarea');
+            ta.value = wechatId; ta.style.position='fixed'; ta.style.opacity='0';
+            document.body.appendChild(ta); ta.select();
+            try { document.execCommand('copy'); } catch(_) {}
+            document.body.removeChild(ta);
+            done();
+          });
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = wechatId; ta.style.position='fixed'; ta.style.opacity='0';
+          document.body.appendChild(ta); ta.select();
+          try { document.execCommand('copy'); } catch(_) {}
+          document.body.removeChild(ta);
+          done();
+        }
+      });
+    })();
+    </script>
 </body>
 </html>
+
+
