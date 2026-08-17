@@ -52,6 +52,12 @@
         if (attr && key && dict[key] !== undefined) el.setAttribute(attr, dict[key]);
       });
     });
+    // Language-specific images: data-i18n-img-zh / -en / -th ... (fallback to zh)
+    document.querySelectorAll('[data-i18n-img-zh]').forEach(function(el) {
+      const src = el.getAttribute('data-i18n-img-' + currentLang) ||
+                  el.getAttribute('data-i18n-img-zh');
+      if (src && el.getAttribute('src') !== src) el.setAttribute('src', src);
+    });
     // Notify listeners (e.g. counter animation may need to re-run)
     document.dispatchEvent(new CustomEvent('i18n:applied', { detail: { lang: currentLang } }));
   }
