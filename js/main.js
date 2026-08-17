@@ -369,7 +369,21 @@ document.addEventListener('keydown', (e) => {
     'huanyu-tianxia': { kind: 'images', count: 12, prefix: 'images/projects/huanyu-tianxia/img-', ext: 'jpg' },
     'jinke-boyue':       { kind: 'images', count: 9,  prefix: 'images/projects/jinke-boyue/img-',       ext: 'jpg' },
     'jinke-cheng':       { kind: 'images', count: 12, prefix: 'images/projects/jinke-cheng/img-',       ext: 'jpg' },
-    'nantian-mingyuan':  { kind: 'images', count: 8,  prefix: 'images/projects/nantian-mingyuan/img-',  ext: 'jpg' }
+    'nantian-mingyuan':  { kind: 'images', count: 8,  prefix: 'images/projects/nantian-mingyuan/img-',  ext: 'jpg' },
+    'duanqiao': { kind: 'images', items: [
+      { type: 'image', src: 'images/products/duanqiao/110-zh.jpg', thumb: 'images/products/duanqiao/110-zh.jpg', name: '110断桥窗纱一体', zh: 'images/products/duanqiao/110-zh.jpg', en: 'images/products/duanqiao/110-en.jpg', th: 'images/products/duanqiao/110-th.jpg' },
+      { type: 'image', src: 'images/products/duanqiao/120-zh.jpg', thumb: 'images/products/duanqiao/120-zh.jpg', name: '120断桥窗纱一体', zh: 'images/products/duanqiao/120-zh.jpg', en: 'images/products/duanqiao/120-en.jpg', th: 'images/products/duanqiao/120-th.jpg' },
+      { type: 'image', src: 'images/products/duanqiao/125-zh.jpg', thumb: 'images/products/duanqiao/125-zh.jpg', name: '125六轨推拉窗', zh: 'images/products/duanqiao/125-zh.jpg', en: 'images/products/duanqiao/125-en.jpg', th: 'images/products/duanqiao/125-th.jpg' },
+      { type: 'image', src: 'images/products/duanqiao/lift-zh.jpg', thumb: 'images/products/duanqiao/lift-zh.jpg', name: '120提升窗', zh: 'images/products/duanqiao/lift-zh.jpg', en: 'images/products/duanqiao/lift-en.jpg', th: 'images/products/duanqiao/lift-th.jpg' },
+      { type: 'image', src: 'images/products/duanqiao/casement-zh.jpg', thumb: 'images/products/duanqiao/casement-zh.jpg', name: '断桥平开窗', zh: 'images/products/duanqiao/casement-zh.jpg', en: 'images/products/duanqiao/casement-en.jpg', th: 'images/products/duanqiao/casement-th.jpg' },
+      { type: 'image', src: 'images/products/duanqiao/sliding-window-zh.jpg', thumb: 'images/products/duanqiao/sliding-window-zh.jpg', name: '断桥推拉窗', zh: 'images/products/duanqiao/sliding-window-zh.jpg', en: 'images/products/duanqiao/sliding-window-en.jpg', th: 'images/products/duanqiao/sliding-window-th.jpg' },
+      { type: 'image', src: 'images/products/duanqiao/sliding-door-zh.jpg', thumb: 'images/products/duanqiao/sliding-door-zh.jpg', name: '断桥推拉门', zh: 'images/products/duanqiao/sliding-door-zh.jpg', en: 'images/products/duanqiao/sliding-door-en.jpg', th: 'images/products/duanqiao/sliding-door-th.jpg' },
+      { type: 'image', src: 'images/products/duanqiao/shoot-1.jpg', thumb: 'images/products/duanqiao/shoot-1.jpg', name: '实拍图' },
+      { type: 'image', src: 'images/products/duanqiao/shoot-2.jpg', thumb: 'images/products/duanqiao/shoot-2.jpg', name: '实拍图' },
+      { type: 'image', src: 'images/products/duanqiao/shoot-3.jpg', thumb: 'images/products/duanqiao/shoot-3.jpg', name: '实拍图' },
+      { type: 'image', src: 'images/products/duanqiao/shoot-4.jpg', thumb: 'images/products/duanqiao/shoot-4.jpg', name: '实拍图' },
+      { type: 'image', src: 'images/products/duanqiao/shoot-5.jpg', thumb: 'images/products/duanqiao/shoot-5.jpg', name: '实拍图' }
+    ]}
   };
 
   function expandItems(spec) {
@@ -432,9 +446,11 @@ document.addEventListener('keydown', (e) => {
     var spec = PROJECTS[projectId];
     if (!spec) return;
     var items = expandItems(spec);
+    var curLang = (window.HuananI18n && typeof window.HuananI18n.getLang === 'function')
+      ? window.HuananI18n.getLang() : 'zh';
     var title = (function() {
-      var card = document.querySelector('.js-project[data-project-id="' + projectId + '"]');
-      return card ? (card.querySelector('h4') ? card.querySelector('h4').textContent : projectId) : projectId;
+      var card = document.querySelector('.js-project[data-project-id="' + projectId + '"], .js-product-modal[data-project-id="' + projectId + '"]');
+      return card ? (card.querySelector('h4') ? card.querySelector('h4').textContent : (card.querySelector('h3') ? card.querySelector('h3').textContent : projectId)) : projectId;
     })();
     var html = '<div class="proj-modal__header">' +
                  '<div><span class="proj-modal__title">' + escapeHtml(title) + '</span>' +
@@ -453,8 +469,11 @@ document.addEventListener('keydown', (e) => {
                               '</div>';
                      }
                      return '<div class="proj-media js-proj-media" data-type="image" data-src="' + escapeHtml(it.src) + '">' +
-                              '<img src="' + escapeHtml(it.thumb) + '" alt="' + escapeHtml(it.name) + '" loading="lazy" decoding="async">' +
-                            '</div>';
+                              '<img src="' + escapeHtml(it[curLang] || it.thumb) + '" alt="' + escapeHtml(it.name) + '" loading="lazy" decoding="async"' +
+                              (it.zh ? ' data-i18n-img-zh="' + escapeHtml(it.zh) + '"' : '') +
+                              (it.en ? ' data-i18n-img-en="' + escapeHtml(it.en) + '"' : '') +
+                              (it.th ? ' data-i18n-img-th="' + escapeHtml(it.th) + '"' : '') +
+                            '></div>';
                    }).join('') +
                  '</div>' +
                '</div>';
@@ -498,7 +517,7 @@ document.addEventListener('keydown', (e) => {
         var allImgs = Array.from(modal.querySelectorAll('.js-proj-media[data-type="image"]'));
         var items = allImgs.map(function(m) {
           var t = m.querySelector('img');
-          return { src: m.getAttribute('data-src'), caption: t ? t.alt : '' };
+          return { src: t ? (t.getAttribute('src') || m.getAttribute('data-src')) : m.getAttribute('data-src'), caption: t ? t.alt : '' };
         });
         var idx = allImgs.indexOf(el);
         // 调用 lightbox 的多图打开函数
@@ -525,7 +544,7 @@ document.addEventListener('keydown', (e) => {
 
   // Wire up project cards
   function bind() {
-    document.querySelectorAll('.js-project').forEach(function(card) {
+    document.querySelectorAll('.js-project, .js-product-modal').forEach(function(card) {
       if (card._projBound) return;
       card._projBound = true;
       card.addEventListener('click', function() {
