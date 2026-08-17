@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>正锌门窗 产品图册 | ZHENGXIN Catalog</title>
+<meta name="description" content="正锌门窗 · 断桥铝门窗产品电子画册 — 产品、型材、工程案例与安装实拍 | ZHENGXIN Doors & Windows digital catalog">
+<meta property="og:title" content="正锌门窗 产品图册">
+<meta property="og:description" content="断桥铝门窗产品、型材、工程案例与安装实拍">
+<meta property="og:type" content="website">
+<style>
+:root {
+  --blue: #003366;
+  --gold: #c8a45c;
+  --bg: #1a1a1a;
+  --page-bg: #fdfdfd;
+  --text: #333;
+  --light: #f0f0f0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#111;touch-action:pan-y;-webkit-tap-highlight-color:transparent}
+
+/* LANG BAR */
+.lang-bar{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:center;gap:5px;padding:14px 12px;pointer-events:none;flex-wrap:wrap}
+.lang-bar button{pointer-events:auto;padding:6px 14px;border-radius:16px;border:1px solid rgba(255,255,255,.4);background:rgba(0,0,0,.3);color:#fff;font-size:12px;backdrop-filter:blur(8px);transition:.25s;cursor:pointer}
+.lang-bar button.on{background:#fff;color:var(--blue);border-color:#fff;font-weight:700}
+
+/* BOOK CONTAINER */
+.book-wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;perspective:1600px;padding-top:48px}
+.book{position:relative;width:92vw;max-width:420px;height:82vh;max-height:680px;transform-style:preserve-3d}
+.book.shadow:after{content:'';position:absolute;top:4px;left:2%;right:2%;bottom:-4px;background:rgba(0,0,0,.4);filter:blur(12px);z-index:-1;border-radius:4px}
+
+/* PAGES */
+.page-card{position:absolute;top:0;left:0;width:100%;height:100%;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,0,.2,1);cursor:pointer;border-radius:3px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,.15)}
+.page-front,.page-back{position:absolute;top:0;left:0;width:100%;height:100%;backface-visibility:hidden;border-radius:3px;overflow:hidden}
+.page-back{transform:rotateY(180deg)}
+
+/* COVER PAGE */
+.cov{background:linear-gradient(160deg,#001a33 0%,var(--blue) 50%,#004d99 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:40px 24px;position:relative}
+.cov .brand{font-size:11px;letter-spacing:6px;color:var(--gold);margin-bottom:30px;text-transform:uppercase}
+.cov .title{font-size:26px;font-weight:800;text-align:center;line-height:1.35;margin-bottom:16px}
+.cov .line{width:40px;height:2px;background:var(--gold);margin:24px auto;border-radius:1px}
+.cov .sub{font-size:12px;color:rgba(255,255,255,.6);letter-spacing:2px;text-align:center}
+.cov .decor{position:absolute;top:-60px;right:-40px;width:200px;height:200px;border:2px solid rgba(255,255,255,.06);border-radius:50%}
+.cov .decor2{position:absolute;bottom:-40px;left:-30px;width:140px;height:140px;border:1px solid rgba(255,255,255,.05);border-radius:50%}
+
+/* END PAGE */
+.end-page{background:linear-gradient(160deg,#001a33 0%,var(--blue) 50%,#004d99 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff}
+.end-page .end-title{font-size:30px;font-weight:700;margin-bottom:12px}
+.end-page .end-line{width:40px;height:2px;background:var(--gold);margin:20px auto;border-radius:1px}
+.end-page .end-sub{font-size:13px;color:rgba(255,255,255,.55);letter-spacing:1px;text-align:center;padding:0 24px;line-height:1.8}
+.end-page .end-contact{margin-top:26px;font-size:11px;color:rgba(255,255,255,.4);letter-spacing:1px;text-align:center;padding:0 30px;line-height:1.9}
+
+/* PRODUCT / IMAGE PAGES */
+.prod{background:var(--page-bg);display:flex;flex-direction:column}
+.prod .top-bar{height:48px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.prod .top-bar span{color:#fff;font-size:15px;font-weight:600;letter-spacing:1px}
+.prod .img-area{flex:1;display:flex;align-items:center;justify-content:center;padding:12px;position:relative;overflow:hidden}
+.prod .img-area img{max-width:100%;max-height:100%;object-fit:contain;border-radius:2px}
+.prod .bot-bar{height:32px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.prod .bot-bar span{color:#bbb;font-size:10px;letter-spacing:2px}
+
+/* GRID PAGE (projects / profiles) */
+.grid-pg{background:var(--page-bg);display:flex;flex-direction:column}
+.grid-pg .top-bar{height:48px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.grid-pg .top-bar span{color:#fff;font-size:15px;font-weight:600;letter-spacing:1px}
+.grid-pg .grid{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px;overflow:hidden}
+.grid-pg .grid .cell{background:#f0f0f0;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.grid-pg .grid .cell img{width:100%;height:100%;object-fit:cover}
+.grid-pg .bot-bar{height:32px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.grid-pg .bot-bar span{color:#bbb;font-size:10px;letter-spacing:2px}
+
+/* AD PAGE */
+.ad-pg{background:#001a33;display:flex;flex-direction:column;overflow:hidden}
+.ad-pg .ad-img{flex:1;display:flex;align-items:center;justify-content:center;padding:0}
+.ad-pg .ad-img img{max-width:100%;max-height:100%;object-fit:contain}
+.ad-pg .ad-bar{height:36px;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ad-pg .ad-bar span{color:#001a33;font-size:12px;font-weight:700;letter-spacing:2px}
+
+/* PAGE NUMBER */
+.pg-num{position:absolute;bottom:8px;right:14px;font-size:10px;color:#bbb;z-index:5}
+
+/* BOOK EDGE */
+.book-edge{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;border-radius:3px;box-shadow:inset -3px 0 8px rgba(0,0,0,.08), inset 3px 0 8px rgba(0,0,0,.08);z-index:100}
+
+/* NAV */
+.nav{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);z-index:300;display:flex;align-items:center;gap:14px;background:rgba(0,0,0,.45);padding:8px 18px;border-radius:24px;backdrop-filter:blur(10px)}
+.nav .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.35);transition:.3s}
+.nav .dot.cur{background:#fff;width:22px;border-radius:10px}
+.nav .arr{color:#fff;font-size:20px;cursor:pointer;padding:4px 8px;line-height:1;opacity:.7;transition:.2s}
+.nav .arr:active{opacity:1}
+.nav .arr.hid{opacity:.15;pointer-events:none}
+
+/* LOADING */
+.loader{position:fixed;top:0;left:0;width:100%;height:100%;background:#111;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .4s}
+.loader.done{opacity:0;pointer-events:none}
+.loader .spinner{width:30px;height:30px;border:2px solid rgba(255,255,255,.12);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loader .txt{color:rgba(255,255,255,.4);font-size:11px;margin-top:14px;letter-spacing:3px}
+
+/* SWIPE HINT */
+.hint{position:fixed;bottom:110px;left:50%;transform:translateX(-50%);z-index:250;color:rgba(255,255,255,.35);font-size:11px;display:flex;align-items:center;gap:4px;animation:hintFade 2.5s infinite}
+@keyframes hintFade{0%,100%{opacity:.4}50%{opacity:1}}
+.hint.hide{display:none}
+
+/* RESPONSIVE */
+@media(min-width:768px){.book{max-width:420px}}
+@media(max-height:600px){
+  .book{height:78vh}
+  .cov .title{font-size:22px}
+  .prod .top-bar,.grid-pg .top-bar{height:40px}
+  .prod .top-bar span,.grid-pg .top-bar span{font-size:13px}
+  .prod .bot-bar,.grid-pg .bot-bar{height:26px}
+}
+</style>
+</head>
+<body>
+
+<div class="loader" id="loader"><div class="spinner"></div><div class="txt">LOADING</div></div>
+
+<div class="lang-bar" id="langbar">
+  <button class="on" data-l="zh">中文</button>
+  <button data-l="th">ไทย</button>
+  <button data-l="en">EN</button>
+  <button data-l="ja">日本語</button>
+  <button data-l="ru">РУ</button>
+  <button data-l="fr">FR</button>
+  <button data-l="de">DE</button>
+</div>
+
+<div class="book-wrap">
+  <div class="book shadow" id="book">
+    <div class="book-edge"></div>
+  </div>
+</div>
+
+<div class="hint" id="hint">← 滑动翻页 →</div>
+
+<div class="nav" id="nav">
+  <span class="arr" id="prev">&#8249;</span>
+  <span id="dots"></span>
+  <span class="arr" id="next">&#8250;</span>
+</div>
+
+<script>
+/* ============ 7-LANGUAGE DATA ============ */
+var L = {
+  zh: { coverTitle:'正锌门窗<br>产品宣传册', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'感谢阅览', endSub:'ZhengXin Doors & Windows',
+        contact:'广东华南防火科技有限公司<br>东莞市新益佳玻璃有限公司',
+        t_logo:'LOGO', t_prof:'型材展示', t_proj:'工程案例', t_ad:'安装实拍', bot:'ZHENGXIN DOORS & WINDOWS' },
+  th: { coverTitle:'แคตตาล็อกสินค้า<br>ZHENGXIN', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'ขอขอบคุณ', endSub:'ZhengXin Doors & Windows',
+        contact:'Guangdong Huanan Fire Prevention<br>Technology Co., Ltd.',
+        t_logo:'LOGO', t_prof:'โปรไฟล์อลูมิเนียม', t_proj:'โครงการติดตั้ง', t_ad:'ผลงานการติดตั้ง', bot:'ZHENGXIN DOORS & WINDOWS' },
+  en: { coverTitle:'ZHENGXIN<br>Doors & Windows<br>Product Catalog', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'Thank You', endSub:'ZhengXin Doors & Windows',
+        contact:'Guangdong Huanan Fire Prevention Technology Co., Ltd.',
+        t_logo:'LOGO', t_prof:'Aluminum Profiles', t_proj:'Projects', t_ad:'On-Site Installation', bot:'ZHENGXIN DOORS & WINDOWS' },
+  ja: { coverTitle:'正锌门窗<br>製品カタログ', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'ご覧いただきありがとうございます', endSub:'ZhengXin Doors & Windows',
+        contact:'広東華南防火科技有限公司',
+        t_logo:'LOGO', t_prof:'アルミ型材', t_proj:'施工事例', t_ad:'現地設置写真', bot:'ZHENGXIN DOORS & WINDOWS' },
+  ru: { coverTitle:'ZHENGXIN<br>Каталог продукции', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'Спасибо за внимание', endSub:'ZhengXin Doors & Windows',
+        contact:'Guangdong Huanan Fire Prevention Technology Co., Ltd.',
+        t_logo:'LOGO', t_prof:'Алюминиевые профили', t_proj:'Проекты', t_ad:'Монтаж на объекте', bot:'ZHENGXIN DOORS & WINDOWS' },
+  fr: { coverTitle:'ZHENGXIN<br>Catalogue produits', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'Merci de votre attention', endSub:'ZhengXin Doors & Windows',
+        contact:'Guangdong Huanan Fire Prevention Technology Co., Ltd.',
+        t_logo:'LOGO', t_prof:'Profilés aluminium', t_proj:'Projets', t_ad:'Installation sur site', bot:'ZHENGXIN DOORS & WINDOWS' },
+  de: { coverTitle:'ZHENGXIN<br>Produktkatalog', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'Vielen Dank', endSub:'ZhengXin Doors & Windows',
+        contact:'Guangdong Huanan Fire Prevention Technology Co., Ltd.',
+        t_logo:'LOGO', t_prof:'Aluminiumprofile', t_proj:'Projekte', t_ad:'Montage vor Ort', bot:'ZHENGXIN DOORS & WINDOWS' }
+};
+
+/* 产品图：zh/en/th 三语言版本（其他语言回退中文） */
+var IMG = {
+  logo: { zh:'images/products/duanqiao/Logo-zh.jpg', en:'images/products/duanqiao/Logo-en.jpg', th:'images/products/duanqiao/Logo-th.jpg' },
+  p110:  { zh:'images/products/duanqiao/110-zh.jpg',  en:'images/products/duanqiao/110-en.jpg',  th:'images/products/duanqiao/110-th.jpg' },
+  p120:  { zh:'images/products/duanqiao/120-zh.jpg',  en:'images/products/duanqiao/120-en.jpg',  th:'images/products/duanqiao/120-th.jpg' },
+  p125:  { zh:'images/products/duanqiao/125-zh.jpg',  en:'images/products/duanqiao/125-en.jpg',  th:'images/products/duanqiao/125-th.jpg' },
+  lift:  { zh:'images/products/duanqiao/lift-zh.jpg',  en:'images/products/duanqiao/lift-en.jpg',  th:'images/products/duanqiao/lift-th.jpg' },
+  case:  { zh:'images/products/duanqiao/casement-zh.jpg', en:'images/products/duanqiao/casement-en.jpg', th:'images/products/duanqiao/casement-th.jpg' },
+  swin:  { zh:'images/products/duanqiao/sliding-window-zh.jpg', en:'images/products/duanqiao/sliding-window-en.jpg', th:'images/products/duanqiao/sliding-window-th.jpg' },
+  sdoor: { zh:'images/products/duanqiao/sliding-door-zh.jpg', en:'images/products/duanqiao/sliding-door-en.jpg', th:'images/products/duanqiao/sliding-door-th.jpg' },
+  showcase: 'images/products/duanqiao/showcase.jpg'
+};
+
+/* 型材图：用宣传图（自带型材参数） */
+var PROFILES = [
+  { key:'p110' }, { key:'p120' }, { key:'p125' }
+];
+
+/* 项目实拍图（无语言版本） */
+var PROJECTS = [
+  'images/projects/huanyu-tianxia/img-01.jpg',
+  'images/projects/huanyu-tianxia/img-02.jpg',
+  'images/projects/jinke-boyue/img-01.jpg',
+  'images/projects/jinke-cheng/img-01.jpg',
+  'images/projects/nantian-mingyuan/img-01.jpg',
+  'images/projects/huanyu-tianxia/img-07.jpg'
+];
+
+/* 产品名称（7语言） */
+var PROD_NAMES = {
+  p110:  { zh:'110系列', th:'110 ซีรีส์', en:'110 Series', ja:'110シリーズ', ru:'Серия 110', fr:'Série 110', de:'Serie 110' },
+  p120:  { zh:'120系列', th:'120 ซีรีส์', en:'120 Series', ja:'120シリーズ', ru:'Серия 120', fr:'Série 120', de:'Serie 120' },
+  p125:  { zh:'125六轨推拉窗', th:'125 ซีรีส์', en:'125 Series', ja:'125シリーズ', ru:'Серия 125', fr:'Série 125', de:'Serie 125' },
+  lift:  { zh:'120提升窗', th:'120 หน้าต่างยกขึ้น', en:'120 Lift Window', ja:'120リフト窓', ru:'Подъемное окно 120', fr:'Fenêtre levante 120', de:'120 Hubfenster' },
+  case:  { zh:'平开窗', th:'หน้าต่างบานเปิด', en:'Casement Window', ja:'開き窓', ru:'Поворотное окно', fr:'Fenêtre à battant', de:'Drehflügelfenster' },
+  swin:  { zh:'推拉窗', th:'หน้าต่างบานเลื่อน', en:'Sliding Window', ja:'引違い窓', ru:'Раздвижное окно', fr:'Fenêtre coulissante', de:'Schiebefenster' },
+  sdoor: { zh:'推拉门', th:'ประตูบานเลื่อน', en:'Sliding Door', ja:'引違いドア', ru:'Раздвижная дверь', fr:'Porte coulissante', de:'Schiebetür' }
+};
+
+var PROF_NAMES = {
+  p110: { zh:'110型材', th:'โปรไฟล์ 110', en:'110 Profile', ja:'110型材', ru:'Профиль 110', fr:'Profilé 110', de:'Profil 110' },
+  p120: { zh:'120型材', th:'โปรไฟล์ 120', en:'120 Profile', ja:'120型材', ru:'Профиль 120', fr:'Profilé 120', de:'Profil 120' },
+  p125: { zh:'125型材', th:'โปรไฟล์ 125', en:'125 Profile', ja:'125型材', ru:'Профиль 125', fr:'Profilé 125', de:'Profil 125' }
+};
+
+/* 项目名（7语言） */
+var PROJ_NAMES = {
+  huanyu: { zh:'寰宇天下·工装', th:'โครงการหวันอวี่', en:'Huanyu Tianxia Project', ja:'寰宇天下 プロジェクト', ru:'Проект Huanyu', fr:'Projet Huanyu', de:'Projekt Huanyu' },
+  boyue:  { zh:'金科铂悦都会', th:'โครงการจินเคอ', en:'Jinke Boyue Project', ja:'金科プロジェクト', ru:'Проект Jinke', fr:'Projet Jinke', de:'Projekt Jinke' },
+  cheng:  { zh:'金科城·工装', th:'โครงการจินเคอเฉิง', en:'Jinke Cheng Project', ja:'金科城プロジェクト', ru:'Проект Jinke Cheng', fr:'Projet Jinke Cheng', de:'Projekt Jinke Cheng' },
+  nantian: { zh:'南天名苑', th:'โครงการหนานเทียน', en:'Nantian Mingyuan Project', ja:'南天名苑プロジェクト', ru:'Проект Nantian', fr:'Projet Nantian', de:'Projekt Nantian' }
+};
+
+/* 页面顺序（按语言无关的模板定义，标题取当前语言） */
+var PAGES_TMPL = [
+  { t:'cover' },
+  { t:'logo' },
+  { t:'prod', key:'p110' },
+  { t:'prod', key:'p120' },
+  { t:'prod', key:'p125' },
+  { t:'prod', key:'lift' },
+  { t:'prod', key:'case' },
+  { t:'prod', key:'swin' },
+  { t:'prod', key:'sdoor' },
+  { t:'prof' },
+  { t:'proj' },
+  { t:'ad' },
+  { t:'end' }
+];
+
+let lang='zh', idx=0, total=0, anim=false;
+const book=document.getElementById('book');
+const dotsEl=document.getElementById('dots');
+const nav=document.getElementById('nav');
+const prevBtn=document.getElementById('prev');
+const nextBtn=document.getElementById('next');
+const hint=document.getElementById('hint');
+const loader=document.getElementById('loader');
+let imgLoadCount=0, imgTotal=0;
+
+function imgSrc(key, lang){
+  var v = IMG[key];
+  if(!v) return '';
+  if(typeof v === 'string') return v;
+  return v[lang] || v.zh;
+}
+
+function buildHTML(){
+  let h='';
+  const T = L[lang];
+  PAGES_TMPL.forEach((p,i)=>{
+    let z = total - i;
+    let st = i===0 ? '' : ' style="transform:rotateY(180deg);pointer-events:none"';
+    let inner = '';
+    if(p.t==='cover'){
+      inner = `<div class="page-front cov">
+        <div class="decor"></div><div class="decor2"></div>
+        <div class="brand">ZHENGXIN</div>
+        <div class="title">${T.coverTitle}</div>
+        <div class="line"></div>
+        <div class="sub">${T.coverSub}</div>
+      </div><div class="page-back"></div>`;
+    } else if(p.t==='end'){
+      inner = `<div class="page-front end-page">
+        <div class="end-title">${T.endTitle}</div>
+        <div class="end-line"></div>
+        <div class="end-sub">${T.endSub}</div>
+        <div class="end-contact">${T.contact}</div>
+      </div><div class="page-back"></div>`;
+    } else if(p.t==='logo'){
+      const src = imgSrc('logo', lang);
+      inner = `<div class="page-front logo-pg"><div class="top-bar"><span>${T.t_logo}</span></div>
+        <div class="img-area"><img src="${src}" onload="imgDone()" onerror="imgDone()"></div>
+        <div class="bot-bar"><span>ZHENGXIN</span></div>
+        <div class="pg-num">${i+1}/${total}</div></div><div class="page-back"></div>`;
+    } else if(p.t==='prod'){
+      const name = PROD_NAMES[p.key] ? (PROD_NAMES[p.key][lang] || PROD_NAMES[p.key].zh) : p.key;
+      const src = imgSrc(p.key, lang);
+      inner = `<div class="page-front prod"><div class="top-bar"><span>${name}</span></div>
+        <div class="img-area"><img src="${src}" onload="imgDone()" onerror="imgDone()"></div>
+        <div class="bot-bar"><span>${T.bot}</span></div>
+        <div class="pg-num">${i+1}/${total}</div></div><div class="page-back"></div>`;
+    } else if(p.t==='prof'){
+      const cells = PROFILES.map(function(pr){
+        const name = PROF_NAMES[pr.key] ? (PROF_NAMES[pr.key][lang] || PROF_NAMES[pr.key].zh) : pr.key;
+        return `<div class="cell"><img src="${imgSrc(pr.key, lang)}" alt="${name}" onload="imgDone()" onerror="imgDone()"></div>`;
+      }).join('');
+      inner = `<div class="page-front grid-pg"><div class="top-bar"><span>${T.t_prof}</span></div>
+        <div class="grid">${cells}</div>
+        <div class="bot-bar"><span>${T.bot}</span></div>
+        <div class="pg-num">${i+1}/${total}</div></div><div class="page-back"></div>`;
+    } else if(p.t==='proj'){
+      const cells = PROJECTS.map(function(src, ci){
+        const name = (PROJ_NAMES[['huanyu','boyue','cheng','nantian'][ci]] || {})[lang] || '';
+        return `<div class="cell"><img src="${src}" alt="${name}" onload="imgDone()" onerror="imgDone()"></div>`;
+      }).join('');
+      inner = `<div class="page-front grid-pg"><div class="top-bar"><span>${T.t_proj}</span></div>
+        <div class="grid">${cells}</div>
+        <div class="bot-bar"><span>${T.bot}</span></div>
+        <div class="pg-num">${i+1}/${total}</div></div><div class="page-back"></div>`;
+    } else if(p.t==='ad'){
+      inner = `<div class="page-front ad-pg">
+        <div class="ad-img"><img src="${imgSrc('showcase', lang)}" onload="imgDone()" onerror="imgDone()"></div>
+        <div class="ad-bar"><span>${T.t_ad}</span></div>
+        <div class="pg-num" style="color:rgba(255,255,255,.5)">${i+1}/${total}</div>
+      </div><div class="page-back"></div>`;
+    }
+    h += `<div class="page-card" data-i="${i}" style="z-index:${z}"${st}>${inner}</div>`;
+  });
+  book.innerHTML = h + '<div class="book-edge"></div>';
+  imgTotal = 1; // logo
+  PAGES_TMPL.forEach(function(p){
+    if(p.t==='prod' || p.t==='prof' || p.t==='proj' || p.t==='ad') imgTotal++;
+  });
+  imgLoadCount = 0;
+}
+
+function imgDone(){
+  imgLoadCount++;
+  if(imgLoadCount >= imgTotal){
+    setTimeout(()=>loader.classList.add('done'), 300);
+  }
+}
+
+function buildDots(){
+  let h='';
+  for(let i=0;i<total;i++) h+=`<span class="dot${i===idx?' cur':''}" data-d="${i}"></span>`;
+  dotsEl.innerHTML=h;
+  prevBtn.classList.toggle('hid', idx===0);
+  nextBtn.classList.toggle('hid', idx===total-1);
+}
+
+function flipTo(target){
+  if(anim || target===idx || target<0 || target>=total) return;
+  anim=true;
+  hint.classList.add('hide');
+  const cards = book.querySelectorAll('.page-card');
+  const dir = target > idx ? 1 : -1;
+
+  cards.forEach(c=>{
+    const i = parseInt(c.dataset.i);
+    let s = c.style;
+    s.transition = 'transform .55s cubic-bezier(.4,0,.2,1)';
+    s.transformOrigin = dir>0 ? 'left center' : 'right center';
+
+    if(dir>0){
+      if(i===idx) { s.transform='rotateY(-175deg)'; s.zIndex=0; s.pointerEvents='none'; }
+      else if(i===target) { s.transform='rotateY(0deg)'; s.zIndex=total-target; s.pointerEvents='auto'; }
+    } else {
+      if(i===idx) { s.transform='rotateY(175deg)'; s.zIndex=0; s.pointerEvents='none'; }
+      else if(i===target) { s.transform='rotateY(0deg)'; s.zIndex=total-target; s.pointerEvents='auto'; }
+    }
+
+    if(i>idx && i!==target) s.zIndex = total-i;
+    if(i<idx && i!==target) s.zIndex = 0;
+  });
+
+  idx=target;
+  buildDots();
+  setTimeout(()=>{anim=false}, 550);
+}
+
+function switchLang(l){
+  if(l===lang) return;
+  lang=l;
+  document.querySelectorAll('#langbar button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
+  total = PAGES_TMPL.length;
+  idx=0;
+  loader.classList.remove('done');
+  buildHTML();
+  buildDots();
+}
+
+/* INIT */
+function init(){
+  const saved = (localStorage.getItem('catalog_lang') || '');
+  if(L[saved]) lang = saved;
+  document.querySelectorAll('#langbar button').forEach(b=>b.classList.toggle('on',b.dataset.l===lang));
+  total = PAGES_TMPL.length;
+  buildHTML();
+  buildDots();
+}
+init();
+
+/* Events */
+document.getElementById('langbar').addEventListener('click',e=>{
+  const b=e.target.closest('button');
+  if(b){ switchLang(b.dataset.l); try{localStorage.setItem('catalog_lang',b.dataset.l);}catch(_){} }
+});
+
+prevBtn.addEventListener('click',()=>flipTo(idx-1));
+nextBtn.addEventListener('click',()=>flipTo(idx+1));
+
+dotsEl.addEventListener('click',e=>{
+  const d=e.target.closest('.dot'); if(d) flipTo(parseInt(d.dataset.d));
+});
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight') flipTo(idx+1);
+  if(e.key==='ArrowLeft') flipTo(idx-1);
+});
+
+let tsX=0, tsY=0, moved=false;
+document.addEventListener('touchstart',e=>{
+  tsX=e.touches[0].clientX; tsY=e.touches[0].clientY; moved=false;
+},{passive:true});
+document.addEventListener('touchmove',e=>{
+  if(!moved&&(Math.abs(e.touches[0].clientX-tsX)>8||Math.abs(e.touches[0].clientY-tsY)>8)) moved=true;
+},{passive:true});
+document.addEventListener('touchend',e=>{
+  if(!moved) return;
+  const dx=e.changedTouches[0].clientX-tsX;
+  const dy=e.changedTouches[0].clientY-tsY;
+  if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>40){
+    flipTo(dx<0?idx+1:idx-1);
+  }
+});
+
+book.addEventListener('click',e=>{
+  const rect=book.getBoundingClientRect();
+  const x=e.clientX-rect.left;
+  if(x>rect.width*.6) flipTo(idx+1);
+  else if(x<rect.width*.4) flipTo(idx-1);
+});
+
+/* Logo 图片（泰国素材 Logo 中文.png 无压缩版，用现有） */
+</script>
+</body>
+</html>
