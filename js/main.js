@@ -255,28 +255,61 @@ document.addEventListener('keydown', (e) => {
   lb.setAttribute('aria-modal', 'true');
   lb.innerHTML = '<div class="img-lightbox__inner">' +
                    '<button type="button" class="img-lightbox__close" aria-label="Close">&times;</button>' +
+                   '<button type="button" class="img-lightbox__nav img-lightbox__prev" aria-label="Previous">&#10094;</button>' +
                    '<img class="img-lightbox__img" alt="">' +
+                   '<button type="button" class="img-lightbox__nav img-lightbox__next" aria-label="Next">&#10095;</button>' +
                  '</div>';
   document.body.appendChild(lb);
   var lbImg = lb.querySelector('.img-lightbox__img');
   var lbClose = lb.querySelector('.img-lightbox__close');
+  var lbPrev = lb.querySelector('.img-lightbox__prev');
+  var lbNext = lb.querySelector('.img-lightbox__next');
+  var lbItems = [];
+  var lbIndex = 0;
 
-  function openLb(src, caption) {
-    lbImg.src = src;
-    lbImg.alt = caption || '';
+  function showLbItem() {
+    if (!lbItems.length) return;
+    var it = lbItems[lbIndex];
+    lbImg.src = it.src;
+    lbImg.alt = it.caption || '';
+    lbPrev.style.display = lbItems.length > 1 ? '' : 'none';
+    lbNext.style.display = lbItems.length > 1 ? '' : 'none';
+  }
+  function openLb(items, index) {
+    lbItems = items || [];
+    lbIndex = Math.max(0, Math.min(index || 0, lbItems.length - 1));
+    showLbItem();
     lb.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   }
+  // 暴露给其他模块（项目弹窗）
+  window.openLb = openLb;
+  window.closeLb = closeLb;
   function closeLb() {
     lb.classList.remove('is-open');
     document.body.style.overflow = '';
   }
+  lbPrev.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (!lbItems.length) return;
+    lbIndex = (lbIndex - 1 + lbItems.length) % lbItems.length;
+    showLbItem();
+  });
+  lbNext.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (!lbItems.length) return;
+    lbIndex = (lbIndex + 1) % lbItems.length;
+    showLbItem();
+  });
   lbClose.addEventListener('click', closeLb);
   lb.addEventListener('click', function(e) {
     if (e.target === lb) closeLb();
   });
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && lb.classList.contains('is-open')) closeLb();
+    if (!lb.classList.contains('is-open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowRight') lbNext.click();
+    if (e.key === 'ArrowLeft') lbPrev.click();
   });
 
   // Wire up all cert thumbnails
@@ -287,7 +320,14 @@ document.addEventListener('keydown', (e) => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
         var src = link.getAttribute('href');
-        openLb(src, getCaption(link));
+        // 收集同组证书图，支持多图导航
+        var group = link.getAttribute('data-group') || 'certs';
+        var all = Array.from(document.querySelectorAll('.js-cert[data-group="' + group + '"]'));
+        var items = all.map(function(l) {
+          return { src: l.getAttribute('href'), caption: getCaption(l) };
+        });
+        var idx = all.indexOf(link);
+        openLb(items, idx);
       });
     });
   }
@@ -451,14 +491,25 @@ document.addEventListener('keydown', (e) => {
       requestAnimationFrame(function() { videoLb.classList.add('is-open'); });
       try { videoEl.play(); } catch (_) {}
     } else {
-      // Reuse existing img lightbox (img-lightbox from certificates)
+      // Use gallery lightbox with prev/next across all images in this modal
       var imgLb = document.querySelector('.img-lightbox');
       var imgEl = imgLb ? imgLb.querySelector('.img-lightbox__img') : null;
       if (imgLb && imgEl) {
-        imgEl.src = src;
-        imgEl.alt = el.querySelector('img') ? el.querySelector('img').alt : '';
-        imgLb.classList.add('is-open');
-        document.body.style.overflow = 'hidden';
+        var allImgs = Array.from(modal.querySelectorAll('.js-proj-media[data-type="image"]'));
+        var items = allImgs.map(function(m) {
+          var t = m.querySelector('img');
+          return { src: m.getAttribute('data-src'), caption: t ? t.alt : '' };
+        });
+        var idx = allImgs.indexOf(el);
+        // 调用 lightbox 的多图打开函数
+        if (typeof openLb === 'function') {
+          openLb(items, idx);
+        } else {
+          imgEl.src = src;
+          imgEl.alt = el.querySelector('img') ? el.querySelector('img').alt : '';
+          imgLb.classList.add('is-open');
+          document.body.style.overflow = 'hidden';
+        }
       }
     }
   });
