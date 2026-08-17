@@ -21,24 +21,24 @@
 html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#111;touch-action:pan-y;-webkit-tap-highlight-color:transparent}
 
 /* LANG BAR */
-.lang-bar{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:center;gap:5px;padding:14px 12px;pointer-events:none;flex-wrap:wrap}
-.lang-bar button{pointer-events:auto;padding:6px 14px;border-radius:16px;border:1px solid rgba(255,255,255,.4);background:rgba(0,0,0,.3);color:#fff;font-size:12px;backdrop-filter:blur(8px);transition:.25s;cursor:pointer}
+.lang-bar{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:center;gap:5px;padding:12px 12px;pointer-events:none;flex-wrap:wrap}
+.lang-bar button{pointer-events:auto;padding:5px 13px;border-radius:16px;border:1px solid rgba(255,255,255,.4);background:rgba(0,0,0,.3);color:#fff;font-size:11px;backdrop-filter:blur(8px);transition:.25s;cursor:pointer}
 .lang-bar button.on{background:#fff;color:var(--blue);border-color:#fff;font-weight:700}
 
-/* BOOK CONTAINER */
-.book-wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;perspective:1600px;padding-top:40px}
-.book{position:relative;width:94vw;max-width:520px;height:88vh;max-height:760px;transform-style:preserve-3d}
-.book.shadow:after{content:'';position:absolute;top:4px;left:2%;right:2%;bottom:-4px;background:rgba(0,0,0,.4);filter:blur(12px);z-index:-1;border-radius:4px}
+/* BOOK CONTAINER —— 完全居中 */
+.book-wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;perspective:1800px}
+.book{position:relative;width:92vw;max-width:600px;height:86vh;max-height:820px;transform-style:preserve-3d}
+.book.shadow:after{content:'';position:absolute;top:4px;left:2%;right:2%;bottom:-6px;background:rgba(0,0,0,.45);filter:blur(16px);z-index:-1;border-radius:6px}
 
 /* PAGES */
-.page-card{position:absolute;top:0;left:0;width:100%;height:100%;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,0,.2,1);cursor:pointer;border-radius:3px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,.15)}
-.page-front,.page-back{position:absolute;top:0;left:0;width:100%;height:100%;backface-visibility:hidden;border-radius:3px;overflow:hidden}
-.page-back{transform:rotateY(180deg)}
+.page-card{position:absolute;top:0;left:0;width:100%;height:100%;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.35,.05,.25,1);cursor:pointer;border-radius:3px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,.15)}
+.page-front,.page-back{position:absolute;top:0;left:0;width:100%;height:100%;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:3px;overflow:hidden}
+.page-back{transform:rotateY(180deg);background:#f5f3ee}
 
 /* COVER PAGE */
 .cov{background:linear-gradient(160deg,#001a33 0%,var(--blue) 50%,#004d99 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:40px 24px;position:relative}
 .cov .brand{font-size:11px;letter-spacing:6px;color:var(--gold);margin-bottom:30px;text-transform:uppercase}
-.cov .title{font-size:26px;font-weight:800;text-align:center;line-height:1.35;margin-bottom:16px}
+.cov .title{font-size:27px;font-weight:800;text-align:center;line-height:1.35;margin-bottom:16px}
 .cov .line{width:40px;height:2px;background:var(--gold);margin:24px auto;border-radius:1px}
 .cov .sub{font-size:12px;color:rgba(255,255,255,.6);letter-spacing:2px;text-align:center}
 .cov .decor{position:absolute;top:-60px;right:-40px;width:200px;height:200px;border:2px solid rgba(255,255,255,.06);border-radius:50%}
@@ -55,17 +55,20 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
 .prod{background:var(--page-bg);display:flex;flex-direction:column}
 .prod .top-bar{height:48px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .prod .top-bar span{color:#fff;font-size:15px;font-weight:600;letter-spacing:1px}
-.prod .img-area{flex:1;display:flex;align-items:center;justify-content:center;padding:12px;position:relative;overflow:hidden}
+.prod .img-area{flex:1;display:flex;align-items:center;justify-content:center;padding:12px;position:relative;overflow:hidden;min-height:0}
 .prod .img-area img{max-width:100%;max-height:100%;object-fit:contain;border-radius:2px}
 .prod .bot-bar{height:32px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .prod .bot-bar span{color:#bbb;font-size:10px;letter-spacing:2px}
 
-/* LOGO PAGE */
+/* LOGO PAGE —— 官网三 LOGO 横排 */
 .logo-pg{background:var(--page-bg);display:flex;flex-direction:column}
 .logo-pg .top-bar{height:48px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .logo-pg .top-bar span{color:#fff;font-size:15px;font-weight:600;letter-spacing:1px}
-.logo-pg .img-area{flex:1;display:flex;align-items:center;justify-content:center;padding:30px;overflow:hidden;min-height:0}
-.logo-pg .img-area img{max-width:80%;max-height:80%;object-fit:contain}
+.logo-pg .img-area{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;overflow:hidden;min-height:0;gap:22px}
+.logo-row{display:flex;align-items:center;justify-content:center;gap:16px;width:100%}
+.logo-row img{max-width:30%;max-height:96px;object-fit:contain}
+.logo-divider{width:1px;height:56px;background:#ddd;flex-shrink:0}
+.logo-name{font-size:11px;color:#999;letter-spacing:2px;text-align:center}
 .logo-pg .bot-bar{height:32px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .logo-pg .bot-bar span{color:#bbb;font-size:10px;letter-spacing:2px}
 
@@ -73,11 +76,22 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
 .grid-pg{background:var(--page-bg);display:flex;flex-direction:column}
 .grid-pg .top-bar{height:48px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .grid-pg .top-bar span{color:#fff;font-size:15px;font-weight:600;letter-spacing:1px}
-.grid-pg .grid{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px;overflow:hidden}
+.grid-pg .grid{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px;overflow:hidden;min-height:0}
 .grid-pg .grid .cell{background:#f0f0f0;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .grid-pg .grid .cell img{width:100%;height:100%;object-fit:cover}
 .grid-pg .bot-bar{height:32px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .grid-pg .bot-bar span{color:#bbb;font-size:10px;letter-spacing:2px}
+
+/* SPREAD PAGE —— 跨页大图（横图左右各半，拼成完整大图） */
+.spread-pg{background:var(--page-bg);display:flex;flex-direction:column}
+.spread-pg .top-bar{height:48px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.spread-pg .top-bar span{color:#fff;font-size:15px;font-weight:600;letter-spacing:1px}
+.spread-pg .img-area{flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;min-height:0}
+.spread-pg .img-area img{position:absolute;top:0;height:100%;width:200%;max-width:none;object-fit:cover}
+.spread-pg .img-area img.half-l{left:0;object-position:left center}
+.spread-pg .img-area img.half-r{right:0;object-position:right center}
+.spread-pg .bot-bar{height:32px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.spread-pg .bot-bar span{color:#bbb;font-size:10px;letter-spacing:2px}
 
 /* AD PAGE */
 .ad-pg{background:#001a33;display:flex;flex-direction:column;overflow:hidden}
@@ -113,13 +127,13 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
 .hint.hide{display:none}
 
 /* RESPONSIVE */
-@media(min-width:768px){.book{max-width:520px}}
+@media(min-width:768px){.book{max-width:600px}}
 @media(max-height:600px){
   .book{height:80vh}
   .cov .title{font-size:22px}
-  .prod .top-bar,.grid-pg .top-bar,.logo-pg .top-bar{height:40px}
-  .prod .top-bar span,.grid-pg .top-bar span,.logo-pg .top-bar span{font-size:13px}
-  .prod .bot-bar,.grid-pg .bot-bar,.logo-pg .bot-bar{height:26px}
+  .prod .top-bar,.grid-pg .top-bar,.logo-pg .top-bar,.spread-pg .top-bar{height:40px}
+  .prod .top-bar span,.grid-pg .top-bar span,.logo-pg .top-bar span,.spread-pg .top-bar span{font-size:13px}
+  .prod .bot-bar,.grid-pg .bot-bar,.logo-pg .bot-bar,.spread-pg .bot-bar{height:26px}
 }
 
 /* ===== 悬浮控件 ===== */
@@ -203,30 +217,29 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
 var L = {
   zh: { coverTitle:'正锌门窗<br>产品宣传册', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'感谢阅览', endSub:'ZhengXin Doors & Windows',
         contact:'广东华南防火科技有限公司<br>东莞市新益佳玻璃有限公司',
-        t_logo:'LOGO', t_prof:'型材展示', t_proj:'工程案例', t_ad:'安装实拍', bot:'ZHENGXIN DOORS & WINDOWS' },
+        t_logo:'品牌 · LOGO', t_prof:'型材展示', t_proj:'工程案例', t_ad:'安装实拍', bot:'ZHENGXIN DOORS & WINDOWS' },
   th: { coverTitle:'แคตตาล็อกสินค้า<br>ZHENGXIN', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'ขอขอบคุณ', endSub:'ZhengXin Doors & Windows',
         contact:'Guangdong Huanan Fire Prevention<br>Technology Co., Ltd.',
         t_logo:'LOGO', t_prof:'โปรไฟล์อลูมิเนียม', t_proj:'โครงการติดตั้ง', t_ad:'ผลงานการติดตั้ง', bot:'ZHENGXIN DOORS & WINDOWS' },
   en: { coverTitle:'ZHENGXIN<br>Doors & Windows<br>Product Catalog', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'Thank You', endSub:'ZhengXin Doors & Windows',
         contact:'Guangdong Huanan Fire Prevention Technology Co., Ltd.',
-        t_logo:'LOGO', t_prof:'Aluminum Profiles', t_proj:'Projects', t_ad:'On-Site Installation', bot:'ZHENGXIN DOORS & WINDOWS' },
+        t_logo:'Brands & LOGO', t_prof:'Aluminum Profiles', t_proj:'Projects', t_ad:'On-Site Installation', bot:'ZHENGXIN DOORS & WINDOWS' },
   ja: { coverTitle:'正锌门窗<br>製品カタログ', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'ご覧いただきありがとうございます', endSub:'ZhengXin Doors & Windows',
         contact:'広東華南防火科技有限公司',
-        t_logo:'LOGO', t_prof:'アルミ型材', t_proj:'施工事例', t_ad:'現地設置写真', bot:'ZHENGXIN DOORS & WINDOWS' },
+        t_logo:'ブランド LOGO', t_prof:'アルミ型材', t_proj:'施工事例', t_ad:'現地設置写真', bot:'ZHENGXIN DOORS & WINDOWS' },
   ru: { coverTitle:'ZHENGXIN<br>Каталог продукции', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'Спасибо за внимание', endSub:'ZhengXin Doors & Windows',
         contact:'Guangdong Huanan Fire Prevention Technology Co., Ltd.',
-        t_logo:'LOGO', t_prof:'Алюминиевые профили', t_proj:'Проекты', t_ad:'Монтаж на объекте', bot:'ZHENGXIN DOORS & WINDOWS' },
+        t_logo:'Бренды и LOGO', t_prof:'Алюминиевые профили', t_proj:'Проекты', t_ad:'Монтаж на объекте', bot:'ZHENGXIN DOORS & WINDOWS' },
   fr: { coverTitle:'ZHENGXIN<br>Catalogue produits', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'Merci de votre attention', endSub:'ZhengXin Doors & Windows',
         contact:'Guangdong Huanan Fire Prevention Technology Co., Ltd.',
-        t_logo:'LOGO', t_prof:'Profilés aluminium', t_proj:'Projets', t_ad:'Installation sur site', bot:'ZHENGXIN DOORS & WINDOWS' },
+        t_logo:'Marques et LOGO', t_prof:'Profilés aluminium', t_proj:'Projets', t_ad:'Installation sur site', bot:'ZHENGXIN DOORS & WINDOWS' },
   de: { coverTitle:'ZHENGXIN<br>Produktkatalog', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'Vielen Dank', endSub:'ZhengXin Doors & Windows',
         contact:'Guangdong Huanan Fire Prevention Technology Co., Ltd.',
-        t_logo:'LOGO', t_prof:'Aluminiumprofile', t_proj:'Projekte', t_ad:'Montage vor Ort', bot:'ZHENGXIN DOORS & WINDOWS' }
+        t_logo:'Marken und LOGO', t_prof:'Aluminiumprofile', t_proj:'Projekte', t_ad:'Montage vor Ort', bot:'ZHENGXIN DOORS & WINDOWS' }
 };
 
 /* 产品图：zh/en/th 三语言版本（其他语言回退中文） */
 var IMG = {
-  logo: { zh:'images/products/duanqiao/Logo-zh.jpg', en:'images/products/duanqiao/Logo-en.jpg', th:'images/products/duanqiao/Logo-th.jpg' },
   p110:  { zh:'images/products/duanqiao/110-zh.jpg',  en:'images/products/duanqiao/110-en.jpg',  th:'images/products/duanqiao/110-th.jpg' },
   p120:  { zh:'images/products/duanqiao/120-zh.jpg',  en:'images/products/duanqiao/120-en.jpg',  th:'images/products/duanqiao/120-th.jpg' },
   p125:  { zh:'images/products/duanqiao/125-zh.jpg',  en:'images/products/duanqiao/125-en.jpg',  th:'images/products/duanqiao/125-th.jpg' },
@@ -237,9 +250,18 @@ var IMG = {
   showcase: 'images/products/duanqiao/showcase.jpg'
 };
 
-/* 型材图：用宣传图（自带型材参数） */
-var PROFILES = [
-  { key:'p110' }, { key:'p120' }, { key:'p125' }
+/* 官网三 LOGO（无语言版本） */
+var BRAND_LOGOS = [
+  { src:'images/logo-1.png' },
+  { src:'images/logo-2.png' },
+  { src:'images/logo-3.png' }
+];
+
+/* 跨页大图（横图）：左右半页拼成完整大图 */
+var SPREADS = [
+  { key:'showcase', label:{ zh:'安装实拍 · 全景', th:'ภาพรวมการติดตั้ง', en:'Installation Overview', ja:'設置全景', ru:'Обзор монтажа', fr:'Vue d\'ensemble', de:'Übersicht' } },
+  { key:'swin',     label:{ zh:'推拉窗 · 全景', th:'หน้าต่างบานเลื่อน', en:'Sliding Window View', ja:'引違い窓 全景', ru:'Раздвижное окно', fr:'Fenêtre coulissante', de:'Schiebefenster' } },
+  { key:'lift',     label:{ zh:'提升窗 · 全景', th:'หน้าต่างยกขึ้น', en:'Lift Window View', ja:'リフト窓 全景', ru:'Подъемное окно', fr:'Fenêtre levante', de:'Hubfenster' } }
 ];
 
 /* 项目实拍图（无语言版本） */
@@ -269,15 +291,14 @@ var PROF_NAMES = {
   p125: { zh:'125型材', th:'โปรไฟล์ 125', en:'125 Profile', ja:'125型材', ru:'Профиль 125', fr:'Profilé 125', de:'Profil 125' }
 };
 
-/* 项目名（7语言） */
 var PROJ_NAMES = {
-  huanyu: { zh:'寰宇天下·工装', th:'โครงการหวันอวี่', en:'Huanyu Tianxia Project', ja:'寰宇天下 プロジェクト', ru:'Проект Huanyu', fr:'Projet Huanyu', de:'Projekt Huanyu' },
-  boyue:  { zh:'金科铂悦都会', th:'โครงการจินเคอ', en:'Jinke Boyue Project', ja:'金科プロジェクト', ru:'Проект Jinke', fr:'Projet Jinke', de:'Projekt Jinke' },
-  cheng:  { zh:'金科城·工装', th:'โครงการจินเคอเฉิง', en:'Jinke Cheng Project', ja:'金科城プロジェクト', ru:'Проект Jinke Cheng', fr:'Projet Jinke Cheng', de:'Projekt Jinke Cheng' },
-  nantian: { zh:'南天名苑', th:'โครงการหนานเทียน', en:'Nantian Mingyuan Project', ja:'南天名苑プロジェクト', ru:'Проект Nantian', fr:'Projet Nantian', de:'Projekt Nantian' }
+  huanyu: { zh:'寰宇天下·工装', th:'โครงการหวันอวี่', en:'Huanyu Tianxia', ja:'寰宇天下', ru:'Huanyu', fr:'Huanyu', de:'Huanyu' },
+  boyue:  { zh:'金科铂悦都会', th:'จินเคอ โบ๊ยู', en:'Jinke Boyue', ja:'金科铂悦', ru:'Jinke Boyue', fr:'Jinke Boyue', de:'Jinke Boyue' },
+  cheng:  { zh:'金科城·工装', th:'จินเคอเฉิง', en:'Jinke Cheng', ja:'金科城', ru:'Jinke Cheng', fr:'Jinke Cheng', de:'Jinke Cheng' },
+  nantian: { zh:'南天名苑', th:'หนานเทียน', en:'Nantian Mingyuan', ja:'南天名苑', ru:'Nantian', fr:'Nantian', de:'Nantian' }
 };
 
-/* 页面顺序（按语言无关的模板定义，标题取当前语言） */
+/* 页面顺序：spread 页会展开为左右两个半页 */
 var PAGES_TMPL = [
   { t:'cover' },
   { t:'logo' },
@@ -290,19 +311,34 @@ var PAGES_TMPL = [
   { t:'prod', key:'sdoor' },
   { t:'prof' },
   { t:'proj' },
-  { t:'ad' },
+  { t:'spread', key:'showcase' },
+  { t:'spread', key:'swin' },
+  { t:'spread', key:'lift' },
   { t:'end' }
 ];
 
 let lang='zh', idx=0, total=0, anim=false;
 const book=document.getElementById('book');
 const dotsEl=document.getElementById('dots');
-const nav=document.getElementById('nav');
 const prevBtn=document.getElementById('prev');
 const nextBtn=document.getElementById('next');
 const hint=document.getElementById('hint');
 const loader=document.getElementById('loader');
 let imgLoadCount=0, imgTotal=0;
+
+/* 展开模板：spread 变为两个半页 */
+function expandTmpl(){
+  let out=[];
+  PAGES_TMPL.forEach(function(p){
+    if(p.t==='spread'){
+      out.push(Object.assign({}, p, {half:'l'}));
+      out.push(Object.assign({}, p, {half:'r'}));
+    } else {
+      out.push(p);
+    }
+  });
+  return out;
+}
 
 function imgSrc(key, lang){
   var v = IMG[key];
@@ -314,7 +350,9 @@ function imgSrc(key, lang){
 function buildHTML(){
   let h='';
   const T = L[lang];
-  PAGES_TMPL.forEach((p,i)=>{
+  const pages = expandTmpl();
+  total = pages.length;
+  pages.forEach((p,i)=>{
     let z = total - i;
     let st = i===0 ? '' : ' style="transform:rotateY(180deg);pointer-events:none"';
     let inner = '';
@@ -334,10 +372,15 @@ function buildHTML(){
         <div class="end-contact">${T.contact}</div>
       </div><div class="page-back"></div>`;
     } else if(p.t==='logo'){
-      const src = imgSrc('logo', lang);
+      const logos = BRAND_LOGOS.map(function(bl){
+        return `<img src="${bl.src}" onload="imgDone()" onerror="imgDone()">`;
+      }).join('');
       inner = `<div class="page-front logo-pg"><div class="top-bar"><span>${T.t_logo}</span></div>
-        <div class="img-area"><img src="${src}" onload="imgDone()" onerror="imgDone()"></div>
-        <div class="bot-bar"><span>ZHENGXIN</span></div>
+        <div class="img-area">
+          <div class="logo-row">${logos}</div>
+          <div class="logo-name">ZHENGXIN DOORS &amp; WINDOWS</div>
+        </div>
+        <div class="bot-bar"><span>${T.bot}</span></div>
         <div class="pg-num">${i+1}/${total}</div></div><div class="page-back"></div>`;
     } else if(p.t==='prod'){
       const name = PROD_NAMES[p.key] ? (PROD_NAMES[p.key][lang] || PROD_NAMES[p.key].zh) : p.key;
@@ -347,9 +390,9 @@ function buildHTML(){
         <div class="bot-bar"><span>${T.bot}</span></div>
         <div class="pg-num">${i+1}/${total}</div></div><div class="page-back"></div>`;
     } else if(p.t==='prof'){
-      const cells = PROFILES.map(function(pr){
-        const name = PROF_NAMES[pr.key] ? (PROF_NAMES[pr.key][lang] || PROF_NAMES[pr.key].zh) : pr.key;
-        return `<div class="cell"><img src="${imgSrc(pr.key, lang)}" alt="${name}" onload="imgDone()" onerror="imgDone()"></div>`;
+      const cells = ['p110','p120','p125'].map(function(k){
+        const name = PROF_NAMES[k] ? (PROF_NAMES[k][lang] || PROF_NAMES[k].zh) : k;
+        return `<div class="cell"><img src="${imgSrc(k, lang)}" alt="${name}" onload="imgDone()" onerror="imgDone()"></div>`;
       }).join('');
       inner = `<div class="page-front grid-pg"><div class="top-bar"><span>${T.t_prof}</span></div>
         <div class="grid">${cells}</div>
@@ -364,6 +407,16 @@ function buildHTML(){
         <div class="grid">${cells}</div>
         <div class="bot-bar"><span>${T.bot}</span></div>
         <div class="pg-num">${i+1}/${total}</div></div><div class="page-back"></div>`;
+    } else if(p.t==='spread'){
+      const name = p.key==='showcase'
+        ? (SPREADS[0].label[lang] || SPREADS[0].label.zh)
+        : (p.key==='swin' ? (SPREADS[1].label[lang]||SPREADS[1].label.zh) : (SPREADS[2].label[lang]||SPREADS[2].label.zh));
+      const src = imgSrc(p.key, lang);
+      const halfCls = p.half==='l' ? 'half-l' : 'half-r';
+      inner = `<div class="page-front spread-pg"><div class="top-bar"><span>${name} ${p.half==='l'?'Ⅰ':'Ⅱ'}</span></div>
+        <div class="img-area"><img class="${halfCls}" src="${src}" onload="imgDone()" onerror="imgDone()"></div>
+        <div class="bot-bar"><span>${T.bot}</span></div>
+        <div class="pg-num">${i+1}/${total}</div></div><div class="page-back"></div>`;
     } else if(p.t==='ad'){
       inner = `<div class="page-front ad-pg">
         <div class="ad-img"><img src="${imgSrc('showcase', lang)}" onload="imgDone()" onerror="imgDone()"></div>
@@ -374,10 +427,7 @@ function buildHTML(){
     h += `<div class="page-card" data-i="${i}" style="z-index:${z}"${st}>${inner}</div>`;
   });
   book.innerHTML = h + '<div class="book-edge"></div>';
-  imgTotal = 1; // logo
-  PAGES_TMPL.forEach(function(p){
-    if(p.t==='prod' || p.t==='prof' || p.t==='proj' || p.t==='ad') imgTotal++;
-  });
+  imgTotal = 3 + 7 + 3 + 6 + 6; // logo3 + 产品7 + 型材3 + 项目6 + spread 6(3图x2半页)
   imgLoadCount = 0;
 }
 
@@ -406,14 +456,14 @@ function flipTo(target){
   cards.forEach(c=>{
     const i = parseInt(c.dataset.i);
     let s = c.style;
-    s.transition = 'transform .55s cubic-bezier(.4,0,.2,1)';
+    s.transition = 'transform .6s cubic-bezier(.35,.05,.25,1)';
     s.transformOrigin = dir>0 ? 'left center' : 'right center';
 
     if(dir>0){
-      if(i===idx) { s.transform='rotateY(-175deg)'; s.zIndex=0; s.pointerEvents='none'; }
+      if(i===idx) { s.transform='rotateY(-180deg)'; s.zIndex=0; s.pointerEvents='none'; }
       else if(i===target) { s.transform='rotateY(0deg)'; s.zIndex=total-target; s.pointerEvents='auto'; }
     } else {
-      if(i===idx) { s.transform='rotateY(175deg)'; s.zIndex=0; s.pointerEvents='none'; }
+      if(i===idx) { s.transform='rotateY(180deg)'; s.zIndex=0; s.pointerEvents='none'; }
       else if(i===target) { s.transform='rotateY(0deg)'; s.zIndex=total-target; s.pointerEvents='auto'; }
     }
 
@@ -423,14 +473,13 @@ function flipTo(target){
 
   idx=target;
   buildDots();
-  setTimeout(()=>{anim=false}, 550);
+  setTimeout(()=>{anim=false}, 620);
 }
 
 function switchLang(l){
   if(l===lang) return;
   lang=l;
   document.querySelectorAll('#langbar button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
-  total = PAGES_TMPL.length;
   idx=0;
   loader.classList.remove('done');
   buildHTML();
@@ -442,7 +491,6 @@ function init(){
   const saved = (localStorage.getItem('catalog_lang') || '');
   if(L[saved]) lang = saved;
   document.querySelectorAll('#langbar button').forEach(b=>b.classList.toggle('on',b.dataset.l===lang));
-  total = PAGES_TMPL.length;
   buildHTML();
   buildDots();
 }
@@ -489,58 +537,113 @@ book.addEventListener('click',e=>{
   else if(x<rect.width*.4) flipTo(idx-1);
 });
 
-/* ============ BGM：卡农钢琴曲（Web Audio 合成，无需音频文件） ============ */
+/* ============ BGM：卡农 交响乐版（Web Audio 合成） ============ */
 (function(){
   var ctx=null, playing=false, timer=null, nextTime=0, step=0;
-  var master=null;
+  var master=null, reverb=null;
 
-  function note(freq,t,dur,vol){
+  function initAudio(){
+    ctx=new (window.AudioContext||window.webkitAudioContext)();
+    master=ctx.createGain(); master.gain.value=.55; master.connect(ctx.destination);
+    // 简易混响：反馈延迟网络
+    reverb=ctx.createConvolver();
+    var sr=ctx.sampleRate, len=sr*2.2;
+    var buf=ctx.createBuffer(2,len,sr);
+    for(var ch=0;ch<2;ch++){
+      var d=buf.getChannelData(ch);
+      for(var i=0;i<len;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.2);
+    }
+    reverb.buffer=buf;
+    var rg=ctx.createGain(); rg.gain.value=.35;
+    reverb.connect(rg); rg.connect(master);
+  }
+
+  /* 弦乐音色：锯齿+低通+慢起音（模拟弦乐组） */
+  function strings(freq,t,dur,vol){
     if(!ctx||freq<=0) return;
     var o1=ctx.createOscillator(), o2=ctx.createOscillator();
+    o1.type='sawtooth'; o1.frequency.value=freq;
+    o2.type='sawtooth'; o2.frequency.value=freq*1.003;
+    var f=ctx.createBiquadFilter(); f.type='lowpass'; f.frequency.value=1400; f.Q.value=.7;
     var g=ctx.createGain();
-    o1.type='triangle'; o1.frequency.value=freq;
-    o2.type='sine'; o2.frequency.value=freq*2;
-    var g1=ctx.createGain(); g1.gain.value=.45;
-    o1.connect(g); o2.connect(g1); g1.connect(g);
-    g.connect(master);
+    o1.connect(f); o2.connect(f); f.connect(g);
+    g.connect(master); g.connect(reverb);
     g.gain.setValueAtTime(0.0001,t);
-    g.gain.exponentialRampToValueAtTime(vol,t+.012);
+    g.gain.exponentialRampToValueAtTime(vol,t+.45);
+    g.gain.setValueAtTime(vol,t+dur*.6);
     g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
     o1.start(t); o2.start(t);
-    o1.stop(t+dur+.05); o2.stop(t+dur+.05);
+    o1.stop(t+dur+.1); o2.stop(t+dur+.1);
   }
-  function playNote(midi,t,len,vol){
-    var f=440*Math.pow(2,(midi-69)/12);
-    note(f,t,len,vol||.22);
+
+  /* 钢琴音色：三角波+快衰减 */
+  function piano(freq,t,dur,vol){
+    if(!ctx||freq<=0) return;
+    var o=ctx.createOscillator();
+    o.type='triangle'; o.frequency.value=freq;
+    var g=ctx.createGain();
+    o.connect(g);
+    g.connect(master); g.connect(reverb);
+    g.gain.setValueAtTime(0.0001,t);
+    g.gain.exponentialRampToValueAtTime(vol,t+.008);
+    g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+    o.start(t); o.stop(t+dur+.05);
   }
-  // 卡农 D大调 旋律（经典段落，两遍循环）
+
+  /* 低音提琴：正弦+慢包络 */
+  function cello(freq,t,dur,vol){
+    if(!ctx||freq<=0) return;
+    var o=ctx.createOscillator();
+    o.type='sine'; o.frequency.value=freq;
+    var g=ctx.createGain();
+    o.connect(g);
+    g.connect(master); g.connect(reverb);
+    g.gain.setValueAtTime(0.0001,t);
+    g.gain.exponentialRampToValueAtTime(vol,t+.12);
+    g.gain.setValueAtTime(vol,t+dur*.5);
+    g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+    o.start(t); o.stop(t+dur+.1);
+  }
+
+  /* 卡农 D大调 —— 和弦进行（每小节1和弦，8小节循环） */
+  var CHORDS=[
+    {root:50, notes:[62,66,69,74]},   // D
+    {root:45, notes:[57,61,64,69]},   // A
+    {root:47, notes:[59,62,66,71]},   // Bm
+    {root:42, notes:[54,57,61,66]},   // F#m
+    {root:43, notes:[55,59,62,67]},   // G
+    {root:38, notes:[50,54,57,62]},   // D/F#
+    {root:43, notes:[55,59,62,67]},   // G
+    {root:45, notes:[57,61,64,69]}    // A
+  ];
+  /* 经典卡农旋律（每小节4个八分音符） */
   var MELODY=[
     [74,76,78,79],[76,78,79,81],[78,79,81,83],[79,81,83,84],
     [81,83,84,86],[83,84,86,88],[84,86,88,89],[86,88,89,91],
     [74,76,78,79],[76,78,79,81],[78,79,81,83],[79,81,83,84],
     [81,83,84,86],[83,84,86,88],[86,88,89,86],[84,81,79,78]
   ];
-  // 低音（D大调卡农固定低音）
-  var BASS=[50,45,47,42,43,38,43,45];
 
   function schedule(){
-    var spb=0.42; // 每拍秒数 (~143bpm 8分音符)
-    while(nextTime < ctx.currentTime + 1.2){
+    var spb=0.32; // 每拍秒数（稍慢，交响感）
+    while(nextTime < ctx.currentTime + 1.5){
       var bar=Math.floor(step/4), beat=step%4;
-      var bass=BASS[bar%8];
-      var mel=MELODY[bar%16];
-      if(beat===0) playNote(bass-12,nextTime,spb*3.6,.30); // 低音根音
-      var m=mel[beat];
-      playNote(m,nextTime,spb*0.9,.14);
-      if(beat===2) playNote(m-12,nextTime,spb*0.8,.10); // 低八度点缀
+      var ch=CHORDS[bar%8];
+      if(beat===0){
+        cello(ch.root-12,nextTime,spb*3.8,.30);        // 低音
+        ch.notes.forEach(function(n,i){               // 弦乐和声
+          strings(n,nextTime,spb*3.8,i===0?.12:.07);
+        });
+      }
+      var m=MELODY[bar%16][beat];
+      piano(m,nextTime,spb*.9,.16);                    // 钢琴旋律
+      if(beat===2) piano(m-12,nextTime,spb*.8,.10);    // 低八度点缀
       nextTime+=spb; step++;
     }
   }
+
   function toggle(){
-    if(!ctx){
-      ctx=new (window.AudioContext||window.webkitAudioContext)();
-      master=ctx.createGain(); master.gain.value=.5; master.connect(ctx.destination);
-    }
+    if(!ctx) initAudio();
     if(playing){
       playing=false;
       clearInterval(timer); timer=null;
@@ -550,8 +653,8 @@ book.addEventListener('click',e=>{
       playing=true;
       ctx.resume();
       if(!timer){
-        nextTime=ctx.currentTime+.15; step=0;
-        timer=setInterval(schedule,60);
+        nextTime=ctx.currentTime+.2; step=0;
+        timer=setInterval(schedule,50);
         schedule();
       }
       btn.classList.remove('paused'); btn.classList.add('playing');
@@ -559,7 +662,6 @@ book.addEventListener('click',e=>{
   }
   var btn=document.getElementById('musicBtn');
   btn.addEventListener('click',toggle);
-  // 页面不可见时暂停（省资源），回来恢复
   document.addEventListener('visibilitychange',function(){
     if(document.hidden&&playing){ btn.click(); }
   });
@@ -585,8 +687,6 @@ book.addEventListener('click',e=>{
     });
   }
 })();
-
-/* Logo 图片（泰国素材 Logo 中文.png 无压缩版，用现有） */
 </script>
 </body>
 </html>
