@@ -26,8 +26,8 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
 .lang-bar button.on{background:#fff;color:var(--blue);border-color:#fff;font-weight:700}
 
 /* BOOK CONTAINER */
-.book-wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;perspective:1600px;padding-top:48px}
-.book{position:relative;width:92vw;max-width:420px;height:82vh;max-height:680px;transform-style:preserve-3d}
+.book-wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;perspective:1600px;padding-top:40px}
+.book{position:relative;width:94vw;max-width:520px;height:88vh;max-height:760px;transform-style:preserve-3d}
 .book.shadow:after{content:'';position:absolute;top:4px;left:2%;right:2%;bottom:-4px;background:rgba(0,0,0,.4);filter:blur(12px);z-index:-1;border-radius:4px}
 
 /* PAGES */
@@ -59,6 +59,15 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
 .prod .img-area img{max-width:100%;max-height:100%;object-fit:contain;border-radius:2px}
 .prod .bot-bar{height:32px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .prod .bot-bar span{color:#bbb;font-size:10px;letter-spacing:2px}
+
+/* LOGO PAGE */
+.logo-pg{background:var(--page-bg);display:flex;flex-direction:column}
+.logo-pg .top-bar{height:48px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-pg .top-bar span{color:#fff;font-size:15px;font-weight:600;letter-spacing:1px}
+.logo-pg .img-area{flex:1;display:flex;align-items:center;justify-content:center;padding:30px;overflow:hidden;min-height:0}
+.logo-pg .img-area img{max-width:80%;max-height:80%;object-fit:contain}
+.logo-pg .bot-bar{height:32px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-pg .bot-bar span{color:#bbb;font-size:10px;letter-spacing:2px}
 
 /* GRID PAGE (projects / profiles) */
 .grid-pg{background:var(--page-bg);display:flex;flex-direction:column}
@@ -104,14 +113,39 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
 .hint.hide{display:none}
 
 /* RESPONSIVE */
-@media(min-width:768px){.book{max-width:420px}}
+@media(min-width:768px){.book{max-width:520px}}
 @media(max-height:600px){
-  .book{height:78vh}
+  .book{height:80vh}
   .cov .title{font-size:22px}
-  .prod .top-bar,.grid-pg .top-bar{height:40px}
-  .prod .top-bar span,.grid-pg .top-bar span{font-size:13px}
-  .prod .bot-bar,.grid-pg .bot-bar{height:26px}
+  .prod .top-bar,.grid-pg .top-bar,.logo-pg .top-bar{height:40px}
+  .prod .top-bar span,.grid-pg .top-bar span,.logo-pg .top-bar span{font-size:13px}
+  .prod .bot-bar,.grid-pg .bot-bar,.logo-pg .bot-bar{height:26px}
 }
+
+/* ===== 悬浮控件 ===== */
+.float-btn{position:fixed;right:16px;z-index:400;width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.35);backdrop-filter:blur(6px);transition:transform .2s;font-size:20px}
+.float-btn:active{transform:scale(.92)}
+#musicBtn{bottom:96px;background:rgba(255,255,255,.95);color:var(--blue)}
+#musicBtn.playing{animation:spinSlow 6s linear infinite}
+#musicBtn.playing:after{content:'♪';position:absolute;top:4px;right:7px;font-size:11px;color:#e74c3c}
+@keyframes spinSlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+#musicBtn .icon-mute{display:none}
+#musicBtn.paused .icon-mute{display:block}
+#musicBtn.paused .icon-play{display:none}
+#contactBtn{bottom:40px;background:linear-gradient(135deg,#e74c3c,#c0392b);color:#fff}
+
+/* 联系方式面板 */
+.contact-panel{position:fixed;right:16px;bottom:96px;z-index:399;width:270px;background:rgba(255,255,255,.97);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.35);padding:18px;display:none;opacity:0;transform:translateY(12px);transition:.25s}
+.contact-panel.open{display:block;opacity:1;transform:translateY(0)}
+.contact-panel .cp-title{font-size:14px;font-weight:700;color:var(--blue);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.contact-panel .cp-item{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#333;text-decoration:none}
+.contact-panel .cp-item:last-child{border-bottom:none}
+.contact-panel .cp-ico{width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.contact-panel .cp-item.cp-phone .cp-ico{background:#27ae60}
+.contact-panel .cp-item.cp-addr .cp-ico{background:#e67e22}
+.contact-panel .cp-item.cp-wechat .cp-ico{background:#2ecc71}
+.contact-panel .cp-val{line-height:1.4}
+.contact-panel .cp-val small{display:block;color:#999;font-size:11px}
 </style>
 </head>
 <body>
@@ -140,6 +174,28 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
   <span class="arr" id="prev">&#8249;</span>
   <span id="dots"></span>
   <span class="arr" id="next">&#8250;</span>
+</div>
+
+<!-- ===== 悬浮控件：音乐开关 + 联系方式 ===== -->
+<button type="button" class="float-btn paused" id="musicBtn" aria-label="播放音乐">
+  <span class="icon-play">&#9835;</span>
+  <span class="icon-mute">&#9834;</span>
+</button>
+<button type="button" class="float-btn" id="contactBtn" aria-label="联系我们">&#9993;</button>
+<div class="contact-panel" id="contactPanel">
+  <div class="cp-title">&#9742; 联系我们</div>
+  <a class="cp-item cp-phone" href="tel:13316330906">
+    <span class="cp-ico">&#9990;</span>
+    <span class="cp-val"><small>电话</small>133 1633 0906</span>
+  </a>
+  <a class="cp-item cp-wechat" href="#" id="wechatLink">
+    <span class="cp-ico">&#9786;</span>
+    <span class="cp-val"><small>微信</small>添加微信咨询</span>
+  </a>
+  <div class="cp-item cp-addr">
+    <span class="cp-ico">&#9873;</span>
+    <span class="cp-val"><small>地址</small>广东省东莞市道滘镇南丫亨龙工业区</span>
+  </div>
 </div>
 
 <script>
@@ -432,6 +488,103 @@ book.addEventListener('click',e=>{
   if(x>rect.width*.6) flipTo(idx+1);
   else if(x<rect.width*.4) flipTo(idx-1);
 });
+
+/* ============ BGM：卡农钢琴曲（Web Audio 合成，无需音频文件） ============ */
+(function(){
+  var ctx=null, playing=false, timer=null, nextTime=0, step=0;
+  var master=null;
+
+  function note(freq,t,dur,vol){
+    if(!ctx||freq<=0) return;
+    var o1=ctx.createOscillator(), o2=ctx.createOscillator();
+    var g=ctx.createGain();
+    o1.type='triangle'; o1.frequency.value=freq;
+    o2.type='sine'; o2.frequency.value=freq*2;
+    var g1=ctx.createGain(); g1.gain.value=.45;
+    o1.connect(g); o2.connect(g1); g1.connect(g);
+    g.connect(master);
+    g.gain.setValueAtTime(0.0001,t);
+    g.gain.exponentialRampToValueAtTime(vol,t+.012);
+    g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+    o1.start(t); o2.start(t);
+    o1.stop(t+dur+.05); o2.stop(t+dur+.05);
+  }
+  function playNote(midi,t,len,vol){
+    var f=440*Math.pow(2,(midi-69)/12);
+    note(f,t,len,vol||.22);
+  }
+  // 卡农 D大调 旋律（经典段落，两遍循环）
+  var MELODY=[
+    [74,76,78,79],[76,78,79,81],[78,79,81,83],[79,81,83,84],
+    [81,83,84,86],[83,84,86,88],[84,86,88,89],[86,88,89,91],
+    [74,76,78,79],[76,78,79,81],[78,79,81,83],[79,81,83,84],
+    [81,83,84,86],[83,84,86,88],[86,88,89,86],[84,81,79,78]
+  ];
+  // 低音（D大调卡农固定低音）
+  var BASS=[50,45,47,42,43,38,43,45];
+
+  function schedule(){
+    var spb=0.42; // 每拍秒数 (~143bpm 8分音符)
+    while(nextTime < ctx.currentTime + 1.2){
+      var bar=Math.floor(step/4), beat=step%4;
+      var bass=BASS[bar%8];
+      var mel=MELODY[bar%16];
+      if(beat===0) playNote(bass-12,nextTime,spb*3.6,.30); // 低音根音
+      var m=mel[beat];
+      playNote(m,nextTime,spb*0.9,.14);
+      if(beat===2) playNote(m-12,nextTime,spb*0.8,.10); // 低八度点缀
+      nextTime+=spb; step++;
+    }
+  }
+  function toggle(){
+    if(!ctx){
+      ctx=new (window.AudioContext||window.webkitAudioContext)();
+      master=ctx.createGain(); master.gain.value=.5; master.connect(ctx.destination);
+    }
+    if(playing){
+      playing=false;
+      clearInterval(timer); timer=null;
+      ctx.suspend();
+      btn.classList.add('paused'); btn.classList.remove('playing');
+    }else{
+      playing=true;
+      ctx.resume();
+      if(!timer){
+        nextTime=ctx.currentTime+.15; step=0;
+        timer=setInterval(schedule,60);
+        schedule();
+      }
+      btn.classList.remove('paused'); btn.classList.add('playing');
+    }
+  }
+  var btn=document.getElementById('musicBtn');
+  btn.addEventListener('click',toggle);
+  // 页面不可见时暂停（省资源），回来恢复
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden&&playing){ btn.click(); }
+  });
+})();
+
+/* ============ 联系方式悬浮面板 ============ */
+(function(){
+  var btn=document.getElementById('contactBtn');
+  var panel=document.getElementById('contactPanel');
+  var wechat=document.getElementById('wechatLink');
+  function toggle(e){
+    e.stopPropagation();
+    panel.classList.toggle('open');
+  }
+  btn.addEventListener('click',toggle);
+  document.addEventListener('click',function(e){
+    if(!panel.contains(e.target)&&e.target!==btn) panel.classList.remove('open');
+  });
+  if(wechat){
+    wechat.addEventListener('click',function(e){
+      e.preventDefault();
+      alert('请用微信扫描官网二维码添加好友咨询');
+    });
+  }
+})();
 
 /* Logo 图片（泰国素材 Logo 中文.png 无压缩版，用现有） */
 </script>
