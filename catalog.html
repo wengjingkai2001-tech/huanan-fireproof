@@ -60,17 +60,17 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
 .prod .bot-bar{height:32px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .prod .bot-bar span{color:#bbb;font-size:10px;letter-spacing:2px}
 
-/* LOGO PAGE —— 官网三 LOGO 横排 */
-.logo-pg{background:var(--page-bg);display:flex;flex-direction:column}
+/* LOGO PAGE —— 黑底白 LOGO */
+.logo-pg{background:#0d0d0d;display:flex;flex-direction:column}
 .logo-pg .top-bar{height:48px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .logo-pg .top-bar span{color:#fff;font-size:15px;font-weight:600;letter-spacing:1px}
-.logo-pg .img-area{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;overflow:hidden;min-height:0;gap:22px}
-.logo-row{display:flex;align-items:center;justify-content:center;gap:16px;width:100%}
-.logo-row img{max-width:30%;max-height:96px;object-fit:contain}
-.logo-divider{width:1px;height:56px;background:#ddd;flex-shrink:0}
-.logo-name{font-size:11px;color:#999;letter-spacing:2px;text-align:center}
-.logo-pg .bot-bar{height:32px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.logo-pg .bot-bar span{color:#bbb;font-size:10px;letter-spacing:2px}
+.logo-pg .img-area{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;overflow:hidden;min-height:0;gap:26px}
+.logo-row{display:flex;align-items:center;justify-content:center;gap:22px;width:100%}
+.logo-row img{max-width:28%;max-height:92px;object-fit:contain;filter:brightness(0) invert(1)}
+.logo-divider{width:1px;height:56px;background:rgba(255,255,255,.25);flex-shrink:0}
+.logo-name{font-size:11px;color:rgba(255,255,255,.55);letter-spacing:3px;text-align:center;text-transform:uppercase}
+.logo-pg .bot-bar{height:32px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-pg .bot-bar span{color:rgba(255,255,255,.35);font-size:10px;letter-spacing:2px}
 
 /* GRID PAGE (projects / profiles) */
 .grid-pg{background:var(--page-bg);display:flex;flex-direction:column}
@@ -79,19 +79,21 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
 .grid-pg .grid{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px;overflow:hidden;min-height:0}
 .grid-pg .grid .cell{background:#f0f0f0;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .grid-pg .grid .cell img{width:100%;height:100%;object-fit:cover}
+.grid-cert{grid-template-columns:repeat(3,1fr);gap:8px}
+.grid-cert .cell{flex-direction:column;position:relative}
+.grid-cert .cell img{width:100%;height:100%;object-fit:contain;background:#fff}
+.grid-cert .cell-cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;font-size:9px;text-align:center;padding:14px 2px 4px;line-height:1.3}
 .grid-pg .bot-bar{height:32px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .grid-pg .bot-bar span{color:#bbb;font-size:10px;letter-spacing:2px}
 
-/* SPREAD PAGE —— 跨页大图（横图左右各半，拼成完整大图） */
-.spread-pg{background:var(--page-bg);display:flex;flex-direction:column}
-.spread-pg .top-bar{height:48px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.spread-pg .top-bar span{color:#fff;font-size:15px;font-weight:600;letter-spacing:1px}
-.spread-pg .img-area{flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;min-height:0}
-.spread-pg .img-area img{position:absolute;top:0;height:100%;width:200%;max-width:none;object-fit:cover}
-.spread-pg .img-area img.half-l{left:0;object-position:left center}
-.spread-pg .img-area img.half-r{right:0;object-position:right center}
-.spread-pg .bot-bar{height:32px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.spread-pg .bot-bar span{color:#bbb;font-size:10px;letter-spacing:2px}
+/* BIG IMAGE PAGE —— 大图整页显示 */
+.big-pg{background:var(--page-bg);display:flex;flex-direction:column}
+.big-pg .top-bar{height:48px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.big-pg .top-bar span{color:#fff;font-size:15px;font-weight:600;letter-spacing:1px}
+.big-pg .img-area{flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;min-height:0}
+.big-pg .img-area img{max-width:100%;max-height:100%;object-fit:contain}
+.big-pg .bot-bar{height:32px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.big-pg .bot-bar span{color:#bbb;font-size:10px;letter-spacing:2px}
 
 /* AD PAGE */
 .ad-pg{background:#001a33;display:flex;flex-direction:column;overflow:hidden}
@@ -113,6 +115,7 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
 .nav .arr{color:#fff;font-size:20px;cursor:pointer;padding:4px 8px;line-height:1;opacity:.7;transition:.2s}
 .nav .arr:active{opacity:1}
 .nav .arr.hid{opacity:.15;pointer-events:none}
+.nav .page-pos{color:rgba(255,255,255,.85);font-size:12px;letter-spacing:1px;min-width:64px;text-align:center;font-variant-numeric:tabular-nums}
 
 /* LOADING */
 .loader{position:fixed;top:0;left:0;width:100%;height:100%;background:#111;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .4s}
@@ -131,9 +134,9 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
 @media(max-height:600px){
   .book{height:80vh}
   .cov .title{font-size:22px}
-  .prod .top-bar,.grid-pg .top-bar,.logo-pg .top-bar,.spread-pg .top-bar{height:40px}
-  .prod .top-bar span,.grid-pg .top-bar span,.logo-pg .top-bar span,.spread-pg .top-bar span{font-size:13px}
-  .prod .bot-bar,.grid-pg .bot-bar,.logo-pg .bot-bar,.spread-pg .bot-bar{height:26px}
+  .prod .top-bar,.grid-pg .top-bar,.logo-pg .top-bar,.big-pg .top-bar{height:40px}
+  .prod .top-bar span,.grid-pg .top-bar span,.logo-pg .top-bar span,.big-pg .top-bar span{font-size:13px}
+  .prod .bot-bar,.grid-pg .bot-bar,.logo-pg .bot-bar,.big-pg .bot-bar{height:26px}
 }
 
 /* ===== 悬浮控件 ===== */
@@ -187,6 +190,7 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
 <div class="nav" id="nav">
   <span class="arr" id="prev">&#8249;</span>
   <span id="dots"></span>
+  <span class="page-pos" id="pagePos"></span>
   <span class="arr" id="next">&#8250;</span>
 </div>
 
@@ -217,25 +221,25 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:"PingFang SC","Micr
 var L = {
   zh: { coverTitle:'正锌门窗<br>产品宣传册', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'感谢阅览', endSub:'ZhengXin Doors & Windows',
         contact:'广东华南防火科技有限公司<br>东莞市新益佳玻璃有限公司',
-        t_logo:'品牌 · LOGO', t_prof:'型材展示', t_proj:'工程案例', t_ad:'安装实拍', bot:'ZHENGXIN DOORS & WINDOWS' },
+        t_logo:'品牌 · LOGO', t_cert:'资质证书', t_proj:'工程案例', t_ad:'安装实拍', bot:'ZHENGXIN DOORS & WINDOWS' },
   th: { coverTitle:'แคตตาล็อกสินค้า<br>ZHENGXIN', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'ขอขอบคุณ', endSub:'ZhengXin Doors & Windows',
         contact:'Guangdong Huanan Fire Prevention<br>Technology Co., Ltd.',
-        t_logo:'LOGO', t_prof:'โปรไฟล์อลูมิเนียม', t_proj:'โครงการติดตั้ง', t_ad:'ผลงานการติดตั้ง', bot:'ZHENGXIN DOORS & WINDOWS' },
+        t_logo:'LOGO', t_cert:'ใบรับรอง', t_proj:'โครงการติดตั้ง', t_ad:'ผลงานการติดตั้ง', bot:'ZHENGXIN DOORS & WINDOWS' },
   en: { coverTitle:'ZHENGXIN<br>Doors & Windows<br>Product Catalog', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'Thank You', endSub:'ZhengXin Doors & Windows',
         contact:'Guangdong Huanan Fire Prevention Technology Co., Ltd.',
-        t_logo:'Brands & LOGO', t_prof:'Aluminum Profiles', t_proj:'Projects', t_ad:'On-Site Installation', bot:'ZHENGXIN DOORS & WINDOWS' },
+        t_logo:'Brands & LOGO', t_cert:'Certificates', t_proj:'Projects', t_ad:'On-Site Installation', bot:'ZHENGXIN DOORS & WINDOWS' },
   ja: { coverTitle:'正锌门窗<br>製品カタログ', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'ご覧いただきありがとうございます', endSub:'ZhengXin Doors & Windows',
         contact:'広東華南防火科技有限公司',
-        t_logo:'ブランド LOGO', t_prof:'アルミ型材', t_proj:'施工事例', t_ad:'現地設置写真', bot:'ZHENGXIN DOORS & WINDOWS' },
+        t_logo:'ブランド LOGO', t_cert:'認証書', t_proj:'施工事例', t_ad:'現地設置写真', bot:'ZHENGXIN DOORS & WINDOWS' },
   ru: { coverTitle:'ZHENGXIN<br>Каталог продукции', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'Спасибо за внимание', endSub:'ZhengXin Doors & Windows',
         contact:'Guangdong Huanan Fire Prevention Technology Co., Ltd.',
-        t_logo:'Бренды и LOGO', t_prof:'Алюминиевые профили', t_proj:'Проекты', t_ad:'Монтаж на объекте', bot:'ZHENGXIN DOORS & WINDOWS' },
+        t_logo:'Бренды и LOGO', t_cert:'Сертификаты', t_proj:'Проекты', t_ad:'Монтаж на объекте', bot:'ZHENGXIN DOORS & WINDOWS' },
   fr: { coverTitle:'ZHENGXIN<br>Catalogue produits', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'Merci de votre attention', endSub:'ZhengXin Doors & Windows',
         contact:'Guangdong Huanan Fire Prevention Technology Co., Ltd.',
-        t_logo:'Marques et LOGO', t_prof:'Profilés aluminium', t_proj:'Projets', t_ad:'Installation sur site', bot:'ZHENGXIN DOORS & WINDOWS' },
+        t_logo:'Marques et LOGO', t_cert:'Certificats', t_proj:'Projets', t_ad:'Installation sur site', bot:'ZHENGXIN DOORS & WINDOWS' },
   de: { coverTitle:'ZHENGXIN<br>Produktkatalog', coverSub:'ZHENGXIN DOORS & WINDOWS', endTitle:'Vielen Dank', endSub:'ZhengXin Doors & Windows',
         contact:'Guangdong Huanan Fire Prevention Technology Co., Ltd.',
-        t_logo:'Marken und LOGO', t_prof:'Aluminiumprofile', t_proj:'Projekte', t_ad:'Montage vor Ort', bot:'ZHENGXIN DOORS & WINDOWS' }
+        t_logo:'Marken und LOGO', t_cert:'Zertifikate', t_proj:'Projekte', t_ad:'Montage vor Ort', bot:'ZHENGXIN DOORS & WINDOWS' }
 };
 
 /* 产品图：zh/en/th 三语言版本（其他语言回退中文） */
@@ -257,11 +261,21 @@ var BRAND_LOGOS = [
   { src:'images/logo-3.png' }
 ];
 
-/* 跨页大图（横图）：左右半页拼成完整大图 */
-var SPREADS = [
+/* 跨页大图（横图）：整页显示 */
+var BIGS = [
   { key:'showcase', label:{ zh:'安装实拍 · 全景', th:'ภาพรวมการติดตั้ง', en:'Installation Overview', ja:'設置全景', ru:'Обзор монтажа', fr:'Vue d\'ensemble', de:'Übersicht' } },
   { key:'swin',     label:{ zh:'推拉窗 · 全景', th:'หน้าต่างบานเลื่อน', en:'Sliding Window View', ja:'引違い窓 全景', ru:'Раздвижное окно', fr:'Fenêtre coulissante', de:'Schiebefenster' } },
   { key:'lift',     label:{ zh:'提升窗 · 全景', th:'หน้าต่างยกขึ้น', en:'Lift Window View', ja:'リフト窓 全景', ru:'Подъемное окно', fr:'Fenêtre levante', de:'Hubfenster' } }
+];
+
+/* 公司资质证书 */
+var CERTS = [
+  { src:'images/certificates/1.jpg', name:{ zh:'防火玻璃检验报告', th:'รายงานการทดสอบกระจกทนไฟ', en:'Fire Glass Test Report', ja:'防火ガラス検査報告', ru:'Отчет о стекле', fr:'Rapport verre', de:'Glasprüfbericht' } },
+  { src:'images/certificates/2.jpg', name:{ zh:'防火窗产品合格证', th:'ใบรับรองผลิตภัณฑ์', en:'Fire Window Certificate', ja:'防火窓合格証', ru:'Сертификат окна', fr:'Certificat fenêtre', de:'Fensterzertifikat' } },
+  { src:'images/certificates/3.jpg', name:{ zh:'五金配件检验报告', th:'รายงานฮาร์ดแวร์', en:'Hardware Test Report', ja:'金物検査報告', ru:'Отчет о фурнитуре', fr:'Rapport quincaillerie', de:'Beschlagprüfbericht' } },
+  { src:'images/certificates/4.jpg', name:{ zh:'凤铝型材检验报告', th:'รายงานโปรไฟล์', en:'Fenglu Profile Report', ja:'型材検査報告', ru:'Отчет о профиле', fr:'Rapport profilé', de:'Profilprüfbericht' } },
+  { src:'images/certificates/5.jpg', name:{ zh:'隔热胶条检验报告', th:'รายงานแถบฉนวน', en:'Thermal Strip Report', ja:'断熱材検査報告', ru:'Отчет об изоляции', fr:'Rapport isolation', de:'Isolierbandprüfbericht' } },
+  { src:'images/certificates/6.jpg', name:{ zh:'铝材检验报告', th:'รายงานอลูมิเนียม', en:'Aluminum Report', ja:'アルミ検査報告', ru:'Отчет об алюминии', fr:'Rapport aluminium', de:'Aluminiumprüfbericht' } }
 ];
 
 /* 项目实拍图（无语言版本） */
@@ -285,11 +299,7 @@ var PROD_NAMES = {
   sdoor: { zh:'推拉门', th:'ประตูบานเลื่อน', en:'Sliding Door', ja:'引違いドア', ru:'Раздвижная дверь', fr:'Porte coulissante', de:'Schiebetür' }
 };
 
-var PROF_NAMES = {
-  p110: { zh:'110型材', th:'โปรไฟล์ 110', en:'110 Profile', ja:'110型材', ru:'Профиль 110', fr:'Profilé 110', de:'Profil 110' },
-  p120: { zh:'120型材', th:'โปรไฟล์ 120', en:'120 Profile', ja:'120型材', ru:'Профиль 120', fr:'Profilé 120', de:'Profil 120' },
-  p125: { zh:'125型材', th:'โปรไฟล์ 125', en:'125 Profile', ja:'125型材', ru:'Профиль 125', fr:'Profilé 125', de:'Profil 125' }
-};
+
 
 var PROJ_NAMES = {
   huanyu: { zh:'寰宇天下·工装', th:'โครงการหวันอวี่', en:'Huanyu Tianxia', ja:'寰宇天下', ru:'Huanyu', fr:'Huanyu', de:'Huanyu' },
@@ -298,7 +308,7 @@ var PROJ_NAMES = {
   nantian: { zh:'南天名苑', th:'หนานเทียน', en:'Nantian Mingyuan', ja:'南天名苑', ru:'Nantian', fr:'Nantian', de:'Nantian' }
 };
 
-/* 页面顺序：spread 页会展开为左右两个半页 */
+/* 页面顺序 */
 var PAGES_TMPL = [
   { t:'cover' },
   { t:'logo' },
@@ -309,11 +319,12 @@ var PAGES_TMPL = [
   { t:'prod', key:'case' },
   { t:'prod', key:'swin' },
   { t:'prod', key:'sdoor' },
-  { t:'prof' },
+  { t:'cert' },          /* 证书 1-3 */
+  { t:'cert' },          /* 证书 4-6 */
   { t:'proj' },
-  { t:'spread', key:'showcase' },
-  { t:'spread', key:'swin' },
-  { t:'spread', key:'lift' },
+  { t:'big', key:'showcase' },
+  { t:'big', key:'swin' },
+  { t:'big', key:'lift' },
   { t:'end' }
 ];
 
@@ -326,13 +337,14 @@ const hint=document.getElementById('hint');
 const loader=document.getElementById('loader');
 let imgLoadCount=0, imgTotal=0;
 
-/* 展开模板：spread 变为两个半页 */
+/* 展开模板（cert 分两页各 3 张） */
 function expandTmpl(){
   let out=[];
+  let certIdx=0;
   PAGES_TMPL.forEach(function(p){
-    if(p.t==='spread'){
-      out.push(Object.assign({}, p, {half:'l'}));
-      out.push(Object.assign({}, p, {half:'r'}));
+    if(p.t==='cert'){
+      out.push(Object.assign({}, p, {offset:certIdx*3}));
+      certIdx++;
     } else {
       out.push(p);
     }
@@ -389,13 +401,14 @@ function buildHTML(){
         <div class="img-area"><img src="${src}" onload="imgDone()" onerror="imgDone()"></div>
         <div class="bot-bar"><span>${T.bot}</span></div>
         <div class="pg-num">${i+1}/${total}</div></div><div class="page-back"></div>`;
-    } else if(p.t==='prof'){
-      const cells = ['p110','p120','p125'].map(function(k){
-        const name = PROF_NAMES[k] ? (PROF_NAMES[k][lang] || PROF_NAMES[k].zh) : k;
-        return `<div class="cell"><img src="${imgSrc(k, lang)}" alt="${name}" onload="imgDone()" onerror="imgDone()"></div>`;
+    } else if(p.t==='cert'){
+      const list = CERTS.slice(p.offset, p.offset+3);
+      const cells = list.map(function(cert, ci){
+        const nm = cert.name[lang] || cert.name.zh;
+        return `<div class="cell"><img src="${cert.src}" alt="${nm}" onload="imgDone()" onerror="imgDone()"><div class="cell-cap">${nm}</div></div>`;
       }).join('');
-      inner = `<div class="page-front grid-pg"><div class="top-bar"><span>${T.t_prof}</span></div>
-        <div class="grid">${cells}</div>
+      inner = `<div class="page-front grid-pg"><div class="top-bar"><span>${T.t_cert}</span></div>
+        <div class="grid grid-cert">${cells}</div>
         <div class="bot-bar"><span>${T.bot}</span></div>
         <div class="pg-num">${i+1}/${total}</div></div><div class="page-back"></div>`;
     } else if(p.t==='proj'){
@@ -407,14 +420,12 @@ function buildHTML(){
         <div class="grid">${cells}</div>
         <div class="bot-bar"><span>${T.bot}</span></div>
         <div class="pg-num">${i+1}/${total}</div></div><div class="page-back"></div>`;
-    } else if(p.t==='spread'){
-      const name = p.key==='showcase'
-        ? (SPREADS[0].label[lang] || SPREADS[0].label.zh)
-        : (p.key==='swin' ? (SPREADS[1].label[lang]||SPREADS[1].label.zh) : (SPREADS[2].label[lang]||SPREADS[2].label.zh));
+    } else if(p.t==='big'){
+      const big = BIGS.filter(function(b){ return b.key===p.key; })[0];
+      const name = big ? (big.label[lang] || big.label.zh) : p.key;
       const src = imgSrc(p.key, lang);
-      const halfCls = p.half==='l' ? 'half-l' : 'half-r';
-      inner = `<div class="page-front spread-pg"><div class="top-bar"><span>${name} ${p.half==='l'?'Ⅰ':'Ⅱ'}</span></div>
-        <div class="img-area"><img class="${halfCls}" src="${src}" onload="imgDone()" onerror="imgDone()"></div>
+      inner = `<div class="page-front big-pg"><div class="top-bar"><span>${name}</span></div>
+        <div class="img-area"><img src="${src}" onload="imgDone()" onerror="imgDone()"></div>
         <div class="bot-bar"><span>${T.bot}</span></div>
         <div class="pg-num">${i+1}/${total}</div></div><div class="page-back"></div>`;
     } else if(p.t==='ad'){
@@ -427,7 +438,7 @@ function buildHTML(){
     h += `<div class="page-card" data-i="${i}" style="z-index:${z}"${st}>${inner}</div>`;
   });
   book.innerHTML = h + '<div class="book-edge"></div>';
-  imgTotal = 3 + 7 + 3 + 6 + 6; // logo3 + 产品7 + 型材3 + 项目6 + spread 6(3图x2半页)
+  imgTotal = 3 + 7 + 6 + 6 + 3; // logo3 + 产品7 + 证书6 + 项目6 + big3
   imgLoadCount = 0;
 }
 
@@ -444,6 +455,8 @@ function buildDots(){
   dotsEl.innerHTML=h;
   prevBtn.classList.toggle('hid', idx===0);
   nextBtn.classList.toggle('hid', idx===total-1);
+  const pos=document.getElementById('pagePos');
+  if(pos) pos.textContent = (idx+1)+' / '+total;
 }
 
 function flipTo(target){
@@ -537,46 +550,27 @@ book.addEventListener('click',e=>{
   else if(x<rect.width*.4) flipTo(idx-1);
 });
 
-/* ============ BGM：卡农 交响乐版（Web Audio 合成） ============ */
+/* ============ BGM：Experience 风格（Ludovico Einaudi，Web Audio 合成） ============ */
 (function(){
   var ctx=null, playing=false, timer=null, nextTime=0, step=0;
   var master=null, reverb=null;
 
   function initAudio(){
     ctx=new (window.AudioContext||window.webkitAudioContext)();
-    master=ctx.createGain(); master.gain.value=.55; master.connect(ctx.destination);
-    // 简易混响：反馈延迟网络
+    master=ctx.createGain(); master.gain.value=.6; master.connect(ctx.destination);
     reverb=ctx.createConvolver();
-    var sr=ctx.sampleRate, len=sr*2.2;
+    var sr=ctx.sampleRate, len=sr*2.6;
     var buf=ctx.createBuffer(2,len,sr);
     for(var ch=0;ch<2;ch++){
       var d=buf.getChannelData(ch);
-      for(var i=0;i<len;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.2);
+      for(var i=0;i<len;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.0);
     }
     reverb.buffer=buf;
-    var rg=ctx.createGain(); rg.gain.value=.35;
+    var rg=ctx.createGain(); rg.gain.value=.42;
     reverb.connect(rg); rg.connect(master);
   }
 
-  /* 弦乐音色：锯齿+低通+慢起音（模拟弦乐组） */
-  function strings(freq,t,dur,vol){
-    if(!ctx||freq<=0) return;
-    var o1=ctx.createOscillator(), o2=ctx.createOscillator();
-    o1.type='sawtooth'; o1.frequency.value=freq;
-    o2.type='sawtooth'; o2.frequency.value=freq*1.003;
-    var f=ctx.createBiquadFilter(); f.type='lowpass'; f.frequency.value=1400; f.Q.value=.7;
-    var g=ctx.createGain();
-    o1.connect(f); o2.connect(f); f.connect(g);
-    g.connect(master); g.connect(reverb);
-    g.gain.setValueAtTime(0.0001,t);
-    g.gain.exponentialRampToValueAtTime(vol,t+.45);
-    g.gain.setValueAtTime(vol,t+dur*.6);
-    g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
-    o1.start(t); o2.start(t);
-    o1.stop(t+dur+.1); o2.stop(t+dur+.1);
-  }
-
-  /* 钢琴音色：三角波+快衰减 */
+  /* 钢琴：三角波+快衰减（Experience 的琶音主体） */
   function piano(freq,t,dur,vol){
     if(!ctx||freq<=0) return;
     var o=ctx.createOscillator();
@@ -585,13 +579,31 @@ book.addEventListener('click',e=>{
     o.connect(g);
     g.connect(master); g.connect(reverb);
     g.gain.setValueAtTime(0.0001,t);
-    g.gain.exponentialRampToValueAtTime(vol,t+.008);
+    g.gain.exponentialRampToValueAtTime(vol,t+.006);
     g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
     o.start(t); o.stop(t+dur+.05);
   }
 
-  /* 低音提琴：正弦+慢包络 */
-  function cello(freq,t,dur,vol){
+  /* 弦乐长音：渐强进入（Experience 标志性的弦乐铺底） */
+  function strings(freq,t,dur,vol){
+    if(!ctx||freq<=0) return;
+    var o1=ctx.createOscillator(), o2=ctx.createOscillator();
+    o1.type='sawtooth'; o1.frequency.value=freq;
+    o2.type='sawtooth'; o2.frequency.value=freq*1.002;
+    var f=ctx.createBiquadFilter(); f.type='lowpass'; f.frequency.value=1500; f.Q.value=.8;
+    var g=ctx.createGain();
+    o1.connect(f); o2.connect(f); f.connect(g);
+    g.connect(master); g.connect(reverb);
+    g.gain.setValueAtTime(0.0001,t);
+    g.gain.exponentialRampToValueAtTime(vol,t+.8);
+    g.gain.setValueAtTime(vol,t+dur*.7);
+    g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+    o1.start(t); o2.start(t);
+    o1.stop(t+dur+.1); o2.stop(t+dur+.1);
+  }
+
+  /* 低音：正弦 */
+  function bass(freq,t,dur,vol){
     if(!ctx||freq<=0) return;
     var o=ctx.createOscillator();
     o.type='sine'; o.frequency.value=freq;
@@ -599,45 +611,38 @@ book.addEventListener('click',e=>{
     o.connect(g);
     g.connect(master); g.connect(reverb);
     g.gain.setValueAtTime(0.0001,t);
-    g.gain.exponentialRampToValueAtTime(vol,t+.12);
+    g.gain.exponentialRampToValueAtTime(vol,t+.1);
     g.gain.setValueAtTime(vol,t+dur*.5);
     g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
     o.start(t); o.stop(t+dur+.1);
   }
 
-  /* 卡农 D大调 —— 和弦进行（每小节1和弦，8小节循环） */
+  /* Experience 和声进行：Am - F - C - G（A小调，循环） */
   var CHORDS=[
-    {root:50, notes:[62,66,69,74]},   // D
-    {root:45, notes:[57,61,64,69]},   // A
-    {root:47, notes:[59,62,66,71]},   // Bm
-    {root:42, notes:[54,57,61,66]},   // F#m
-    {root:43, notes:[55,59,62,67]},   // G
-    {root:38, notes:[50,54,57,62]},   // D/F#
-    {root:43, notes:[55,59,62,67]},   // G
-    {root:45, notes:[57,61,64,69]}    // A
+    {root:45, arp:[57,60,64,69,64,60,57,60]},  // Am: A2, C3, E3, A3
+    {root:41, arp:[53,57,60,65,60,57,53,57]},  // F
+    {root:48, arp:[60,64,67,72,67,64,60,64]},  // C
+    {root:43, arp:[55,59,62,67,62,59,55,59]}   // G
   ];
-  /* 经典卡农旋律（每小节4个八分音符） */
-  var MELODY=[
-    [74,76,78,79],[76,78,79,81],[78,79,81,83],[79,81,83,84],
-    [81,83,84,86],[83,84,86,88],[84,86,88,89],[86,88,89,91],
-    [74,76,78,79],[76,78,79,81],[78,79,81,83],[79,81,83,84],
-    [81,83,84,86],[83,84,86,88],[86,88,89,86],[84,81,79,78]
-  ];
+  /* 每小节 4 个 8分音符组（Experience 的 6/8 律动感：每组 3 音符）
+     实际用 4/4 每小节 8 个 8 分音符，速度 ~90bpm */
+  var spb=0.30;
 
   function schedule(){
-    var spb=0.32; // 每拍秒数（稍慢，交响感）
     while(nextTime < ctx.currentTime + 1.5){
-      var bar=Math.floor(step/4), beat=step%4;
-      var ch=CHORDS[bar%8];
+      var bar=Math.floor(step/8), beat=step%8;
+      var ch=CHORDS[bar%4];
       if(beat===0){
-        cello(ch.root-12,nextTime,spb*3.8,.30);        // 低音
-        ch.notes.forEach(function(n,i){               // 弦乐和声
-          strings(n,nextTime,spb*3.8,i===0?.12:.07);
-        });
+        bass(ch.root-12,nextTime,spb*7.8,.26);   // 低音根音
       }
-      var m=MELODY[bar%16][beat];
-      piano(m,nextTime,spb*.9,.16);                    // 钢琴旋律
-      if(beat===2) piano(m-12,nextTime,spb*.8,.10);    // 低八度点缀
+      var n=ch.arp[beat];
+      piano(n,nextTime,spb*.85,.13);             // 快速琶音
+      if(beat%2===0) piano(n+12,nextTime,spb*.7,.06); // 高八度点缀
+      // 每小节弦乐进入（第4小节强），渐强感
+      if(bar%8>=5 && beat===0){
+        strings(ch.root+3,nextTime,spb*7.5,.05);
+        strings(ch.arp[1],nextTime,spb*7.5,.04);
+      }
       nextTime+=spb; step++;
     }
   }
