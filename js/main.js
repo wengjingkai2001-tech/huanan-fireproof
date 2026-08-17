@@ -321,8 +321,10 @@ document.addEventListener('keydown', (e) => {
         e.preventDefault();
         var src = link.getAttribute('href');
         // 收集同组证书图，支持多图导航
-        var group = link.getAttribute('data-group') || 'certs';
-        var all = Array.from(document.querySelectorAll('.js-cert[data-group="' + group + '"]'));
+        var group = link.getAttribute('data-group');
+        var all = group
+          ? Array.from(document.querySelectorAll('.js-cert[data-group="' + group + '"]'))
+          : Array.from(document.querySelectorAll('.js-cert'));
         var items = all.map(function(l) {
           return { src: l.getAttribute('href'), caption: getCaption(l) };
         });
