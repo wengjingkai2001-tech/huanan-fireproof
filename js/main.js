@@ -140,8 +140,8 @@ function openLightbox(el) {
     const img = document.getElementById('lightboxImg');
     const caption = document.getElementById('lightboxCaption');
 
-    // Collect all cap-items
-    const allItems = document.querySelectorAll('.cap-item');
+    // Collect all lightbox items (capability images + product images)
+    const allItems = document.querySelectorAll('.cap-item, .product-img-wrap');
     lightboxItems = Array.from(allItems);
 
     // Find index
@@ -150,7 +150,8 @@ function openLightbox(el) {
     // Set image
     const clickedImg = el.querySelector('img');
     img.src = clickedImg.src;
-    caption.textContent = el.querySelector('.cap-overlay span').textContent;
+    const capSpan = el.querySelector('.cap-overlay span');
+    caption.textContent = capSpan ? capSpan.textContent : (clickedImg.alt || '');
 
     // Store current index
     lightbox.dataset.index = idx;
@@ -184,7 +185,8 @@ function updateLightbox(lightbox, idx) {
     const item = lightboxItems[idx];
     const clickedImg = item.querySelector('img');
     img.src = clickedImg.src;
-    caption.textContent = item.querySelector('.cap-overlay span').textContent;
+    const capSpan = item.querySelector('.cap-overlay span');
+    caption.textContent = capSpan ? capSpan.textContent : (clickedImg.alt || '');
     lightbox.dataset.index = idx;
 }
 
