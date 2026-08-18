@@ -551,101 +551,35 @@ book.addEventListener('click',e=>{
   else if(x<rect.width*.4) flipTo(idx-1);
 });
 
-/* ============ BGM：理查德·克莱德曼《梦中的婚礼》主旋律段（Solo Piano） ============ */
+/* ============ BGM：《致爱丽丝》理查德·克莱德曼（真实音频） ============ */
 (function(){
-  var ctx=null, playing=false, timer=null, nextTime=0, step=0;
-  var master=null, reverb=null;
+  var audio=null, playing=false;
+  var btn=document.getElementById('musicBtn');
 
   function initAudio(){
-    ctx=new (window.AudioContext||window.webkitAudioContext)();
-    master=ctx.createGain(); master.gain.value=.45; master.connect(ctx.destination);
-    reverb=ctx.createConvolver();
-    var sr=ctx.sampleRate, len=sr*3.2;
-    var buf=ctx.createBuffer(2,len,sr);
-    for(var ch=0;ch<2;ch++){
-      var d=buf.getChannelData(ch);
-      for(var i=0;i<len;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.4);
-    }
-    reverb.buffer=buf;
-    var rg=ctx.createGain(); rg.gain.value=.28;
-    reverb.connect(rg); rg.connect(master);
-  }
-
-  /* 克莱德曼式钢琴：三角波+泛音+柔和包络（清澈温暖） */
-  function piano(freq,t,dur,vol){
-    if(!ctx||freq<=0) return;
-    var o1=ctx.createOscillator(), o2=ctx.createOscillator();
-    o1.type='triangle'; o1.frequency.value=freq;
-    o2.type='sine'; o2.frequency.value=freq*2;
-    var o2g=ctx.createGain(); o2g.gain.value=.22;
-    o2.connect(o2g);
-    var f=ctx.createBiquadFilter(); f.type='lowpass'; f.frequency.value=2400;
-    var g=ctx.createGain();
-    o1.connect(f); o2g.connect(f); f.connect(g);
-    g.connect(master); g.connect(reverb);
-    g.gain.setValueAtTime(0.0001,t);
-    g.gain.exponentialRampToValueAtTime(vol,t+.02);
-    g.gain.exponentialRampToValueAtTime(vol*.55,t+.25);
-    g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
-    o1.start(t); o1.stop(t+dur+.15);
-    o2.start(t); o2.stop(t+dur+.15);
-  }
-
-  /* 《梦中的婚礼》副歌（最火段）D大调 6小节循环 */
-  var CHORDS=[
-    {root:38, notes:[50,57,62,66]},  // D
-    {root:38, notes:[50,57,62,66]},  // D
-    {root:47, notes:[59,62,66,71]},  // Bm
-    {root:45, notes:[57,61,64,69]},  // A
-    {root:43, notes:[55,59,62,67]},  // G
-    {root:38, notes:[50,57,62,66]}   // D
-  ];
-  /* 主旋律：D5 F#5 A5 F#5 | D5 B4 G4 A4 | G4 F#4 E4 F#4 |
-     E4 C#4 A3 B3 | C#4 D4 E4 F#4 | G4 F#4 E4 D4 */
-  var MELODY=[
-    [74,78,81,78],
-    [74,71,67,69],
-    [67,66,64,66],
-    [64,61,57,59],
-    [61,62,64,66],
-    [67,66,64,62]
-  ];
-  var spb=0.62; // ~97bpm，克莱德曼抒情速度
-  function schedule(){
-    while(nextTime < ctx.currentTime + 1.5){
-      var bar=Math.floor(step/4), beat=step%4;
-      var ch=CHORDS[bar%6];
-      if(beat===0) piano(ch.root-12,nextTime,spb*3.4,.22);   // 低音
-      piano(MELODY[bar%6][beat],nextTime,spb*1.9,.15);        // 旋律
-      if(beat===1) piano(ch.notes[1],nextTime,spb*1.6,.07);   // 琶音伴奏
-      if(beat===2) piano(ch.notes[2],nextTime,spb*1.5,.06);
-      if(beat===3) piano(ch.notes[3],nextTime,spb*1.4,.05);
-      nextTime+=spb; step++;
-    }
+    audio=new Audio('images/bgm.mp3');
+    audio.loop=true;
+    audio.preload='auto';
+    audio.volume=.7;
   }
 
   function toggle(){
-    if(!ctx) initAudio();
+    if(!audio) initAudio();
     if(playing){
+      audio.pause();
       playing=false;
-      clearInterval(timer); timer=null;
-      ctx.suspend();
       btn.classList.add('paused'); btn.classList.remove('playing');
     }else{
+      var p=audio.play();
+      if(p&&p.catch) p.catch(function(){});
       playing=true;
-      ctx.resume();
-      if(!timer){
-        nextTime=ctx.currentTime+.3; step=0;
-        timer=setInterval(schedule,50);
-        schedule();
-      }
       btn.classList.remove('paused'); btn.classList.add('playing');
     }
   }
-  var btn=document.getElementById('musicBtn');
+
   btn.addEventListener('click',toggle);
   document.addEventListener('visibilitychange',function(){
-    if(document.hidden&&playing){ btn.click(); }
+    if(document.hidden&&playing){ toggle(); }
   });
 })();
 
@@ -670,5 +604,6 @@ book.addEventListener('click',e=>{
   }
 })();
 </script>
+<audio id="bgmAudio" src="images/bgm.mp3" loop preload="none"></audio>
 </body>
 </html>
