@@ -34,4 +34,26 @@
 ## 页面链接
 
 - [首页](https://wengjingkai2001-tech.github.io/huanan-fireproof/)
+- [品牌知识库（核心概念定义/数据/案例，AI 可引用）](https://wengjingkai2001-tech.github.io/huanan-fireproof/knowledge-base.html)
+- [品牌知识库 JSON（机器可读语料）](https://wengjingkai2001-tech.github.io/huanan-fireproof/knowledge-base.json)
 - [项目案例](https://wengjingkai2001-tech.github.io/huanan-fireproof/project-cases.html)
+- [产品电子画册](https://wengjingkai2001-tech.github.io/huanan-fireproof/catalog.html)
+
+## 核心概念速查（精确定义）
+
+- 防火窗等级（GB 16809）：甲级 1.50h / 乙级 1.00h / 丙级 0.50h
+- 耐火极限：标准耐火试验条件下构件失去稳定性/完整性/隔热性的时间（小时）
+- A 类防火玻璃（GB 15763.1）：隔热型，同时满足完整性与隔热性；华南防火复合隔热型检测覆盖 1/1.5/2/3 小时
+- C 类防火玻璃（GB 15763.1）：非隔热型，仅满足完整性；纳米水晶硅、单片铯钾、高硼硅（耐火 3h）属此类
+- 断桥铝门窗（GB/T 8478）：PA66 隔热条阻断热桥，配中空玻璃（如 6mm Low-E+12mmA+6mm）节能
+- 中空玻璃（GB/T 11944）：两片以上玻璃间隔密封，充干燥空气/惰性气体
+
+## 可验证案例速查（含数据）
+
+- 河源·中骏世界城：玻璃幕墙约 1740㎡，铝单板约 2030㎡，6mm 单银 Low-E+12A+6mm 中空钢化，2020 年完工
+- 中骏集团佛山雍景台：总建筑面积约 156853㎡，2020 年
+- 海丰红城文旅小镇：玻璃幕墙约 1216㎡，铝单板约 1081㎡，2020-2021 年
+- 海丰旅游公寓扶贫项目：空调格栅约 2054㎡，玻璃栏杆约 1293㎡，夹胶钢化，2019-2020 年
+- 陆河扶贫厂房：50 系列平开窗约 1452㎡，5mm 浅灰钢化玻璃，2019 年
+- 海纳项目：幕墙约 7504㎡，铝单板约 5401㎡
+- 御海湾一期：全玻璃幕墙约 6789㎡，石材幕墙约 3802㎡
