@@ -1,4 +1,4 @@
-﻿{
+{
   "lang.name": "Deutsch",
   "lang.zh": "中文",
   "lang.en": "English",
@@ -22,10 +22,6 @@
   "hero.btn_about": "Über uns",
   "about.title": "Über uns",
   "about.subtitle": "Guangdong Huanan Fire Prevention Technology Co., Ltd.",
-  "about.p1": "Die Guangdong Huanan Fire Prevention Technology Co., Ltd. hat ihren Sitz in Daojiao, Dongguan. Das Hauptgeschäft umfasst Aluminium-Brandschutzfenster, Stahl-Brandschutzfenster, Brandschutz-Vorhangfassaden, Brandschutz-Trennwände, Borosilikat-Brandschutzglas, mehrschichtiges wärmeisolierendes Brandschutzglas der Klasse A, nanokristallines Silizium-Brandschutzglas und weitere Produkte. Das Unternehmen verfügt über ein vollständiges Produktions- und Weiterverarbeitungssystem für Brandschutz-Tür- und Fensterrahmen sowie Brandschutzglas und gewährleistet damit eine stabile Fertigung, strenge Qualitätskontrolle und einen aufmerksamen Kundendienst.",
-  "about.p2": "Das Partnerunternehmen, die Guangdong Huanan New Building Materials Technology Co., Ltd., ist autorisierter Vertragspartner für Offline-LOW-E-Glas von CSG und Xinyi sowie Generalvertriebspartner für Online-LOW-E-Glas von Yaopi in der Provinz Guangdong. Mehrere Gesellschaften arbeiten eng zusammen und bieten jedem Kunden einen individuellen Service. Auf der Grundlage fundierter technischer und fachlicher Kompetenz bieten wir umfassende Dienstleistungen, sichern eine stabile Produktion und Lieferung sowie professionelle und hochwertige Produkte.",
-  "about.p3": "Huanan Fire Prevention stellt den Kunden stets in den Mittelpunkt und folgt dem zentralen Wert «Ehrfurcht und Handwerkskunst». Wir legen großen Wert auf die Gewinnung und Förderung von Talenten, die Modernisierung der Anlagen und eine wissenschaftliche Betriebsführung. Unser Team qualifizierter Fachkräfte liefert unseren Kunden kontinuierlich erstklassige Produkte und Dienstleistungen. Mit der Greater Bay Area (Guangdong – Hongkong – Macau) als Heimatbasis weiten wir unsere Tätigkeit schrittweise auf ganz China aus und realisieren Projekte in Messezentren, Schulen, Krankenhäusern, Sport- und Freizeitanlagen, Bürogebäuden sowie Wohnvierteln.",
-  "about.p4": "Getragen von der großen Mission «Das Licht der Technologie sammeln, die Qualität des menschlichen Lebens schützen, zum Wohlstand beitragen und die Welt durch Innovation voranbringen», dient Huanan Fire Prevention der Gesellschaft mit aufrichtigem Herzen, trägt die Träume jedes Huanan-Mitarbeiters und schreitet unermüdlich voran.",
   "about.stat1": "Realisierte Projekte",
   "about.stat2": "Patente & Zertifikate",
   "about.stat3": "Branchenerfahrung (Jahre)",
@@ -223,5 +219,25 @@
   "videos.v4.title": "Projekt Hongmei Shoukai",
   "videos.v4.sub": "Montage von Fensterrahmen auf der Baustelle",
   "video.title": "Projektvideos",
-  "video.hint": "Klicken Sie außerhalb des Videos oder drücken Sie Esc zum Schließen"
+  "video.hint": "Klicken Sie außerhalb des Videos oder drücken Sie Esc zum Schließen",
+  "about.q1": "Was macht Huanan Fire Prevention?",
+  "about.a1": "Hersteller und Dienstleister für Feuerschutztüren, -fenster und Glässysteme, 2020 in Daojiao, Dongguan gegründet.",
+  "about.a1b1": "Produkte: Aluminium-Feuerschutzfenster (Serien 110/120/125), Stahlfenster (Klasse A/B/C), Brandschutzfassaden, Brandschutzglas-Trennwände",
+  "about.a1b2": "Brandschutzglas: Verbund-Wärmedämmglas (Klasse A), Nano-Kristallsilizium (Klasse C), Borosilikat, Cäsium-Kalium",
+  "about.a1b3": "Dienste: Produktion, OEM, schlüsselfertige Montage",
+  "about.q2": "Wie ist das Produktionssystem?",
+  "about.a2": "Zwei integrierte Systeme: Feuerschutztüren/-fenster und Brandschutzglas-Verarbeitung; stabile Lieferung.",
+  "about.a2b1": "Türen und Fenster: Rahmenproduktion + vollständige Weiterverarbeitung",
+  "about.a2b2": "Glas: Schneiden, Kanten, Vorspannen, Isolierglas, Verbundglas",
+  "about.a2b3": "Qualität: Prozesskontrolle + Endkontrolle",
+  "about.q3": "Wie ist die Lieferkette?",
+  "about.a3": "Verbundene Firmen liefern Basisglas; Kooperation sichert Low-E-Rohglas.",
+  "about.a3b1": "Guangdong Huanan New Materials: Offline-Low-E-Vertrieb CSG/Xinyi, Generalvertreter Online-Low-E Yaopi (Guangdong)",
+  "about.a3b2": "Dongguan Xinyijia Glass: Vorspannen, Isolierglas, Verbundglas, Low-E, Brandschutzglas",
+  "about.a3b3": "System: persönlicher Service, stabile Produktion und Lieferung",
+  "about.q4": "Welche Projekte führt es durch?",
+  "about.a4": "Basis in der Greater-Bay-Region, bedient öffentliche und gewerbliche Gebäude landesweit.",
+  "about.a4b1": "Typen: Ausstellungszentren, Schulen, Krankenhäuser, Büros, Einkaufszentren, Wohnungen",
+  "about.a4b2": "Projekte: CIFI Zhongjun World City, Foshan Yongjingtai, Haifeng Cultural Town usw.",
+  "about.a4b3": "Daten: 300+ Projekte, 150+ Kunden"
 }
