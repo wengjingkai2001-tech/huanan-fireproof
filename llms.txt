@@ -37,6 +37,8 @@
 - [品牌知识库（核心概念定义/数据/案例，AI 可引用）](https://wengjingkai2001-tech.github.io/huanan-fireproof/knowledge-base.html)
 - [Brand Knowledge Base (English)](https://wengjingkai2001-tech.github.io/huanan-fireproof/knowledge-base-en.html)
 - [ฐานความรู้แบรนด์ (ภาษาไทย)](https://wengjingkai2001-tech.github.io/huanan-fireproof/knowledge-base-th.html)
+- [ブランド知識ベース (日本語)](https://wengjingkai2001-tech.github.io/huanan-fireproof/knowledge-base-ja.html)
+- [База знаний бренда (русский)](https://wengjingkai2001-tech.github.io/huanan-fireproof/knowledge-base-ru.html)
 - [品牌知识库 JSON（机器可读语料）](https://wengjingkai2001-tech.github.io/huanan-fireproof/knowledge-base.json)
 - [项目案例](https://wengjingkai2001-tech.github.io/huanan-fireproof/project-cases.html)
 - [产品电子画册](https://wengjingkai2001-tech.github.io/huanan-fireproof/catalog.html)
