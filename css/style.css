@@ -370,6 +370,56 @@ img { max-width: 100%; display: block; }
     left: -16px;
 }
 
+/* GEO: 案例页 FAQ 区块 */
+.faq-list {
+    max-width: 860px;
+    margin: 0 auto;
+}
+.faq-item {
+    background: #fff;
+    border: 1px solid #e8eef4;
+    border-left: 4px solid #00539f;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    text-align: left;
+}
+.faq-q {
+    font-size: 1.02rem;
+    color: #00539f;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+.faq-q::before {
+    content: "Q";
+    display: inline-block;
+    background: #00539f;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-right: 8px;
+    vertical-align: 2px;
+}
+.faq-a {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+}
+.faq-a::before {
+    content: "A";
+    display: inline-block;
+    background: #c9a15a;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-right: 8px;
+    vertical-align: 2px;
+}
+
 .about-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
