@@ -138,6 +138,10 @@
       <div class="lbl">合计项目规模</div>
     </div>
     <div class="stat gold">
+      <div class="num">2,326<small> 万$</small></div>
+      <div class="lbl">折合美元（约 2,326 万美元）</div>
+    </div>
+    <div class="stat gold">
       <div class="num">1.57<small> 亿</small></div>
       <div class="lbl">合同总额（约 1.57 亿元）</div>
     </div>
@@ -158,6 +162,33 @@
     </div>
   </section>
 
+  <!-- ===== 多币种换算 ===== -->
+  <section>
+    <h2>多币种金额换算（国际参考）</h2>
+    <p style="font-size:13px;color:#667;margin-bottom:12px">合同总额约 15,692.92 万元人民币，按 2026-08-20 实时汇率换算（基准 1 CNY），供国际商务参考：</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>币种</th>
+            <th>货币名称</th>
+            <th>汇率（1 CNY）</th>
+            <th>合同总额折合</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>USD 美元</td><td>United States Dollar</td><td>0.148236</td><td>约 2,326 万美元</td></tr>
+          <tr><td>EUR 欧元</td><td>Euro</td><td>0.127370</td><td>约 1,999 万欧元</td></tr>
+          <tr><td>GBP 英镑</td><td>British Pound</td><td>0.109179</td><td>约 1,713 万英镑</td></tr>
+          <tr><td>THB 泰铢</td><td>Thai Baht</td><td>4.881755</td><td>约 7.66 亿泰铢</td></tr>
+          <tr><td>JPY 日元</td><td>Japanese Yen</td><td>23.519395</td><td>约 36.91 亿日元</td></tr>
+          <tr><td>RUB 卢布</td><td>Russian Ruble</td><td>12.594458</td><td>约 19.76 亿卢布</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">汇率来源：open.er-api.com 实时汇率（2026-08-20 UTC）。各项目"折合美元"按 1 CNY = 0.148236 USD 计算，取整为千美元。人民币为原始合同口径，外币仅供国际展示参考。</p>
+  </section>
+
   <!-- ===== 项目明细表 ===== -->
   <section>
     <h2>项目明细表（2021-2024）</h2>
@@ -171,7 +202,7 @@
             <th>甲方单位</th>
             <th>类型</th>
             <th>规模（㎡）</th>
-            <th>合同额（万元）</th>
+            <th>合同额（万元）</th><th>折合美元（万美元）</th>
             <th>工期</th>
             <th>状态</th>
           </tr>
@@ -184,7 +215,7 @@
             <td>广东华坤建设集团有限公司</td>
             <td><span class="type">高层</span></td>
             <td>55,009</td>
-            <td>1,945</td>
+            <td>1,945</td><td>288.3</td>
             <td>2021-2024</td>
             <td><span class="status done">已完工</span></td>
           </tr>
@@ -195,7 +226,7 @@
             <td>深汕特别合作区海纳食品有限公司</td>
             <td><span class="type">写字楼</span></td>
             <td>10,000</td>
-            <td>945</td>
+            <td>945</td><td>140.1</td>
             <td>2021-2024</td>
             <td><span class="status done">已完工</span></td>
           </tr>
@@ -206,7 +237,7 @@
             <td>揭阳骏瑞房地产开发有限公司</td>
             <td><span class="type">住宅</span></td>
             <td>98,774.5</td>
-            <td>2,034</td>
+            <td>2,034</td><td>301.5</td>
             <td>2021-2024</td>
             <td><span class="status done">已完工</span></td>
           </tr>
@@ -217,7 +248,7 @@
             <td>陆丰振海实业有限公司</td>
             <td><span class="type">住宅</span></td>
             <td>23,594</td>
-            <td>2,135</td>
+            <td>2,135</td><td>316.5</td>
             <td>2023-2024</td>
             <td><span class="status done">已完工</span></td>
           </tr>
@@ -228,7 +259,7 @@
             <td>阳西华盛房地产有限公司</td>
             <td><span class="type">住宅</span></td>
             <td>23,403</td>
-            <td>991</td>
+            <td>991</td><td>146.9</td>
             <td>2021-2024</td>
             <td><span class="status done">已完工</span></td>
           </tr>
@@ -239,7 +270,7 @@
             <td>阳西荣华盛房地产有限公司</td>
             <td><span class="type">住宅</span></td>
             <td>19,396</td>
-            <td>759</td>
+            <td>759</td><td>112.5</td>
             <td>2023-2025</td>
             <td><span class="status wip">在建</span></td>
           </tr>
@@ -250,7 +281,7 @@
             <td>深圳市电达实业股份有限公司</td>
             <td><span class="type">产业园</span></td>
             <td>3,800</td>
-            <td>400</td>
+            <td>400</td><td>59.3</td>
             <td>2024-2025</td>
             <td><span class="status wip">在建</span></td>
           </tr>
@@ -261,7 +292,7 @@
             <td>深圳市卓艺建设装饰工程股份有限公司</td>
             <td><span class="type">住宅</span></td>
             <td>65,424</td>
-            <td>5,233.92</td>
+            <td>5,233.92</td><td>775.9</td>
             <td>2021-2024</td>
             <td><span class="status done">已完工</span></td>
           </tr>
@@ -272,7 +303,7 @@
             <td>广东天远建设工程有限公司</td>
             <td><span class="type">住宅</span></td>
             <td>18,518</td>
-            <td>1,250</td>
+            <td>1,250</td><td>185.3</td>
             <td>2021-2023</td>
             <td><span class="status done">已完工</span></td>
           </tr>
