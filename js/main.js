@@ -140,8 +140,8 @@ function openLightbox(el) {
     const img = document.getElementById('lightboxImg');
     const caption = document.getElementById('lightboxCaption');
 
-    // Collect all lightbox items (capability images + product images)
-    const allItems = document.querySelectorAll('.cap-item, .product-img-wrap');
+    // Collect all lightbox items (capability images + product images + factory images)
+    const allItems = document.querySelectorAll('.cap-item, .product-img-wrap, .factory-item-img');
     lightboxItems = Array.from(allItems);
 
     // Find index
