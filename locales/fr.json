@@ -1,4 +1,4 @@
-﻿{
+{
   "lang.name": "Français",
   "lang.zh": "中文",
   "lang.en": "English",
@@ -22,10 +22,6 @@
   "hero.btn_about": "À propos",
   "about.title": "À propos",
   "about.subtitle": "Guangdong Huanan Fire Prevention Technology Co., Ltd.",
-  "about.p1": "Guangdong Huanan Fire Prevention Technology Co., Ltd. est située dans la ville de Daojiao, à Dongguan. Notre activité principale couvre les fenêtres coupe-feu en aluminium, les fenêtres coupe-feu en acier, les murs-rideaux coupe-feu, les cloisons coupe-feu, le verre coupe-feu au bore-silicate, le verre coupe-feu isolant multicouche de classe A, le verre coupe-feu nano-cristallin à base de silicium, et bien d'autres produits. L'entreprise dispose d'un système complet de production et de transformation des cadres de portes et fenêtres coupe-feu ainsi que du verre coupe-feu, garantissant un système de production stable, un contrôle qualité rigoureux et un service après-vente attentionné.",
-  "about.p2": "L'entreprise partenaire, Guangdong Huanan New Building Materials Technology Co., Ltd., est concessionnaire agréé du verre LOW-E hors ligne de CSG et Xinyi, et distributeur général du verre LOW-E en ligne de Yaopi pour la province du Guangdong. Plusieurs sociétés collaborent étroitement pour offrir un service personnalisé à chaque client. Grâce à une solide base technique et professionnelle, nous nous engageons à fournir un service complet, en assurant la stabilité de la production et de l'approvisionnement, ainsi que des produits professionnels et de haute qualité.",
-  "about.p3": "Huanan Fire Prevention place toujours le client au centre de ses préoccupations, en défendant la valeur fondamentale « respect et savoir-faire ». Nous attachons une grande importance au recrutement et à la formation des talents, à la modernisation des équipements et à une gestion scientifique. Notre équipe de techniciens qualifiés offre en permanence à nos clients des produits et des services de premier ordre. Basés dans la grande baie Guangdong-Hong Kong-Macao, nous étendons progressivement notre activité à travers toute la Chine, réalisant des projets de centres d'exposition, d'écoles, d'hôpitaux, de complexes sportifs et de loisirs, de bureaux et de zones résidentielles.",
-  "about.p4": "Guidée par la grande mission « Concentrer la lumière de la technologie, protéger la qualité de la vie humaine, accompagner la prospérité, et faire progresser le monde par l'innovation », Huanan Fire Prevention sert la société avec sincérité, porte les rêves de chaque membre de Huanan et avance sans relâche.",
   "about.stat1": "Projets réalisés",
   "about.stat2": "Brevets et certificats",
   "about.stat3": "Expérience (années)",
@@ -223,5 +219,25 @@
   "videos.v4.title": "Projet Hongmei Shoukai",
   "videos.v4.sub": "Pose de cadres de fenêtres sur site",
   "video.title": "Vidéos des projets",
-  "video.hint": "Cliquez hors de la vidéo ou appuyez sur Échap pour fermer"
+  "video.hint": "Cliquez hors de la vidéo ou appuyez sur Échap pour fermer",
+  "about.q1": "Que fait Huanan Fire Prevention ?",
+  "about.a1": "Fabricant et prestataire de systèmes de portes, fenêtres et verres coupe-feu, fondé en 2020 à Daojiao, Dongguan.",
+  "about.a1b1": "Produits : fenêtres coupe-feu aluminium (séries 110/120/125), fenêtres acier (classe A/B/C), murs-rideaux, cloisons en verre coupe-feu",
+  "about.a1b2": "Verre coupe-feu : composite isolant (classe A), nano-silicium cristallin (classe C), borosilicate, cesium-potassium",
+  "about.a1b3": "Services : production, OEM, installation clé en main",
+  "about.q2": "Quel est le système de production ?",
+  "about.a2": "Deux systèmes intégrés : portes/fenêtres coupe-feu et transformation du verre coupe-feu ; approvisionnement stable.",
+  "about.a2b1": "Portes et fenêtres : production de cadres + transformation complète",
+  "about.a2b2": "Verre : découpe, meulage, trempe, vitrage isolant, feuilletage",
+  "about.a2b3": "Qualité : contrôle en cours + inspection finale",
+  "about.q3": "Quelle est la chaîne d'approvisionnement ?",
+  "about.a3": "Des sociétés affiliées fournissent le verre de base ; coopération amont pour le verre Low-E.",
+  "about.a3b1": "Guangdong Huanan New Materials : distributeur Low-E offline CSG/Xinyi, agent général Low-E online Yaopi (Guangdong)",
+  "about.a3b2": "Dongguan Xinyijia Glass : trempe, vitrage, feuilletage, Low-E, verre coupe-feu",
+  "about.a3b3": "Système : service personnalisé, production et livraison stables",
+  "about.q4": "Quels projets réalise-t-elle ?",
+  "about.a4": "Basée dans la région de la Grande Baie, sert bâtiments publics et commerciaux dans toute la Chine.",
+  "about.a4b1": "Types : centres d'exposition, écoles, hôpitaux, bureaux, complexes commerciaux, résidences",
+  "about.a4b2": "Projets : CIFI Zhongjun World City, Foshan Yongjingtai, Haifeng Cultural Town, etc.",
+  "about.a4b3": "Données : 300+ projets, 150+ clients"
 }
