@@ -1,4 +1,4 @@
-﻿{
+{
   "lang.name": "English",
   "lang.zh": "中文",
   "lang.en": "English",
@@ -22,10 +22,6 @@
   "hero.btn_about": "About Us",
   "about.title": "About Us",
   "about.subtitle": "Guangdong Huanan Fire Prevention Technology Co., Ltd.",
-  "about.p1": "Guangdong Huanan Fire Prevention Technology Co., Ltd. is located in Daojiao Town, Dongguan City. We mainly produce aluminum fire-rated windows, steel fire-rated windows, fire-rated curtain walls, fire-rated partitions, high borosilicate fire-rated glass, composite insulated Class A fire-rated glass, and nano-crystal-silica fire-rated glass. With complete production lines for fire-rated door/window frames and deep-processing fire-rated glass, we deliver a stable production system, strict quality control and attentive after-sales service.",
-  "about.p2": "Our upstream partner, Guangdong Huanan New Material Technology Co., Ltd., is an authorized dealer of CSG and Xinyi offline LOW-E glass and the exclusive Guangdong agent for Yaopi online LOW-E glass. Working together with one-on-one service, strong technical expertise and solid knowledge, we provide all-round support for our customers, ensuring stable production and supply with professional products of the highest quality.",
-  "about.p3": "Huanan Fire Prevention always puts customers first, holding the core values of \"Awe in the heart, craftsmanship in the work\". We invest in talent, modern facilities and scientific management, backed by a professional technical team, to deliver first-class products and services to our customers. Based in the Guangdong-Hong Kong-Macao Greater Bay Area and expanding nationwide, we undertake projects including exhibition centers, schools, hospitals, sports and entertainment centers, office buildings, and mixed-use residential complexes.",
-  "about.p4": "Embracing the great mission of \"Bringing the light of technology, protecting quality of life, helping build a moderately prosperous society, and driving the world with innovation\", Huanan Fire Prevention serves society with sincerity, carrying the dreams of every Huanan person forward without pause.",
   "about.stat1": "Projects Delivered",
   "about.stat2": "Patents & Certs",
   "about.stat3": "Years of Experience",
@@ -223,5 +219,25 @@
   "videos.v4.title": "Hongmei Shoukai Project",
   "videos.v4.sub": "Window frame installation",
   "video.title": "Project video",
-  "video.hint": "Click outside the video or press Esc to close"
+  "video.hint": "Click outside the video or press Esc to close",
+  "about.q1": "What does Huanan Fire Prevention do?",
+  "about.a1": "A manufacturer and engineering service provider focused on fire-rated doors, windows and glass systems, founded in 2020 in Daojiao Town, Dongguan.",
+  "about.a1b1": "Products: aluminum fire-rated windows (110/120/125 series), steel fire-rated windows (Class A/B/C), fire-resistant curtain walls, fire glass partitions",
+  "about.a1b2": "Fire glass: composite heat-insulating (Class A), nano crystal silicon (Class C), borosilicate, monolithic cesium-potassium",
+  "about.a1b3": "Services: production, OEM cooperation, turnkey installation",
+  "about.q2": "What is the production system?",
+  "about.a2": "Two integrated production systems: fire-rated doors/windows and fire glass processing, ensuring stable supply.",
+  "about.a2b1": "Fire doors & windows: frame production + deep processing full flow",
+  "about.a2b2": "Fire glass: cutting, edging, tempering, insulating, laminating lines",
+  "about.a2b3": "Quality: in-process control + final inspection",
+  "about.q3": "What is the upstream supply chain?",
+  "about.a3": "Affiliated companies supply base glass; upstream cooperation ensures Low-E raw glass supply.",
+  "about.a3b1": "Guangdong Huanan New Materials: CSG & Xinyi offline Low-E franchisee, Yaopi online Low-E Guangdong general agent",
+  "about.a3b2": "Dongguan Xinyijia Glass: tempering, insulating, laminating, Low-E, fire glass base processing",
+  "about.a3b3": "System: one-to-one service ensuring stable production and supply",
+  "about.q4": "What projects does it undertake?",
+  "about.a4": "Based in the Guangdong-Hong Kong-Macao Greater Bay Area, serving public and commercial buildings nationwide.",
+  "about.a4b1": "Types: exhibition centers, schools, hospitals, offices, commercial complexes, residences",
+  "about.a4b2": "Cases: CIFI Zhongjun World City, Foshan Yongjingtai, Haifeng Cultural Town, etc. (see project cases page)",
+  "about.a4b3": "Data: 300+ projects, 150+ clients (see knowledge base)"
 }
