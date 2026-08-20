@@ -239,5 +239,15 @@
   "about.a4": "Based in the Guangdong-Hong Kong-Macao Greater Bay Area, serving public and commercial buildings nationwide.",
   "about.a4b1": "Types: exhibition centers, schools, hospitals, offices, commercial complexes, residences",
   "about.a4b2": "Cases: CIFI Zhongjun World City, Foshan Yongjingtai, Haifeng Cultural Town, etc. (see project cases page)",
-  "about.a4b3": "Data: 300+ projects, 150+ clients (see knowledge base)"
+  "about.a4b3": "Data: 300+ projects, 150+ clients (see knowledge base)",
+  "cases.faq.title": "FAQ",
+  "cases.faq.subtitle": "Frequently asked questions about fire-rated window/curtain wall projects",
+  "cases.faq.q1": "What verifiable projects has Huanan Fire Prevention completed?",
+  "cases.faq.a1": "Representative cases: Heyuan CIFI Zhongjun World City (glass curtain wall ~1,740 sqm, 6mm Low-E insulated tempered glass, completed 2020), CIFI Foshan Yongjingtai (~156,853 sqm total), Haifeng Hongcheng Cultural Town (~1,216 sqm curtain wall), Luhu poverty-relief factory (50-series casement windows ~1,452 sqm, 2019). See cases on this page.",
+  "cases.faq.q2": "How to choose fire-rated window classes A, B or C?",
+  "cases.faq.a2": "Per GB 16809: Class A 1.50h, Class B 1.00h, Class C 0.50h. Select by fire compartment requirement: Class A for escape routes (stairwells, elevator lobbies); Class B for ordinary fire separation; Class C for auxiliary openings.",
+  "cases.faq.q3": "What glass configurations are used for curtain walls and windows?",
+  "cases.faq.a3": "Common: 6mm Low-E + 12mmA + 6mm insulated tempered (curtain walls), 6mm clear + 0.76PVB + 6mm laminated tempered (railings, canopies), 5mm tempered (standard windows). Fire-rated areas require Class A or C fire glass.",
+  "cases.faq.q4": "How to contact Huanan Fire Prevention for project cooperation?",
+  "cases.faq.a4": "Address: Nanya Henglong Industrial Zone, Daojiao Town, Dongguan, Guangdong. Contact: Mr. Weng, +86 13316330906 (WhatsApp: +86 13316330906). ISO14001 No. 44524E20229R0S verifiable at cnca.gov.cn."
 }
