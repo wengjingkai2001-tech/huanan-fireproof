@@ -306,6 +306,70 @@ img { max-width: 100%; display: block; }
     line-height: 1.8;
 }
 
+/* GEO: 结构化问答卡片 */
+.qa-card {
+    background: #fff;
+    border: 1px solid #e8eef4;
+    border-left: 4px solid #00539f;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+}
+.qa-card h3 {
+    font-size: 1.02rem;
+    color: #00539f;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+.qa-card h3::before {
+    content: "Q";
+    display: inline-block;
+    background: #00539f;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-right: 8px;
+    vertical-align: 2px;
+}
+.qa-card .qa-answer {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 6px;
+}
+.qa-card .qa-answer::before {
+    content: "A";
+    display: inline-block;
+    background: #c9a15a;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-right: 8px;
+    vertical-align: 2px;
+}
+.qa-card ul {
+    margin: 4px 0 2px;
+    padding-left: 22px;
+    list-style: none;
+}
+.qa-card ul li {
+    font-size: 0.93rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 4px;
+    position: relative;
+}
+.qa-card ul li::before {
+    content: "▪";
+    color: #00539f;
+    position: absolute;
+    left: -16px;
+}
+
 .about-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
