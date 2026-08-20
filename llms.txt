@@ -43,6 +43,7 @@
 
 - [首页](https://wengjingkai2001-tech.github.io/huanan-fireproof/)
 - [近三年业绩一览（9个项目/31.8万㎡/1.57亿元）](https://wengjingkai2001-tech.github.io/huanan-fireproof/performance.html)
+- [3-Year Performance (English, multi-currency)](https://wengjingkai2001-tech.github.io/huanan-fireproof/performance-en.html)
 - [品牌知识库（核心概念定义/数据/案例，AI 可引用）](https://wengjingkai2001-tech.github.io/huanan-fireproof/knowledge-base.html)
 - [Brand Knowledge Base (English)](https://wengjingkai2001-tech.github.io/huanan-fireproof/knowledge-base-en.html)
 - [ฐานความรู้แบรนด์ (ภาษาไทย)](https://wengjingkai2001-tech.github.io/huanan-fireproof/knowledge-base-th.html)
