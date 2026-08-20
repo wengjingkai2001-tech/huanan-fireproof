@@ -244,6 +244,70 @@
             .factory-grid { grid-template-columns: 1fr; }
             .page-hero h1 { font-size: 1.8rem; }
         }
+
+        /* 生产实力大图 lightbox */
+        .factory-item-img {
+            cursor: zoom-in;
+            overflow: hidden;
+        }
+        .factory-item-img img {
+            transition: transform .3s;
+        }
+        .factory-item-img:hover img {
+            transform: scale(1.05);
+        }
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0,0,0,.88);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox-img {
+            max-width: 88vw;
+            max-height: 82vh;
+            border-radius: 8px;
+            box-shadow: 0 8px 40px rgba(0,0,0,.5);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 18px;
+            right: 26px;
+            color: #fff;
+            font-size: 40px;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .lightbox-prev, .lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 44px;
+            cursor: pointer;
+            padding: 12px;
+            user-select: none;
+        }
+        .lightbox-prev { left: 18px; }
+        .lightbox-next { right: 18px; }
+        .lightbox-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+            text-shadow: 0 1px 4px rgba(0,0,0,.6);
+        }
+        @media (max-width: 768px) {
+            .lightbox-prev { left: 6px; font-size: 30px; }
+            .lightbox-next { right: 6px; font-size: 30px; }
+        }
     </style>
 </head>
 <body>
@@ -435,27 +499,39 @@
                 <p data-i18n="cases.section3.desc">国内外先进的玻璃深加工设备，严格的质量管理体系</p>
                 <div class="factory-grid">
                     <div class="factory-item">
-                        <img src="images/capability/3.jpg" alt="原片切割" decoding="async">
+                        <div class="factory-item-img" onclick="openLightbox(this)" role="button" tabindex="0">
+                            <img src="images/capability/3.jpg" alt="原片切割" decoding="async">
+                        </div>
                         <p data-i18n="cases.factory.cut">原片切割（全自动电脑开机台）</p>
                     </div>
                     <div class="factory-item">
-                        <img src="images/capability/9.jpg" alt="磨边" decoding="async">
+                        <div class="factory-item-img" onclick="openLightbox(this)" role="button" tabindex="0">
+                            <img src="images/capability/9.jpg" alt="磨边" decoding="async">
+                        </div>
                         <p data-i18n="cases.factory.edge">磨边（全自动高速四边精磨）</p>
                     </div>
                     <div class="factory-item">
-                        <img src="images/capability/8.jpg" alt="中空" decoding="async">
+                        <div class="factory-item-img" onclick="openLightbox(this)" role="button" tabindex="0">
+                            <img src="images/capability/8.jpg" alt="中空" decoding="async">
+                        </div>
                         <p data-i18n="cases.factory.hollow">中空（全自动打胶中空线）</p>
                     </div>
                     <div class="factory-item">
-                        <img src="images/capability/5.jpg" alt="钢化" decoding="async">
+                        <div class="factory-item-img" onclick="openLightbox(this)" role="button" tabindex="0">
+                            <img src="images/capability/5.jpg" alt="钢化" decoding="async">
+                        </div>
                         <p data-i18n="cases.factory.tempered">钢化（强制对流双式钢化炉）</p>
                     </div>
                     <div class="factory-item">
-                        <img src="images/capability/11.jpg" alt="夹胶" decoding="async">
+                        <div class="factory-item-img" onclick="openLightbox(this)" role="button" tabindex="0">
+                            <img src="images/capability/11.jpg" alt="夹胶" decoding="async">
+                        </div>
                         <p data-i18n="cases.factory.laminated">夹胶（夹胶合片无尘车间）</p>
                     </div>
                     <div class="factory-item">
-                        <img src="images/warehouse/img_4132.jpg" alt="库存" decoding="async">
+                        <div class="factory-item-img" onclick="openLightbox(this)" role="button" tabindex="0">
+                            <img src="images/warehouse/img_4132.jpg" alt="库存" decoding="async">
+                        </div>
                         <p data-i18n="cases.factory.stock">库存（物料仓库实拍）</p>
                     </div>
                 </div>
@@ -525,6 +601,15 @@
                 <small data-i18n="video.hint">点击视频外区域或按 Esc 关闭</small>
             </div>
         </div>
+    </div>
+
+    <!-- Image lightbox (生产实力大图) -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev" onclick="event.stopPropagation();prevImage()">&#10094;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="" decoding="async">
+        <span class="lightbox-next" onclick="event.stopPropagation();nextImage()">&#10095;</span>
+        <div class="lightbox-caption" id="lightboxCaption"></div>
     </div>
 
     <!-- ========== FAQ 区块（GEO：AI 可引用问答） ========== -->
